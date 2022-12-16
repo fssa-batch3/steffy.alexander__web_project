@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #f2f4f1;
+  box-shadow: 0px 5px 20px black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  align-items: center;
+  font-size: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: #171a0f;
+  display: flex;
+  align-items: center;
+  font-family: "Carter One", cursive;
+  font-size: 80px;
+}
+
+#shopping {
+  color: blue;
+  margin-top: 100px;
+}
+
+.home {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a:nth-child(4) img {
+  margin-right: 13px;
+}
+
+#log {
+  width: 25px;
+  height: 25px;
+}
+
+.logo img {
+  width: 110px;
+  height: 65px;
+  margin-left: 25px;
+}
+
+.nav a {
+  margin: 10px;
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 18px;
+  color: #30650f;
+}
+
+#cart {
+  width: 80px;
+  height: 60px;
+}
+
+body>h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.step1,
+.step2,
+.step3 {
+  width: 100px;
+  height: 60px;
+  margin: 20px 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+
+}
+
+.step1 {
+  border: solid green;
+  border-width: 0px 0px 5px 0px;
+}
+
+.content {
+  width: 800px;
+  height: 600px;
+  text-align: center;
+  margin: 20px 10px 20px 20px;
+}
+
+.content input {
+  width: 400px;
+  border: 1px solid black;
+}
+
+label {
+  font-size: 20px;
+
+}
+
+#box {
+  height: 30px;
+  margin-top: 10px;
+}
+
+.whole {
+  width: 1000px;
+  height: 700px;
+  border: 1.25px solid black;
+  margin-left: 320px;
+}
+
+.last {
+  padding: 10px;
+  background-color: green;
+  margin-top: 70px;
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.last a {
+  text-decoration: none;
+  color: white;
+}
+
+.last:hover {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
