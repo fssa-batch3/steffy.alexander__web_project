@@ -51,6 +51,8 @@ font-family: "Carter One", cursive;
     width: 80px;
     height: 60px;
 }
+
+/* header ends */
 .right{
     margin:100px auto;
     height: 800px;
@@ -120,6 +122,7 @@ box-shadow: 5px 5px 20px grey;
 .foot1 h1{
     margin-top: 23px;
    }
+   /* footer starts */
 footer{
     margin-top: 200px;
     padding-top: 280px;

@@ -66,6 +66,9 @@ h1:hover{
     height: 65px;  
     margin-left: 25px;
 }
+
+/* header ends */
+
 #fa{
     color: yellow;
 }
@@ -191,6 +194,9 @@ select{
 h3:hover{
     letter-spacing: 3px;
 }
+
+
+/* footer starts */
 footer{
     margin-top: 500px;
     padding-top: 280px;

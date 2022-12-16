@@ -95,6 +95,8 @@ header a {
   height: 60px;
 }
 
+/* header ends */
+
 #buynow {
   padding: 8px 20px;
   margin-top: 200px;
@@ -233,6 +235,7 @@ header a {
   background-color: #674979;
   color: yellow;
 }
+/* footer starts */
 footer {
   margin-top: 300px;
   padding-top: 280px;
