@@ -121,7 +121,7 @@
 }
 .main a{
     padding: 15px 25px;
-   background-image: linear-gradient(to bottom right,#28583a,#34a26f);;
+   background-image: linear-gradient(to bottom right,#28583a,#34a26f);
     border-radius: 10px;
     margin:30px auto;
     display: block;
@@ -130,7 +130,7 @@
     color: black;
 }
 .seller{
-    background-image: linear-gradient(to bottom right,#28583a,#34a26f);;
+    background-image: linear-gradient(to bottom right,#28583a,#34a26f);
     padding:20px;
     border-radius: 20px 20px 0px 0px;
     text-align: center;
