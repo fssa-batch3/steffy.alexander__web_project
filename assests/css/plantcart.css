@@ -35,6 +35,10 @@ font-family: "Carter One", cursive;
 .nav a{
     font-size: 18px;
     color:#30650f;
+    margin:10px;
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 15px;
 }
 .nav a:nth-child(4) img{
     margin-right: 13px;
@@ -62,12 +66,6 @@ h1:hover{
     width: 110px;
     height: 65px;  
     margin-left: 25px;
-}
-.nav a{
-    margin:10px;
-    text-decoration: none;
-    margin-right: 50px;
-    font-size: 15px;
 }
 #fa{
     color: yellow;
@@ -152,9 +150,6 @@ display: flex;
 .product1 h4{
     font-size: 20px;
     font-weight: 700;
-}
-.total{
-margin-top: 300px;
 }
 .total a{
     width: 230px;

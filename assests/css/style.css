@@ -229,9 +229,6 @@ header a {
   border-radius: 20px;
   margin-top: 400px;
 }
-#add a {
-  margin-top: 400px;
-}
 #add:hover {
   background-color: #674979;
   color: yellow;
