@@ -137,7 +137,6 @@ header a {
   border-radius: 20px;
   background-color: white;
   color: #203f0c;
-  font-family: carton;
 
 }
 .require li{
@@ -176,8 +175,6 @@ h3{
   list-style-type: circle solid rgb(242, 9, 9);  
   margin-left: 100px;
   color:rgb(44, 70, 104);
-  margin: 15px 30px 15px 70px;
-  font-family:'Carter One';
 }
 .fa-solid{
   position: absolute;
@@ -230,7 +227,6 @@ h3{
 
  h4{
   color:#425a27;
-  font-family: carter one;
   text-align: center;
   font-size: 22px;
   margin-bottom: 20px;
