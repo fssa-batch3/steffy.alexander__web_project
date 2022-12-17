@@ -233,7 +233,11 @@ header a {
   margin-top: 20px;
 }
 
-#fa {
+.fa-sharp{
+  color: gold;
+  height: 40px;
+}
+.fa-regular{
   color: gold;
   height: 40px;
 }

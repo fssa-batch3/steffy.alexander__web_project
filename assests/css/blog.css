@@ -123,3 +123,108 @@ header a {
   font-family: "Carter One", cursive;
   color: #425a27;
 }
+.careimg img{
+  width: 300px;
+  height: 300px;
+ margin:0px 0px 100px 70px;
+}
+.content{
+ display: flex;
+  width: 1070px;
+  height: 430px;
+  box-shadow: 5px 5px 5px grey;
+  margin:150px auto;
+  border-radius: 20px;
+  background-color: white;
+  color: #203f0c;
+  font-family: carton;
+
+}
+.require li{
+  margin:20px 100px 0px 100px;
+  font-family: "Carter One", cursive;
+  font-size: 18px;
+}
+h2{
+  color:#0e0e0e;
+  font-family: "Carter One", cursive;
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 1px;
+  font-size: 29px;
+}
+h3{
+  color:#0e0e0e;
+  font-family: "Carter One", cursive;
+  margin-top: 100px;
+  font-size: 29px;
+  margin-left: 30px;
+}
+.bottomimages{
+  display: flex;
+}
+.bottomimages img:nth-child(1){
+  width: 400px;
+  height: 240px;
+  margin: 80px 10px 60px 450px;
+  box-shadow: 5px 5px 5px grey;
+
+}
+.bottom li{
+  list-style-type: circle solid rgb(242, 9, 9);  
+  margin-left: 100px;
+  color:rgb(44, 70, 104);
+  margin: 15px 30px 15px 70px;
+  font-family:'Carter One';
+}
+.fa-solid{
+  position: absolute;
+  font-size: 100px;
+  top: 1880px;
+  left:610px;
+  color:white;
+  cursor: pointer;
+
+}
+.firstimage img{
+ width:200px;
+ margin: 100px 20px 20px 70px;
+}
+.secimage img{
+  width:160px;
+  margin: 100px 0px 20px 30px;
+ }
+ .thirdimage img{
+  width:200px;
+  margin: 100px 20px 20px 70px;
+ }
+ .first,.second{
+  display: flex;
+ }
+ .firstpoint,.thirdpoint{
+  margin:90px 90px 40px 40px;
+  letter-spacing: 1px;
+  font-family:carter one;
+  color: rgb(132, 90, 6);
+  font-size: 17px;
+ }
+ .secpoint{
+ margin:90px 90px 40px 140px;
+ font-family:carter one;
+ font-weight: 0;
+ font-size: 17px;
+ letter-spacing: .5px;
+ color: rgb(132, 90, 6);
+}
+ .third{
+  display: flex;
+ }
+ h4{
+  color:#425a27;
+  font-family: carter one;
+ }
+
+ 
+ 
+ 
+
