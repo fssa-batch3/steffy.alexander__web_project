@@ -162,11 +162,13 @@ h3{
 }
 .bottomimages{
   display: flex;
+   margin:30px auto;
+   width: 400px;
 }
-.bottomimages img:nth-child(1){
+.bottomimages img{
   width: 400px;
   height: 240px;
-  margin: 80px 10px 60px 450px;
+ 
   box-shadow: 5px 5px 5px grey;
 
 }
@@ -180,48 +182,58 @@ h3{
 .fa-solid{
   position: absolute;
   font-size: 100px;
-  top: 1880px;
-  left:610px;
+  top:80px;
+  left:175px;
   color:white;
   cursor: pointer;
 
 }
+.bottomimages a {
+  position: relative;
+}
+
 .firstimage img{
  width:200px;
- margin: 100px 20px 20px 70px;
 }
 .secimage img{
   width:160px;
-  margin: 100px 0px 20px 30px;
+
  }
  .thirdimage img{
   width:200px;
-  margin: 100px 20px 20px 70px;
+  margin-right: 120px;
  }
- .first,.second{
+
+ .firstimage img,.secimage img,.thirdimage img{
+  margin:20px;
+ }
+
+
+
+ .first,.second,.third{
   display: flex;
+  align-items: center;
+  width:1000px;
+  margin: 10px auto;
+  padding:20px;
+  box-sizing: border-box;
  }
- .firstpoint,.thirdpoint{
-  margin:90px 90px 40px 40px;
-  letter-spacing: 1px;
-  font-family:carter one;
+ .firstpoint,.secpoint,.thirdpoint{
+
+
+  font-family:sans-serif;
   color: rgb(132, 90, 6);
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
  }
- .secpoint{
- margin:90px 90px 40px 140px;
- font-family:carter one;
- font-weight: 0;
- font-size: 17px;
- letter-spacing: .5px;
- color: rgb(132, 90, 6);
-}
- .third{
-  display: flex;
- }
+
  h4{
   color:#425a27;
   font-family: carter one;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
  }
 
  
