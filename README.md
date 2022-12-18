@@ -18,4 +18,4 @@ Wire frame -https://drive.google.com/file/d/1IySjsNsgFfi3b5GqaPiXM0Z6WTTtiahF/vi
 
 User flow - https://drive.google.com/file/d/16bplpv6KbGs8ezb0uMvlvr241g4hxH76/view?usp=share_link
 
-Vee Blooms live website - https://steffydominic.github.io/veeblooms/
+Vee Blooms live website - https://github.com/steffydominic/Steffy-portfolio.git
