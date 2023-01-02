@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
 }
 body{
-  width: 1520px;
+  /* width: 1520px; */
 }
 header {
   align-items: center;
@@ -94,7 +94,7 @@ header a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/pexels-kate-trifo-3804997.jpg);
   background-size: cover;
-  width: 100vmax;
+  width: 100%;
   height: 800px;
   box-sizing: border-box;
   text-align: center;
@@ -256,9 +256,9 @@ footer {
   height: 300px;
   background-color: #5d963f;
   border-radius: 20px;
-  /* position: absolute;
+  position: absolute;
   top: 2800px;
-  left: 300px; */
+  left: 300px;
 }
 
 .foot2 {
@@ -402,12 +402,18 @@ footer {
   margin-left: 20%;
  }
  footer{
-  padding-top: 70px;
+  padding-top: 100px;
   width: 100%;
   height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+ }
+ .foot1{
+  top:4300px;
+  width: 500px;
+  height:50%;
+  left:250px;
  }
  
 
