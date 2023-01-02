@@ -40,35 +40,6 @@ header a {
   cursor: pointer;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -133,38 +104,36 @@ body>h1 {
 }
 
 .content {
-  width: 800px;
-  height: 600px;
+  width: 650px;
+  height: 700px;
   text-align: center;
-  margin: 20px 10px 20px 20px;
+  margin: 20px auto;
+  background-color: #d9ecce;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: "Carter One", cursive;
 }
 
 .content input {
-  width: 400px;
-  border: 1px solid black;
+  width:300px;
+  border-radius: 10px;
+  border-style:none;
 }
 
 label {
   font-size: 20px;
-
+  font-family: "Carter One", cursive;
 }
 
 #box {
   height: 30px;
   margin-top: 10px;
 }
-
-.whole {
-  width: 1000px;
-  height: 700px;
-  border: 1.25px solid black;
-  margin-left: 320px;
-}
-
 .last {
   padding: 10px;
   background-color: green;
-  margin-top: 70px;
+  margin: 5px auto;
   width: 100px;
   height: 25px;
   border-radius: 10px;
