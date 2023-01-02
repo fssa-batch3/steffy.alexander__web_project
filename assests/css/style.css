@@ -4,7 +4,9 @@
   font-family: "Kanit", sans-serif;
   scroll-behavior: smooth;
 }
-
+body{
+  width: 1520px;
+}
 header {
   align-items: center;
   display: flex;
@@ -16,6 +18,7 @@ header {
   top: 0;
   z-index: 10;
   font-size: 30px;
+  width: 100%;
 }
 
 header a {
@@ -91,7 +94,7 @@ header a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/pexels-kate-trifo-3804997.jpg);
   background-size: cover;
-  width: 100%;
+  width: 100vmax;
   height: 800px;
   box-sizing: border-box;
   text-align: center;
@@ -121,7 +124,7 @@ header a {
   display: flex;
   background-color: #f2f4f1;
   width: 100%;
-  height: 1000px;
+  /* height: 1000px; */
   border-radius: 20px;
   padding: 60px;
   box-sizing: border-box;
@@ -140,7 +143,7 @@ header a {
 }
 
 .left {
-  width: 32%;
+  width: 70%;
   height: 800px;
   background-image: url("../images/Offers\ in\ Plants\ Your\ Story.jpg");
   background-repeat: no-repeat;
@@ -162,8 +165,8 @@ header a {
 }
 
 .right {
-  width: 70%;
-  height: 800px;
+  /* width: 70%; */
+  /* height: 800px; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -253,9 +256,9 @@ footer {
   height: 300px;
   background-color: #5d963f;
   border-radius: 20px;
-  position: absolute;
+  /* position: absolute;
   top: 2800px;
-  left: 300px;
+  left: 300px; */
 }
 
 .foot2 {
@@ -349,4 +352,64 @@ footer {
 
 .name {
   color: #30650f;
+}
+
+@media only screen  and ( max-width:500px){
+  body{
+    width: 1000px;
+  }
+  .nav{
+    /* width: 500px; */
+    }
+  .content1 {
+    width: 100%;
+  }
+  .main2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main2top{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #review{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+ }
+ .left, .right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .right{
+  /* display: flex;
+  flex-wrap: wrap;
+  width: 150%;*/
+  margin-top: 30px;
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ }
+ .box1{
+  width: 300px;
+  height: 380px;
+  margin-left: 20%;
+ }
+ footer{
+  padding-top: 70px;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ 
+
+
 }
