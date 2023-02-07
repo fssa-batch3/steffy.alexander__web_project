@@ -201,4 +201,12 @@ h3{
   margin-bottom: 20px;
  }
 
+ @media only screen  and ( max-width:500px){
+  body{
+    width: 1000px;
+  }
+  .nav{
+    /* width: 500px; */
+    }
+  }
  

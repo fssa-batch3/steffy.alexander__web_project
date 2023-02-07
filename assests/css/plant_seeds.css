@@ -62,20 +62,24 @@ header a {
 }
 
 /* header ends */
-.right {
-    margin: 100px auto;
-    height: 800px;
+.right ,.right2{
+    margin: 50px auto;
+    height: 400px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    overflow: hidden;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
 
 }
 
-.box1 {
-    height: 380px;
+.right::-webkit-scrollbar ,.right2::-webkit-scrollbar{
+   display: none;
+}
+.box1,.box2 {
+    height: 350px;
     width: 220px;
     border: 2px solid white;
-    margin: 0px 30px 30px 30px;
+    margin: 0px 30px ;
     transition: 1s;
     color: brown;
     text-align: center;
@@ -83,22 +87,20 @@ header a {
     box-shadow: 5px 5px 5px grey;
 }
 
-.box1:hover {
+.box1:hover, .box2:hover{
     transform: scale(0.95);
     transition: .8s;
     box-shadow: 5px 5px 20px grey;
-
 }
 
 .spl img {
-
     width: 20px;
     height: 30px;
 }
 
-.box1 img {
-    height: 230px;
-    width: 100%;
+.box1 img,.box2 img {
+    height: 190px;
+    width: 190px;
     margin-bottom: 10px;
     border-radius: 20px;
 }
@@ -112,12 +114,10 @@ header a {
 .fa-sharp {
     color: gold;
     height: 40px;
-
 }
 .fa-regular {
     color: gold;
     height: 40px;
-
 }
 
 #add {
@@ -182,6 +182,7 @@ footer {
     display: flex;
     flex-direction: column;
 
+ 
 }
 
 .foot1 textarea {
@@ -220,3 +221,39 @@ footer {
     margin-right: 80px;
     margin-top: 20px;
 }
+
+@media only screen  and ( max-width:500px){
+    body{
+      width: 1000px;
+    }
+    .nav{
+      /* width: 500px; */
+      }
+      .box1{
+        width: 300px;
+        height: 380px;
+        margin-left: 20%;
+       }
+       .right{
+        margin-top: 30px;
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       }
+       footer{
+        padding-top: 100px;
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1820px;
+       }
+       .foot1{
+        top:2525px;
+        width: 500px;
+        height:50%;
+        left:250px;
+       }
+       
+    }

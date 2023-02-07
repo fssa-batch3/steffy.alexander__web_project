@@ -143,7 +143,7 @@ header a {
 }
 
 .left {
-  width: 70%;
+  width: 40%;
   height: 800px;
   background-image: url("../images/Offers\ in\ Plants\ Your\ Story.jpg");
   background-repeat: no-repeat;
@@ -165,8 +165,8 @@ header a {
 }
 
 .right {
-  /* width: 70%; */
-  /* height: 800px; */
+   width: 70%; 
+   height: 800px; 
   display: flex;
   flex-wrap: wrap;
 }

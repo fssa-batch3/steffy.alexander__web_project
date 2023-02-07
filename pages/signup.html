@@ -26,18 +26,63 @@
             </div>
         </div>
 
-        <label><i id="loglog" class="fa-solid fa-child-dress"></i><input type="text"
-                placeholder="First Name..."></label><br>
-        <label><i id="loglog" class="fa-solid fa-child-dress"></i><input type="text"
-                placeholder="Last Name..."></label><br>
-        <label><i id="loglog" class="fa-solid fa-envelope"></i><input type="text" placeholder="Email..."></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i><input type="text" placeholder="Password..."></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i><input type="text"
-                placeholder="Confirm Password..."></label><br><br><br>
-
-        <a href="../index.html">GET STARTED</a>
+        <label><i id="loglog" class="fa-solid fa-child-dress"></i>
+            <input type="text" placeholder="First Name..." id="fname" required></label><br>
+        <label><i id="loglog" class="fa-solid fa-child-dress"></i>
+            <input type="text" placeholder="Last Name..." id="lname" required></label><br>
+        <label><i id="loglog" class="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Email..." id="email" required></label><br>
+        <label><i id="loglog" class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password..." id="password" required></label><br>
+        <label><i id="loglog" class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Confirm Password..." id="confirmpass" required></label><br><br><br>
+     
+            <button type="button" onclick="submit()">GET STARTED</button>
+        <!-- <a href="../index.html">GET STARTED</a> -->
 
     </div>
+
+
+
+    <script>
+
+
+        function submit(){
+        const fname = document.getElementById("fname").value
+        const lname = document.getElementById("lname").value
+        const email= document.getElementById("email").value
+        const password =  document.getElementById("password").value
+        const confirmpass =  document.getElementById("confirmpass").value
+       
+         if(fname!="" && lname!="" && email!="" && password!="" &&confirmpass!=""){
+        let user_data={
+             "fname": fname,
+             "lastname": lname,
+             "email":email,
+             "password":password,
+             "confirmpass":confirmpass,
+        }
+        
+             let arr= localStorage.getItem("arr")
+                ?JSON.parse(localStorage.getItem("arr")):
+                 [];
+                    arr.push(user_data)
+                localStorage.setItem("arr",JSON.stringify(arr))
+            
+        
+        if(password===confirmpass){
+            window.location.href="../index.html"
+        }
+        else{
+            alert("password mismatch")
+        }
+    }
+    else{
+        alert("fill the fields")
+    }
+    }
+        
+      </script>  
 </body>
 
 </html>

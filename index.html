@@ -26,7 +26,7 @@
       <a href="./pages/seeds.html">Seeds</a>
       <a href="./pages/blog.html">Blog</a>
       <a href="./pages/login.html"><img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""
-          LOGIN />Login/signup</a>
+          LOGIN /><span id="user_name">Login/signup</span></a>
       <a href="./pages/cart.html"><img id="cart" src="./assests/images/cart logo.png" alt="cart" /></a>
     </div>
   </header>
@@ -53,7 +53,8 @@
       <div class="left"></div>
 
       <div class="right">
-        <div class="box1">
+
+        <!-- <div class="box1">
           <div class="imgtrend" alt="trend">
             <img src="./assests/images/pink_rose_plant.jpg" alt="rose" />
             <i id="rs" class="fa-solid fa-indian-rupee-sign">450</i>
@@ -132,7 +133,7 @@
             <i  class="fa-sharp fa-solid fa-star"></i>
           </div>
           <a id="add" href="#">Add To Cart</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -249,6 +250,80 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // const user_name = localStorage.getItem("email");
+    // console.log(user_name);
+    // document.getElementById("user_name").innerText= user_name
+
+
+
+
+
+    //  <div class="box1">
+    //       <div class="imgtrend" alt="trend">
+    //         <img src="./assests/images/pink_rose_plant.jpg" alt="rose" />
+    //         <i id="rs" class="fa-solid fa-indian-rupee-sign">450</i>
+
+    //         <h3 class="pinkrose">Pink Rose Plant</h3>
+    //         <i  class="fa-sharp fa-solid fa-star"></i>
+    //         <i  class="fa-sharp fa-solid fa-star"></i>
+    //         <i  class="fa-sharp fa-solid fa-star"></i>
+    //         <i  class="fa-sharp fa-solid fa-star"></i>
+    //         <i  class="fa-sharp fa-solid fa-star"></i>
+    //       </div>
+    //       <a id="add" href="pages/plantcart.html">Add To Cart</a>
+    //     </div>
+
+    for(let j=0; j<=5; j++){
+
+let  div_1=document.createElement("div")
+div_1.setAttribute("class","box1")
+document.querySelector(".right").prepend(div_1)
+
+
+let  div_2=document.createElement("div")
+div_2.setAttribute("class","imgtrend")
+document.querySelector(".box1").append(div_2)
+
+ let img=document.createElement("img")
+img.setAttribute("src","./assests/images/pink_rose_plant.jpg")
+img.setAttribute("alt","rose")
+document.querySelector(".imgtrend").append(img)
+
+let  i_1=document.createElement("i")
+i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
+i_1.setAttribute("id","rs")
+document.querySelector(".imgtrend").append(i_1)
+
+let  h3=document.createElement("h3")
+h3.setAttribute("class","pinkrose")
+h3.innerText="Pink Rose Plant"
+document.querySelector(".imgtrend").append(h3)
+
+for(i=0; i<=4; i++){
+let  i_2=document.createElement("i")
+i_2.setAttribute("class","fa-sharp fa-solid fa-star")
+i_2.setAttribute("id","rs")
+document.querySelector(".imgtrend").append(i_2)
+}
+
+let a_1=document.createElement("anchor")
+a_1.setAttribute("href","pages/plantcart.html")
+a_1.setAttribute("id","add")
+a_1.innerText="Add to cart"
+document.querySelector(".box1").append(a_1)
+
+
+    }
+
+
+
+
+
+ 
+
+  </script>
 </body>
 
 </html>

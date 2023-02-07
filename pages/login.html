@@ -24,13 +24,52 @@
             </div>
         </div>
 
-        <label><i id="loglog" class="fa-solid fa-envelope"></i><input type="text" placeholder="Email..."></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i><input type="text" placeholder="Password..."></label><br><br>
+        <label><i id="loglog" class="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Email..." id="email"></label><br>
+        <label><i id="loglog" class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password..." id="password"></label><br><br>
 
         <a id="account" href="./signup.html">don't have an account?</a><br><br><br>
-        <a id="signin" href="./signup.html">sign in</a>
+        <!-- <a id="signin" href="./signup.html">sign in</a>
+         -->
+        <button type="button" onclick="submit()">sign in</button>
 
     </div>
+
+  
+  <script>
+
+
+function submit(){
+      
+        const email= document.getElementById("email").value
+        const password =  document.getElementById("password").value
+       
+       const user=JSON.parse(localStorage.getItem("arr"))
+let check;
+        user.find(element=>{
+                if(element["email"]==email && element["password"]==password){
+                        return check=1
+
+                }
+                else{
+                   return check=0
+                }
+        })
+if(check==1){
+    alert("Successfully logged in") 
+    window.location.href="../index.html"
+
+}
+else{
+    alert("incorrect")
+}
+
+  
+}
+  </script>
+
 </body>
+
 
 </html>

@@ -32,7 +32,7 @@
     </header>
 
     <div class="right">
-        <div class="box1">
+        <!-- <div class="box1">
             <div class="imgtrend" alt="trend">
                 <img src="../assests/images/pink_rose_plant.jpg" alt="rose">
                 <i id="rs" class="fa-solid fa-indian-rupee-sign">450</i>
@@ -184,13 +184,12 @@
             <a id="add" href="./cart.html">Add To Cart</a>
 
 
-        </div>
+        </div> -->
 
 
 
     </div>
-    </div>
-    </div>
+   <div class="right2"></div>
     <footer>
         <div class="foot1">
             <h1>Suggestions</h1>
@@ -219,8 +218,250 @@
         </div>
     </footer>
 
+    <script>
 
 
+
+const product_list=[{
+
+    "name":"Pinkrose Plant",
+    "image":{
+        source: "../assests/images/pink_rose_plant.jpg",
+        alt:"rose"}
+},
+{
+    "name":"Starlink Hibiscus Plant",
+    "image":{
+        source: "../assests/images/hibiscuss.jpg",
+        alt:"hibiscus"}
+},
+
+{
+    "name":"dieffenbranchia",
+    "image":{
+        source:" ../assests/images/dieff.jpg",
+        alt:"dieffenbranchia"}
+},
+
+{
+    "name":"Jade Mini Plant",
+    "image":{
+        source: "../assests/images/jade plant.jpg",
+        alt:"jade"}
+},
+{
+    "name":"Mexican Marigold",
+    "image":{
+        source:"../assests/images/marigold.jpg",
+        alt:"marigold"}
+},
+
+{
+    "name":"Black Tomato seeds",
+    "image":{
+        source:"../assests/images/blackcherry.jpg ",
+        alt:"black tomatoimg"}
+},
+
+{
+    "name":"Rosery Pea",
+    "image":{
+        source:"../assests/images/precatorious.jpg",
+        alt:"rosery pea img"}
+},
+
+{
+    "name":"Thyme",
+    "image":{
+        source:"../assests/images/bougainvillea.jpeg",
+        alt:"thymeimg"}
+},
+{
+    "name":"Swiss Cheese Plant",
+    "image":{
+        source:"../assests/images/swiss cheese plant.jpg",
+        alt:"swiss cheese plant img"}
+},
+{
+    "name":"Rose Cactus ",
+    "image":{
+        source:"../assests/images/redcactus.jpg",
+        alt:"Rose cactus img"}
+},
+
+
+
+
+{
+    "name":"Strawberry",
+    "image":{
+        source:"../assests/images/strawberry.jpg",
+        alt:"strawberry img"}
+},
+
+{
+    "name":"Canna Yellow plant",
+    "image":{
+        source:"../assests/images/canna yellow.jpg",
+        alt:"canna flower img"}
+},
+
+{
+    "name":"Mini orange plant",
+    "image":{
+        source:"../assests/images/mini orange.webp",
+        alt:" mini orange img"}
+},
+
+{
+    "name":"Tulsi",
+    "image":{
+        source:"../assests/images/tulsii.jpg",
+        alt:"Tulsi img"}
+},
+
+
+{
+    "name":"White Flamingo",
+    "image":{
+        source:"../assests/images/white flamingoo.jpg",
+        alt:" mini orange img"}
+},
+
+
+{
+    "name":"Red Mimosa",
+    "image":{
+        source:"../assests/images/red mimosa.jpg",
+        alt:" Red mimosa img"}
+},
+
+
+{
+    "name":"Mini orange",
+    "image":{
+        source:"../assests/images/mini orange.webp",
+        alt:" mini orange img"}
+},
+{
+    "name":"Ixora",
+    "image":{
+        source:"../assests/images/Ixora.avif",
+        alt:" mini orange img"}
+},
+{
+    "name":"Venus Flytrap ",
+    "image":{
+        source:"../assests/images/venus flytrap.jpg",
+        alt:"Venusflytrap img"}
+},
+{
+    "name":"Middlemist Red ",
+    "image":{
+        source:"../assests/images/middlemist red.jpg",
+        alt:" middlemist red img"}
+}
+
+
+
+
+
+
+]
+
+
+
+
+
+    
+    for(let j=0; j<=9; j++){
+
+        let  div_1=document.createElement("div")
+        div_1.setAttribute("class","box1")
+        document.querySelector(".right").prepend(div_1)
+        
+        
+        let  div_2=document.createElement("div")
+        div_2.setAttribute("class","imgtrend")
+        document.querySelector(".box1").append(div_2)
+        
+         let img=document.createElement("img")
+        img.setAttribute("src", product_list[j]["image"]["source"])
+        img.setAttribute("alt","rose")
+        document.querySelector(".imgtrend").append(img)
+        
+        let  i_1=document.createElement("i")
+        i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
+        i_1.setAttribute("id","rs")
+        document.querySelector(".imgtrend").append(i_1)
+        
+        let  h3=document.createElement("h3")
+        h3.setAttribute("class","pinkrose")
+        h3.innerText=product_list[j]["name"]
+        document.querySelector(".imgtrend").append(h3)
+        
+        for(i=0; i<=4; i++){
+        let  i_2=document.createElement("i")
+        i_2.setAttribute("class","fa-sharp fa-solid fa-star")
+        i_2.setAttribute("id","rs")
+        document.querySelector(".imgtrend").append(i_2)
+        }
+        
+        let a_1=document.createElement("anchor")
+        a_1.setAttribute("href","pages/plantcart.html")
+        a_1.setAttribute("id","add")
+        a_1.innerText="Add to cart"
+        document.querySelector(".box1").append(a_1)
+        
+        
+            }
+
+
+
+            for(let k=10; k<=19; k++){
+
+let  div_1=document.createElement("div")
+div_1.setAttribute("class","box2")
+document.querySelector(".right2").prepend(div_1)
+
+
+let  div_2=document.createElement("div")
+div_2.setAttribute("class","imgtrend1")
+document.querySelector(".box2").append(div_2)
+
+ let img=document.createElement("img")
+img.setAttribute("src", product_list[k]["image"]["source"])
+img.setAttribute("alt","rose")
+document.querySelector(".imgtrend1").append(img)
+
+let  i_1=document.createElement("i")
+i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
+i_1.setAttribute("id","rs")
+document.querySelector(".imgtrend1").append(i_1)
+
+let  h3=document.createElement("h3")
+h3.setAttribute("class","pinkrose")
+h3.innerText=product_list[k]["name"]
+document.querySelector(".imgtrend1").append(h3)
+
+for(l=0; l<=4; l++){
+let  i_2=document.createElement("i")
+i_2.setAttribute("class","fa-sharp fa-solid fa-star")
+i_2.setAttribute("id","rs")
+document.querySelector(".imgtrend1").append(i_2)
+}
+
+let a_1=document.createElement("anchor")
+a_1.setAttribute("href","pages/plantcart.html")
+a_1.setAttribute("id","add")
+a_1.innerText="Add to cart"
+document.querySelector(".box2").append(a_1)
+
+
+    }
+
+
+</script>
 
 </body>
 
