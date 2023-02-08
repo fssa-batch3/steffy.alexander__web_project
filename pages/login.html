@@ -49,8 +49,10 @@ function submit(){
 let check;
         user.find(element=>{
                 if(element["email"]==email && element["password"]==password){
+                    // const users=JSON.stringify(element)
+                    // localStorage.setItem("arr",users)
                         return check=1
-
+  
                 }
                 else{
                    return check=0
@@ -58,7 +60,7 @@ let check;
         })
 if(check==1){
     alert("Successfully logged in") 
-    window.location.href="../index.html"
+    window.location.href="profile.html"
 
 }
 else{
