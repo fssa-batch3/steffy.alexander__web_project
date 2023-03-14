@@ -25,9 +25,9 @@
         </div>
 
         <label><i id="loglog" class="fa-solid fa-envelope"></i>
-            <input type="text" placeholder="Email..." id="email"></label><br>
+            <input type="email" placeholder="Email..." id="email" required></label><br>
         <label><i id="loglog" class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password..." id="password"></label><br><br>
+            <input type="password" placeholder="Password..." id="password" title="Enter a uppercase, a lowercase, a number/special character" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></label><br>
 
         <a id="account" href="./signup.html">don't have an account?</a><br><br><br>
         <!-- <a id="signin" href="./signup.html">sign in</a>
@@ -44,6 +44,10 @@ function submit(){
       
         const email= document.getElementById("email").value
         const password =  document.getElementById("password").value
+        let data={
+            "email":email,
+            "password":password
+        }
        
        const user=JSON.parse(localStorage.getItem("arr"))
 let check;
@@ -60,6 +64,7 @@ let check;
         })
 if(check==1){
     alert("Successfully logged in") 
+    localStorage.setItem("profile",JSON.stringify(data))
     window.location.href="profile.html"
 
 }

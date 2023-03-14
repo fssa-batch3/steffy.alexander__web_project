@@ -15,6 +15,7 @@
 
 <body>
 
+
     <div class="main">
         <div class="signup">
             <h2>Signup</h2>
@@ -25,64 +26,101 @@
                 <i id="iconlog" class="fa-brands fa-google-plus-g"></i>
             </div>
         </div>
+        <form>
 
-        <label><i id="loglog" class="fa-solid fa-child-dress"></i>
-            <input type="text" placeholder="First Name..." id="fname"></label><br>
-        <label><i id="loglog" class="fa-solid fa-child-dress"></i>
-            <input type="text" placeholder="Last Name..." id="lname"></label><br>
-        <label><i id="loglog" class="fa-solid fa-envelope"></i>
-            <input type="text" placeholder="Email..." id="email"></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password..." id="password"></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Confirm Password..." id="confirmpass"></label><br><br><br>
-     
-            <button type="button" onclick="submit()">GET STARTED</button>
-        <!-- <a href="../index.html">GET STARTED</a> -->
+            <label><i id="loglog" class="fa-solid fa-child-dress"></i>
+                <input type="text" placeholder="First Name..." pattern="[A-Za-z]{1,24}" id="fname"
+                    title="Firstletter must in CAPS" required></label><br>
+            <label><i id="loglog" class="fa-solid fa-child-dress"></i>
+                <input type="text" placeholder="Last Name..." id="lname"></label><br>
+            <label><i id="loglog" class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email..." id="email" required></label><br>
+            <label><i id="loglog" class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password..." id="password"
+               
+                    required></label><br> 
+            <label><i id="loglog" class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Confirm Password..." id="confirmpass" required></label><br><br><br>
+
+            <button type="submit">GET STARTED</button>
+        </form>
+        
 
     </div>
 
 
-
+  
     <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+            submit();
+
+            console.log("Form has been submitted")
+        })
+
+        function submit () {
+            const fname       = document.getElementById("fname").value
+            const lname       = document.getElementById("lname").value
+            const email       = document.getElementById("email").value
+            const password    = document.getElementById("password").value
+            const confirmpass = document.getElementById("confirmpass").value
+
+              const records   = JSON.parse(localStorage.getItem("arr"));
+
+            if (fname != "" && lname != "" && email != "" && password != "" && confirmpass != "") {
+
+                let arr = localStorage.getItem("arr")
+                        ? JSON.parse(localStorage.getItem("arr")) :
+                        [];
 
 
-        function submit(){
-        const fname = document.getElementById("fname").value
-        const lname = document.getElementById("lname").value
-        const email= document.getElementById("email").value
-        const password =  document.getElementById("password").value
-        const confirmpass =  document.getElementById("confirmpass").value
-       
-         if(fname!="" && lname!="" && email!="" && password!="" &&confirmpass!=""){
-        let user_data={
-             "fname": fname,
-             "lastname": lname,
-             "email":email,
-             "password":password,
-             "confirmpass":confirmpass,
-        }
-        
-             let arr= localStorage.getItem("arr")
-                ?JSON.parse(localStorage.getItem("arr")):
-                 [];
-                    arr.push(user_data)
-                localStorage.setItem("arr",JSON.stringify(arr))
-            
-        
-        if(password===confirmpass){
-            window.location.href="../index.html"
+                let user_data = {
+                    "fname": fname,
+                    "lastname": lname,
+                    "email": email,
+                    "password": password,
+                    "confirmpass": confirmpass,
+                }
+                let check = true;
+                if(records!= null){
+                    for( let i=0; i< records.length; i++){
+                        if(records[i].email ==email ){
+                            check = false;
+                            break;
+                        }
+                    }
+                }
+
+
+          if(check){
+            if (password === confirmpass) {
+                  
+                arr.push(user_data)
+                    localStorage.setItem("arr", JSON.stringify(arr))
+                    alert("Successfully logged in")
+                    window.location.href = "login.html"
+
+                }
+                else {
+                    alert("password mismatch")
+                }
+
+          }
+          else{
+            alert("Already have an account")
+
+          }
+               
         }
         else{
-            alert("password mismatch")
-        }
-    }
-    else{
-        alert("fill the fields")
-    }
-    }
+            alert ("fill this data")
+        }}
         
-      </script>  
+      
+
+
+    </script>
 </body>
 
 </html>

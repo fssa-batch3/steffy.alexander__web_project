@@ -5,49 +5,202 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="stylesheet" href="../assests/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <!-- profileimage -->
     <form>
-        <div class="main">
-            <div class="container">
-                <div class="heading">
-                    <h1>MyProfile</h1>
-                </div>
-                <div class="profile_img">
-                    <img src="../assets/image/profile.jpg" alt="image">
-                    <p><button>Edit Profile</button> </p>
-                </div>
-                <div class="user_details">
-                    <label>FirstName:<input id="fname" name="firstname" type="text"></label><br><br>
-                    <label>LastName:<input id="lname" name="lastname" type="text"></label><br><br>
-                    <label>Email:<input id="email" name="email" type="text"></label><br><br>
-                    <label>Phonenumber:<input id="pnumber" name="phonenumber" type="number"></label><br><br>
-                    <label>Username:<input id="username" name="username" type="text"></label><br><br>
-                    <label>Password:<input name="password" type="password"></label><br><br>
-                    <label>Conformpassword:<input name="conformpassword" type="password"></label><br><br>
-                    <label>Occupation:<input name="occupation" type="text"></label><br><br>
-                    <label>Address:<input name="address" type="text"></label><br><br>
-                    <div class="home">
-                        <button>Back to home</button>
-                    </div>
-                   
-                </div>
-            </div>
+        
+            <div class="content">
+        <div class="left">
+    <div class="leftbox">
+        
+         <img class="profile" src="../assests/images/bc.jpeg" alt="profile img">
+         <input type="file" id="file">
+         <label for="file"><img id="editcam" src="../assests/images/photo-camera.png" alt="editimg"></label>
+         <br><br>
+         <p class="username" id="displayProfile">Steffy Alexander</p>
+         <!-- <label for="name"> name <input type="text" id="name"></label><br><br>
+         <label for="email">Email <input type="text"  id="email"></label> -->
         </div>
-    </form>
-    <script>
+        <div class="bottomleft">
 
-let users = JSON.parse(localStorage.getItem("arr"));
-        console.log(typeof(users))
+        <div class="fstname"><i class="fa-solid fa-user"></i>Profile</div>
+        <div class="secname"><i class="fa-solid fa-user"></i>Edit Profile</div>
+       <div class="thirdname"><i class="fa-solid fa-user"></i>Home</div>
+        </div>
+    </div>
+    <div class="right">
+    <!-- <div class="righttop">
+        <textarea placeholder="What's in your mind today?"></textarea><br>
+        <i class="fa-solid fa-camera-retro"></i>
+        <i class="fa-solid fa-phone-volume"></i>
+        <i class="fa-solid fa-microphone"></i><span><button id="post">POST</button></span>
         
-            document.getElementById("fname").value    = users[0]["fname"]; 
-            document.getElementById("lname").value = users[0]["lastname"];
-            document.getElementById("email").value   = users[0]["email"];
-            // document.getElementById("pnumber").value = users[i]["phonenumber"];
-            // document.getElementById("username").value = users[i]["username"];
+    </div> -->
+
+
+<div class="bottomcontent">
+    
+    <div class="bottomquote">
+  <p id="para">"a3wsedrctyvuhbijninyybvrs rthvyu"</p>
+    </div>
+    <div class="inputfields">
+        <label for="fname">First name<input type="text" id="fname" disabled></label><br>
+        <label for="lname">last name <input type="text" id="lname" disabled></label><br>
+        <label for="email">Email <input type="text"  id="email" disabled></label><br>
+        <label for="number">Mobile.No <input type="text"  id="number" disabled></label><br>
+        <label for="address">Address<input type="text" id="address" disabled></label><br>
+        <label for="gender">Gender <input type="text" id="gender" disabled></label><br>
+    </div>
+</div>
+
+<div class="lastcontent">
+    <div class="side_one">
+        <h2>Add Bio</h2>
+        <textarea placeholder="Add Bio"></textarea>
+        <button id="edit" >Edit</button>
+        <button id="save" onclick="update()">update</button>
+        <button id="delete" onclick="del()">Delete</button>
+    </div>
+   <div><img src="../assests/images/img gif.gif" alt="plants"></div>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+
+<script>
+   
+    const img_div =document.querySelector(".leftbox")
+    const profile =document.querySelector(".profile")
+    const file=document.querySelector("#file")
+    const uploadbtn=document.querySelector("#button")
+    const displayName = document.querySelector("#displayProfile")
+    // when we choose file
+    file.addEventListener('change',function(){
+        // this refers to file
+        const choosed_file = this.files[0]
+        if(choosed_file) {
+            const reader= new FileReader()
+   // filereader is predefiden function of js
+            reader.addEventListener('load',function(){
+             profile.setAttribute("src",reader.result)
+         })
+         reader.readAsDataURL(choosed_file)
+        }
+    })
+
+
+
+    let username = JSON.parse(localStorage.getItem("arr")); //array of objects
+
+
+    let profile_data = JSON.parse(localStorage.getItem("profile"));
+     //object --> to know who the user is 
+     
+let res;
+
+
+    username.find(e=>{
+        if(e["email"]==profile_data["email"]){
+            return res=e; //arr[0]
+
+        }
+    })
+
+    // console.log(res)  //{first:name}
+    // res["mobile_num"]="56767676"
+    // console.log(res)
+
+    document.getElementById("fname").value = res["fname"];
+    document.getElementById("lname").value = res["lastname"];
+    document.getElementById("email").value = res["email"]; 
+    document.getElementById("number").value = res["number"]; 
+    document.getElementById("address").value = res["address"]; 
+    document.getElementById("gender").value = res["gender"];
+    displayName.innerText = res["fname"] + " "+res["lastname"] 
+    
+    //
+
+    document.getElementById("edit").addEventListener("click",e=>{
+        e.preventDefault();
+        document.getElementById("fname").removeAttribute("disabled","")
+        document.getElementById("lname").removeAttribute("disabled","")
+        // document.getElementById("email").removeAttribute("disabled","")
+        document.getElementById("number").removeAttribute("disabled","")
+        document.getElementById("address").removeAttribute("disabled","")
+        document.getElementById("gender").removeAttribute("disabled","")
+       
+    })
+
+
+
+    document.getElementById("save").addEventListener("click",e=>{
+        e.preventDefault();
         
-    </script>
+        
+        res["fname"]=document.getElementById("fname").value;
+        res["lastname"]=document.getElementById("lname").value;
+        res["number"]=document.getElementById("number").value;
+        res["address"]=document.getElementById("address").value;
+        res["gender"]=document.getElementById("gender").value;
+        
+
+        localStorage.setItem("arr",JSON.stringify(username))
+
+    })
+
+    document.getElementById("delete").addEventListener("click",e=>{
+        e.preventDefault();
+        console.log(res) //current object
+        // res["fname"]=""
+        // console.log(res)
+        let num=username.indexOf(res) //1
+
+        // delete username[num] //username[1]
+        username.splice(num,1)//splice(index,1,replacement)
+        console.log(username)
+        localStorage.setItem("arr",JSON.stringify(username))
+
+
+    })
+
+
+    console.log(username);
+
+    // for (let i = 0; i < username.length; i++) { 
+    //     document.getElementById("fname").value = username[i]["fname"];
+    //     document.getElementById("lname").value = username[i]["lastname"];
+    //     document.getElementById("email").value = username[i]["email"];
+    //     document.getElementById("p").innerText = username[i]["fname"]+ " " + username[i]["lastname"];
+
+    // }
+
+        // let username = JSON.parse(localStorage.getItem("arr"));
+       
+
+    //     for(let i = 0; i < username.length; i++){
+    //       if(document.getElementById("email").value == username[i]["email"]){
+    //         username[i].fname= document.getElementById("fname").value
+    //         username[i].lastname= document.getElementById("lname").value
+           
+    //     }
+    //     localStorage.setItem("arr", JSON.stringify(username))
+    // }
+
+
+    
+
+</script>
 </body>
 </html>
+
+
+
+
+
