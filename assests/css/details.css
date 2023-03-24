@@ -7,7 +7,11 @@
     scroll-behavior: smooth;
 
 } */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
 
+* {
+  font-family: "Poppins", sans-serif;
+}
 header {
   align-items: center;
   display: flex;
@@ -30,7 +34,7 @@ header a {
   align-items: center;
   font-family: "Carter One", cursive;
   font-size: 80px;
-  width:100%;
+  width: 100%;
 }
 
 /* #shopping {
@@ -76,10 +80,9 @@ header a {
 }
 
 img#cart {
- width:90px;
- height: 60px;
+  width: 90px;
+  height: 60px;
 }
-
 
 /* .side-nav{
     width: 65px;
@@ -163,7 +166,7 @@ ul{
     height:38px;
    padding-right: 30px;
 
-} */ */
+} */
 /* .loginimg{
     width:30px;
     height:30px;
@@ -171,86 +174,136 @@ ul{
     padding-left: 1.5px;
   
 } */
-.container{
-    display: flex;
-    width:850px;
-    height:1050px;
-    border:1px solid black;
-   
-  }
-  .imgtrend img{
-      width:450px;
-      height:450px;
-      margin: 15px;
-     
-  }
-  .fa-sharp{
-      color: rgb(248, 219, 54);
-      height: 40px;
-    }
-    .fa-regular{
-      color: rgb(255, 217, 0);
-      height: 40px;
-    } 
-   
-  .left{
-      width:480px;
-      height:500px;
-      border:2px solid black;
-      margin:1px 70px 30px 100px ;
-      position: fixed;
-      margin-right: 800px;
-     
-  }
-.right{
-    width:700px;
-    height:1200px;
-    border:1px solid black;
-    margin-top: 170px;
-    position: relative;
-    left: 670px;
-   
+.container {
+  display: flex;
+  width: 850px;
+  height: 1050px;
+  /* border:1px solid black; */
 }
-#numinrs{
-   font-size: 38px;
-   margin-top: 10px;
- }
- #rs{
-    font-size: 30px;
-
-   }
-select{
-   width: 60px;
-   height:35px;
-   text-align: center;
- }
- .buttons{
-    width:350px;
-    display:flex ;
-    justify-content: space-around;
-    margin: 50px 0px 10px 0px;
-    
- }
- #cart,#buynow{
-    /* margin:30px 20px; */
-   width:115px;
-   height:40px;
-
-   }
-#general{
-   
-    border:.5px solid rgb(81, 185, 132);
+.imgtrend >img {
+  width: 450px;
+  height: 450px;
+  margin: 130px 15px 50px 15px;
 }
-th{
-  border:.5px solid rgb(81, 185, 132);
-  width:220px;
+.fa-sharp {
+  color: rgb(248, 219, 54);
+  height: 40px;
+  margin: 10px 1px 8px 15px;
+}
+.fa-regular {
+  color: rgb(255, 217, 0);
+  height: 40px;
+}
+
+.left {
+  width: 480px;
+  height: 500px;
+  /* border:2px solid black; */
+  margin: 1px 70px 30px 100px;
+  position: fixed;
+  margin-right: 800px;
+}
+.right {
+  width: 700px;
+  height: 1200px;
+  /* border:1px solid black; */
+  margin-top: 100px;
+  position: relative;
+  left: 670px;
+}
+.right h2 {
+  /* margin-left: 17px;*/
+  font-size: 45px;
+  font-weight: 500;
+  color: #112701;
+  margin-bottom: 0;
+}
+.fa-star{
+  margin-left: 5px;
+}
+#numinrs {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+.quantity_form {
+  margin-top: 20px;
+}
+#rs {
+  font-size: 30px;
+  margin-left: 17px;
+  margin-top: 1px;
+}
+#quantity {
+  margin-top: 12px;
+}
+select {
+  width: 60px;
+  height: 35px;
+  text-align: center;
+}
+.buttons {
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0px 10px 0px;
+}
+#buy_now {
+  margin-left: 15px;
+}
+#cart1,
+#buy_now {
+  /* margin:30px 20px; */
+  height: 48px;
+  width: 400px;
+  /* line-height: 50px; */
+  /* margin-top: 50px;
+   margin-right: 80px; */
+  border-radius: 40px;
+  border-color: 1px solid rgb(37, 111, 72);
+  color: rgb(37, 111, 72);
+  background-color: white;
+  text-align: center;
+  /* border: none; */
+
+  border: 2px solid rgb(37, 111, 72);
+}
+#cart1:hover,
+#buy_now:hover {
+  background-color: #3d6921;
+  color: white;
+  border-style: none;
+}
+#general {
+  border: 0.5px solid rgb(81, 185, 132);
+}
+td {
+  border: 0.5px solid rgb(37, 111, 72);
+  width: 220px;
   height: 30px;
   padding: 8px;
-
 }
 
-table{
-    margin-left: 70px;
-    width:420px;
-} 
-
+table {
+  margin-left: 70px;
+  width: 420px;
+  margin-top: 60px;
+}
+h6,h5 {
+  color: #30650f;
+  font-size: 20px;
+}
+h3 {
+  font-size: 30px;
+}
+.plantimages{
+ /* border: 2px solid black; */
+ height: 100px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+/* border: 1px solid black; */
+}
+.plantimages img{
+  width:120px;
+  /* height: 80px; */
+}

@@ -1,28 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <form action="">
-            <label for="img">Image url:<input type="text" id="image" /></label><br /><br />
-            <label for="Tittle"> Title:<input type="text" id="titlename" /></label><br /><br />
-            <label for="price">Price:<input id="price" /></label><br /><br />
-            <label for="rate">Rating:<input type="text" id="ratings" /></label><br /><br />
-            <button onclick="createproduct()">Create</button><br /><br />
-            <button onclick="delete_product()">Delete</button><br /><br />
-            <button onclick="update_product()">Uhpdate</button><br /><br />
-        </form>
-    </div>     
-</body>
+      <form id="form">
+        <label for="img">Image url:<input type="url" id="image" /></label
+        ><br /><br />
+        <label for="Tittle"> Price:<input type="text" id="price" /></label
+        ><br /><br />
+        <label for="name"> Name:<input type="text" id="name" /></label
+        ><br /><br />
+        <label for="rate"> Rating:<input type="text" id="ratings" /></label
+        ><br /><br />
+        <label for="image_1"> image_1:<input type="text" id="image_1" /></label
+        ><br /><br />
+        <label for="image_2"> image_2:<input type="text" id="image_2" /></label
+        ><br /><br />
+        <label for="image_3"> image_3:<input type="text" id="image_3" /></label
+        ><br /><br />
+        <label for="h2"> h2 <input type="text" id="h2" /></label><br /><br />
+        <p>About:</p>
+        <textarea id="about"></textarea> <br /><br />
+
+        <label for="Plant_Name"
+          >Plant_Name: <input type="text" id="Plant_Name" /></label
+        ><br /><br />
+        <label for=" Type_of_plant">
+          Type: <input type="text" id="Type_of_plant" /></label
+        ><br /><br />
+        <label for=" Suitable_Location">
+          Suitable_Location:<input type="text" id="Suitable_Location" /></label
+        ><br /><br />
+        <label for=" Container_Type"
+          >Container_Type:<input type="text" id="Container_Type" /></label
+        ><br /><br />
+        <label for=" Container_Material"
+          >Container Material:<input
+            type="text"
+            id="Container_Material" /></label
+        ><br /><br />
+        <label for="Height"> Height: <input type="text" id="Height" /></label
+        ><br /><br />
+        <label for="Brand"> Brand: <input type="text" id="Brand" /></label
+        ><br /><br />
+        <label for=" Planting_Season">
+          Planting Season: <input type="text" id="Planting_Season" /></label
+        ><br /><br />
+
+        <label for=" table_Plantname">
+          table_Plantname: <input type="text" id="table_Plantname" /></label
+        ><br /><br />
+        <label for="Hybrid"> Hybrid: <input type="text" id="Hybrid" /></label
+        ><br /><br />
+
+        <button id="create">Create</button><br /><br />
+        <button onclick="delete_product()">Delete</button><br /><br />
+        <button onclick="update_product()">Update</button><br /><br />
+      </form>
+    </div>
+
+    <script>
+      let product = JSON.parse(localStorage.getItem("create_plant"))
+        ? JSON.parse(localStorage.getItem("create_plant"))
+        : [];
+
+       
+
+      document.getElementById("create").addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        let product_create = {};
+
+        const image = document.getElementById("image");
+        const price = document.getElementById("price");
+        const name = document.getElementById("name");
+        const ratings = document.getElementById("ratings");
+        const image_1 = document.getElementById("image_1");
+        const image_2 = document.getElementById("image_2");
+        const image_3 = document.getElementById("image_3");
+        const about = document.getElementById("about");
+        const Plant_Name = document.getElementById("Plant_Name");
+        const Type_of_plant = document.getElementById("Type_of_plant");
+        const Suitable_Location = document.getElementById("Suitable_Location");
+        const Container_Type = document.getElementById("Container_Type");
+        const Container_Material =
+          document.getElementById("Container_Material");
+        const Height = document.getElementById("Height");
+        const Brand = document.getElementById("Brand");
+        const Planting_Season = document.getElementById("Planting_Season");
+        const table_Plantname = document.getElementById("table_Plantname");
+        const Hybrid = document.getElementById("Hybrid");
+
+        product_create["image"] = image.value;
+        product_create["price"] = price.value;
+        product_create["name"] = name.value;
+        product_create["ratings"] = ratings.value;
+        product_create["image_1"] = image_1.value;
+        product_create["image_2"] = image_2.value;
+        product_create["image_3"] = image_3.value;
+        product_create["about"] = about.value;
+        product_create["Plant_Name"] = Plant_Name.value;
+        product_create["Type_of_plant"] = Type_of_plant.value;
+        product_create["Suitable_Location"] = Suitable_Location.value;
+        product_create["Container_Type"] = Container_Type.value;
+        product_create["Height"] = Height.value;
+        product_create["Brand"] = Brand.value;
+        product_create["Planting_Season"] = Planting_Season.value;
+        product_create["table_Plantname"] = table_Plantname.value;
+        product_create["Hybrid"] = Hybrid.value;
+        product_create["status"] = true;
+
+
+
+
+        product.push (product_create);
+
+        console.log(product_create);
+
+        localStorage.setItem("create_plant", JSON.stringify(product));
+
+        alert("done");
+
+      });
+
+      function delete_product() {
+        let user_pdt = JSON.parse(localStorage.getItem("create_plant"));
+        for (let i = 0; i < user_pdt.length; i++) {
+          if (document.getElementById("name").value == user_pdt[i]["name"]) {
+            user_pdt.splice(i, 1);
+            localStorage.setItem("create_plant", JSON.stringify(user_pdt));
+          }
+        }
+      }
+
+      // function update_product() {
+      //     product_update = {}
+      //     let product = JSON.parse(localStorage.getItem('create_plant')) ?? []
+
+      //     const image = document.getElementById("image").value
+      //     const price = document.getElementById("price").value
+      //     const name = document.getElementById("name").value
+      //     const ratings = document.getElementById("ratings").value
+      //     product_create["image"] = image;
+      //     product_create["price"] = price;
+      //     product_create["name"] = name;
+      //     product_create["ratings"] = ratings;
+      //     product.push (product_create);
+
+      // }
+    </script>
+  </body>
 </html>
-
-
-
-
-
-

@@ -63,8 +63,8 @@
         <h2>Add Bio</h2>
         <textarea placeholder="Add Bio"></textarea>
         <button id="edit" >Edit</button>
-        <button id="save" onclick="update()">update</button>
-        <button id="delete" onclick="del()">Delete</button>
+        <button id="save">update</button>
+        <button id="delete">Delete</button>
     </div>
    <div><img src="../assests/images/img gif.gif" alt="plants"></div>
 </div>
@@ -123,7 +123,9 @@ let res;
     document.getElementById("number").value = res["number"]; 
     document.getElementById("address").value = res["address"]; 
     document.getElementById("gender").value = res["gender"];
-    displayName.innerText = res["fname"] + " "+res["lastname"] 
+
+    displayName.innerText=res["fname"] +" " +res["lastname"];
+    // displayName.innerText = res["fname"] + " "+res["lastname"] 
     
     //
 
@@ -152,6 +154,18 @@ let res;
         
 
         localStorage.setItem("arr",JSON.stringify(username))
+        if(res["number"]){
+            console.log(res)
+            document.getElementById("number").value=res["number"]
+
+        }
+        
+        document.getElementById("fname").setAttribute("disabled","")
+        document.getElementById("lname").setAttribute("disabled","")
+        document.getElementById("email").setAttribute("disabled","")
+        document.getElementById("number").setAttribute("disabled","")
+        document.getElementById("address").setAttribute("disabled","")
+        document.getElementById("gender").setAttribute("disabled","")
 
     })
 
