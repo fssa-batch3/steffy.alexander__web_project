@@ -264,25 +264,37 @@
     }
     ]
 
+
     let url = window.location.search;  //?name=venmus flytrap (key, value)
-    console.log(url)
+    // console.log(url)
     let urls = new URLSearchParams(url)
-    console.log(urls)//"name":"venus flytrap"
+    // console.log(urls)//"name":"venus flytrap"
     let name = urls.get("name")
-    console.log(name);
+    // console.log(name);
 
   
     const pr_arr = JSON.parse(localStorage.getItem("create_plant"))
+
    
    pr_arr.find(function (obj){
 
-    if(obj["Plant_Name"] == name){
+    if(obj["name"] == name){
 
       list_products(obj);
     }
 
    })
+   const seed = JSON.parse(localStorage.getItem("seed_details"))
 
+  seed.find(function (obj){
+   if(obj["name"] == name){
+
+    list_products(obj);
+}
+
+})
+
+   
     //console.log(pr_arr);
 
     function list_products(search) {
@@ -395,7 +407,7 @@
             <tr>
               <td id="general">General</td>
 
-              <td>Name</td>
+              <td>${search["name"]}</td>
 
             </tr>
 
@@ -465,6 +477,8 @@
         </table>
       </div>
     </div>`
+
+
     }
 
 

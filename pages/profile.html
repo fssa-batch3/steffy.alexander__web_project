@@ -99,15 +99,15 @@
 
     let username = JSON.parse(localStorage.getItem("arr")); //array of objects
 
-
-    let profile_data = JSON.parse(localStorage.getItem("profile"));
+   
+    let profile_data = (localStorage.getItem("profile"));
      //object --> to know who the user is 
      
 let res;
 
 
     username.find(e=>{
-        if(e["email"]==profile_data["email"]){
+        if(e["email"]==profile_data){
             return res=e; //arr[0]
 
         }
@@ -120,9 +120,12 @@ let res;
     document.getElementById("fname").value = res["fname"];
     document.getElementById("lname").value = res["lastname"];
     document.getElementById("email").value = res["email"]; 
-    document.getElementById("number").value = res["number"]; 
-    document.getElementById("address").value = res["address"]; 
-    document.getElementById("gender").value = res["gender"];
+    // document.getElementById("number").value = res["number"]; 
+    // document.getElementById("address").value = res["address"]; 
+    // document.getElementById("gender").value = res["gender"];
+     document.getElementById("number").value = ""; 
+    document.getElementById("address").value = ""; 
+    document.getElementById("gender").value = "";
 
     displayName.innerText=res["fname"] +" " +res["lastname"];
     // displayName.innerText = res["fname"] + " "+res["lastname"] 
@@ -171,21 +174,22 @@ let res;
 
     document.getElementById("delete").addEventListener("click",e=>{
         e.preventDefault();
-        console.log(res) //current object
+        // console.log(res) //current object
         // res["fname"]=""
         // console.log(res)
-        let num=username.indexOf(res) //1
+        // let num=username.indexOf(res) //1
 
         // delete username[num] //username[1]
-        username.splice(num,1)//splice(index,1,replacement)
-        console.log(username)
-        localStorage.setItem("arr",JSON.stringify(username))
+        // username.splice(num,1)//splice(index,1,replacement)
+        // console.log(username)
+        // localStorage.setItem("arr",JSON.stringify(username))
+       localStorage.removeItem("profile")
 
-
+     
     })
 
-
-    console.log(username);
+    
+  
 
     // for (let i = 0; i < username.length; i++) { 
     //     document.getElementById("fname").value = username[i]["fname"];
