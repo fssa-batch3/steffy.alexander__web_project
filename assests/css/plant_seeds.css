@@ -72,6 +72,9 @@ header a {
     width: auto;
 
 }
+.right a{
+    text-decoration: none;
+}
 
 .right::-webkit-scrollbar ,.right2::-webkit-scrollbar{
    display: none;

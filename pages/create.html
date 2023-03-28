@@ -19,10 +19,10 @@
         <label for="image_1"> image_1:<input type="text" id="image_1" /></label>
         <label for="image_2"> image_2:<input type="text" id="image_2" /></label>
         <label for="image_3"> image_3:<input type="text" id="image_3" /></label>
-        <br>
+        <br />
 
         <p>About:</p>
-        <textarea id="about"></textarea><br>
+        <textarea id="about"></textarea><br />
 
         <!-- <label for="Plant_Name"
           >Plant_Name: <input type="text" id="Plant_Name"
@@ -31,8 +31,8 @@
           Type: <input type="text" id="Type_of_plant"
         /></label>
         <label for=" Suitable_Location">
-          Suitable_Location:<input type="text" id="Suitable_Location"
-        /></label><br><br>
+          Suitable_Location:<input type="text" id="Suitable_Location" /></label
+        ><br /><br />
         <label for=" Container_Type"
           >Container_Type:<input type="text" id="Container_Type"
         /></label>
@@ -40,7 +40,8 @@
           >Container Material:<input type="text" id="Container_Material"
         /></label>
         <label for="Height"> Height: <input type="text" id="Height" /></label>
-        <label for="Brand"> Brand: <input type="text" id="Brand" /></label><br><br>
+        <label for="Brand"> Brand: <input type="text" id="Brand" /></label
+        ><br /><br />
         <label for=" Planting_Season">
           Planting Season: <input type="text" id="Planting_Season"
         /></label>
@@ -49,19 +50,16 @@
           table_Plantname: <input type="text" id="table_Plantname"
         /></label> -->
         <label for="Hybrid"> Hybrid: <input type="text" id="Hybrid" /></label>
-        <br><br>
+        <br /><br />
 
         <label for="plant_category">
-         
-          <input type="radio" id="plant_category" name="category">
+          <input type="radio" id="plant_category" name="category" />
           Plant
         </label>
         <label for="seed_category">
-
-          <input type="radio" name="category" id="seed_category">
-          Seed
-        </label><br><br>
-     
+          <input type="radio" name="category" id="seed_category" />
+          Seed </label
+        ><br /><br />
 
         <button id="create">Create</button>
         <button onclick="delete_product()">Delete</button>
@@ -73,11 +71,10 @@
       let plant_product = JSON.parse(localStorage.getItem("create_plant"))
         ? JSON.parse(localStorage.getItem("create_plant"))
         : [];
-      let seed_details =JSON.parse(localStorage.getItem("seed_details"))
+      let seed_details = JSON.parse(localStorage.getItem("seed_details"))
         ? JSON.parse(localStorage.getItem("seed_details"))
         : [];
       document.getElementById("create").addEventListener("click", (e) => {
-
         e.preventDefault();
 
         const image = document.getElementById("image");
@@ -88,7 +85,7 @@
         const image_2 = document.getElementById("image_2");
         const image_3 = document.getElementById("image_3");
         const about = document.getElementById("about");
-      
+
         const Type_of_plant = document.getElementById("Type_of_plant");
         const Suitable_Location = document.getElementById("Suitable_Location");
         const Container_Type = document.getElementById("Container_Type");
@@ -98,62 +95,70 @@
         const Brand = document.getElementById("Brand");
         const Planting_Season = document.getElementById("Planting_Season");
         // const table_Plantname = document.getElementById("table_Plantname");
-        const Hybrid = document.getElementById("Hybrid")
-        const plant_category= document.getElementById("plant_category")
+        const Hybrid = document.getElementById("Hybrid");
+        const plant_category = document.getElementById("plant_category");
         const seed_category = document.getElementById("seed_category");
-       let category;
+        let category;
         if (plant_category.checked) {
-          category= "Plant"
-        }
-        else{
-          category= "Seed"
+          category = "Plant";
+        } else {
+          category = "Seed";
         }
 
-        let product_create ={
-         
-          "image":image.value,
-          "price":price.value,
-          "name":name.value,
-          "ratings":ratings.value,
-          "image_1":image_1.value,
-          "image_2":image_2.value,
-          "image_3":image_3.value,
-          "about":about.value,
+        let product_create = {
+          image: image.value,
+          price: price.value,
+          name: name.value,
+          ratings: ratings.value,
+          image_1: image_1.value,
+          image_2: image_2.value,
+          image_3: image_3.value,
+          about: about.value,
           // "Plant_Name":Plant_Name.value,
-          "Type_of_plant":Type_of_plant.value,
-          "Suitable_Location":Suitable_Location.value,
-          "Container_Type": Container_Type.value,
-          "Height":Height.value,
-          "Brand":Brand.value,
-          "Planting_Season":Planting_Season.value,
-          "Hybrid":Hybrid.value,
+          Type_of_plant: Type_of_plant.value,
+          Suitable_Location: Suitable_Location.value,
+          Container_Type: Container_Type.value,
+          Height: Height.value,
+          Brand: Brand.value,
+          Planting_Season: Planting_Season.value,
+          Hybrid: Hybrid.value,
           // "table_Plantname":table_Plantname.value,
-          "Category":category
-
-        }
+          Category: category,
+        };
         // product_create["status"] = true;
 
-
-        if(plant_category.checked){
+        if (plant_category.checked) {
           plant_product.push(product_create);
           localStorage.setItem("create_plant", JSON.stringify(plant_product));
-        }
-        else{
+        } else {
           seed_details.push(product_create);
           localStorage.setItem("seed_details", JSON.stringify(seed_details));
- 
         }
-
 
         alert("done");
       });
 
       function delete_product() {
-        let user_pdt = JSON.parse(localStorage.getItem("create_plant"));
-        for (let i = 0; i < user_pdt.length; i++) {
-          if (document.getElementById("name").value == user_pdt[i]["name"]) {
-            user_pdt.splice(i, 1);
-            localStorage.setItem("create_plant", JSON.stringify(user_pdt));
+        // e.preventDefault()
+        if (plant_category.checked) {
+          let cr_plant = JSON.parse(localStorage.getItem("create_plant"));
+          for (let i = 0; i < cr_plant.length; i++) {
+            if (document.getElementById("name").value == cr_plant[i]["name"]) {
+              cr_plant.splice(i, 1);
+              localStorage.setItem("create_plant", JSON.stringify(cr_plant));
+            }
+          }
+        } else {
+          let seed_details = JSON.parse(localStorage.getItem("seed_details"));
+
+          for (let j = 0; j < seed_details.length; j++) {
+            if (
+              document.getElementById("name").value == seed_details[j]["name"]
+            ) {
+              seed_details.splice(j, 1);
+              console.log("fdvsv");
+              localStorage.setItem("seed_details", JSON.stringify(seed_details));
+            }
           }
         }
       }

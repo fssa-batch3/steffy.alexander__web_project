@@ -366,10 +366,11 @@
 
 let seed_details = JSON.parse(localStorage.getItem('seed_details'))
     
-        for(let j=0; j<=9; j++){
+        for(let j=0; j<seed_details.length; j++){
+console.log(seed_details[0]["name"]);
     
             let  div_1=document.createElement("a")
-            div_1.setAttribute("href","../pages/details.html?name="+ seed_details[j].name)
+            div_1.setAttribute("href","../pages/details.html?name="+ seed_details[j]["name"])
         div_1.setAttribute("class","box1")
         document.querySelector(".right").prepend(div_1)
         
@@ -414,7 +415,7 @@ let seed_details = JSON.parse(localStorage.getItem('seed_details'))
     
 
                    
-        for(let k=10; k<=19; k++){
+        for(let k=10; k<seed_details.length; k++){
     
             let  div_1=document.createElement("div")
 div_1.setAttribute("class","box2")
@@ -426,7 +427,7 @@ div_2.setAttribute("class","imgtrend1")
 document.querySelector(".box2").append(div_2)
 
  let img=document.createElement("img")
-img.setAttribute("src", seed_details[k]["image"]["source"])
+img.setAttribute("src", seed_details[k]["image"])
 img.setAttribute("alt","rose")
 document.querySelector(".imgtrend1").append(img)
 
