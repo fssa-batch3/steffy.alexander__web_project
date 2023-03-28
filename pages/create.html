@@ -11,66 +11,83 @@
   <body>
     <div class="container">
       <form id="form">
-        <label for="img">Image url:<input type="url" id="image" /></label>
-        <label for="Tittle"> Price:<input type="text" id="price" /></label>
-        <label for="name"> Name:<input type="text" id="name" /></label>
-        <label for="rate"> Rating:<input type="text" id="ratings" /></label
-        ><br /><br />
-        <label for="image_1"> image_1:<input type="text" id="image_1" /></label>
-        <label for="image_2"> image_2:<input type="text" id="image_2" /></label>
-        <label for="image_3"> image_3:<input type="text" id="image_3" /></label>
-        <br />
+        
+          <label for="img">Image url:<input type="url" id="image" /></label>
+          <label for="Tittle"> Price:<input type="text" id="price" /></label>
+          <label for="name"> Name:<input type="text" id="name" /></label>
+          <label for="rate"> Rating:<input type="text" id="ratings" /></label
+          ><br /><br />
 
-        <p>About:</p>
-        <textarea id="about"></textarea><br />
+          <label for="image_1">
+            image_1:<input type="text" id="image_1"
+          /></label>
+          <label for="image_2">
+            image_2:<input type="text" id="image_2"
+          /></label>
+          <label for="image_3">
+            image_3:<input type="text" id="image_3"
+          /></label>
+          <br />
 
-        <!-- <label for="Plant_Name"
+          <p>About:</p>
+          <textarea id="about"></textarea><br />
+
+          <!-- <label for="Plant_Name"
           >Plant_Name: <input type="text" id="Plant_Name"
         /></label> -->
-        <label for=" Type_of_plant">
-          Type: <input type="text" id="Type_of_plant"
-        /></label>
-        <label for=" Suitable_Location">
-          Suitable_Location:<input type="text" id="Suitable_Location" /></label
-        ><br /><br />
-        <label for=" Container_Type"
-          >Container_Type:<input type="text" id="Container_Type"
-        /></label>
-        <label for=" Container_Material"
-          >Container Material:<input type="text" id="Container_Material"
-        /></label>
-        <label for="Height"> Height: <input type="text" id="Height" /></label>
-        <label for="Brand"> Brand: <input type="text" id="Brand" /></label
-        ><br /><br />
-        <label for=" Planting_Season">
-          Planting Season: <input type="text" id="Planting_Season"
-        /></label>
+          <label for=" Type_of_plant">
+            Type: <input type="text" id="Type_of_plant"
+          /></label>
+          <label for=" Suitable_Location">
+            Suitable_Location:<input
+              type="text"
+              id="Suitable_Location" /></label
+          ><br /><br />
+          <label for=" Container_Type"
+            >Container_Type:<input type="text" id="Container_Type"
+          /></label>
+          <label for=" Container_Material"
+            >Container Material:<input type="text" id="Container_Material"
+          /></label>
+          <label for="Height"> Height: <input type="text" id="Height" /></label>
+          <label for="Brand"> Brand: <input type="text" id="Brand" /></label
+          ><br /><br />
+          <label for=" Planting_Season">
+            Planting Season: <input type="text" id="Planting_Season"
+          /></label>
 
-        <!-- <label for=" table_Plantname">
+          <!-- <label for=" table_Plantname">
           table_Plantname: <input type="text" id="table_Plantname"
         /></label> -->
-        <label for="Hybrid"> Hybrid: <input type="text" id="Hybrid" /></label>
-        <br /><br />
+          <label for="Hybrid"> Hybrid: <input type="text" id="Hybrid" /></label>
+          <br /><br />
 
-        <label for="plant_category">
-          <input type="radio" id="plant_category" name="category" />
-          Plant
-        </label>
-        <label for="seed_category">
-          <input type="radio" name="category" id="seed_category" />
-          Seed </label
-        ><br /><br />
+          <label for="plant_category">
+            <input type="radio" id="plant_category" name="category" />
+            Plant
+          </label>
+          <label for="seed_category">
+            <input type="radio" name="category" id="seed_category" />
+            Seed </label
+          ><br /><br />
 
-        <button id="create">Create</button>
-        <button onclick="delete_product()">Delete</button>
+          <button id="create">Create</button>
+     
+       
+        
+
+          <button onclick="delete_product()">Delete</button>
+  
+
         <button onclick="update_product()">Update</button>
       </form>
-    </div>
+ 
 
     <script>
       let plant_product = JSON.parse(localStorage.getItem("create_plant"))
         ? JSON.parse(localStorage.getItem("create_plant"))
         : [];
+        
       let seed_details = JSON.parse(localStorage.getItem("seed_details"))
         ? JSON.parse(localStorage.getItem("seed_details"))
         : [];
@@ -157,7 +174,10 @@
             ) {
               seed_details.splice(j, 1);
               console.log("fdvsv");
-              localStorage.setItem("seed_details", JSON.stringify(seed_details));
+              localStorage.setItem(
+                "seed_details",
+                JSON.stringify(seed_details)
+              );
             }
           }
         }

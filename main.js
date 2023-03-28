@@ -101,6 +101,7 @@ if (localStorage.getItem("create_plant")) {
         Hybrid: "No",
         Category: "Plant",
       },
+      a,
     ])
   );
 }
