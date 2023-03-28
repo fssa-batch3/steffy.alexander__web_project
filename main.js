@@ -111,7 +111,7 @@ if (localStorage.getItem("create_plant")) {
 if (localStorage.getItem("seed_details")) {
 } else {
   localStorage.setItem(
-    "create_plant",
+    "seed_details",
     JSON.stringify([
       {
         image: "",
