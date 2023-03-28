@@ -1,7 +1,6 @@
 if (localStorage.getItem("create_plant")) {
-//   return;
-} 
-else {
+  //   return;
+} else {
   localStorage.setItem(
     "create_plant",
     JSON.stringify([
@@ -104,9 +103,126 @@ else {
         Planting_Season: "July to September.",
         table_Plantname: "Miniorange_plant",
         Hybrid: "Kamkot lemon",
-      }
+      },
     ])
   );
-
 }
 
+if (localStorage.getItem("seed_details")) {
+} else {
+  localStorage.setItem(
+    "create_plant",
+    JSON.stringify([
+      {
+        image: "",
+        price: "",
+        name: "Mexican_marigold",
+        ratings: "",
+        image_1: "",
+        image_2: "",
+        image_3: "",
+        about: "",
+        Plant_Name: "Pinkrose_Plant",
+        Type_of_plant: "",
+        Suitable_Location: "",
+        Container_Type: "",
+        Height: "",
+        Brand: "",
+        Planting_Season: "",
+        Hybrid: "",
+        table_Plantname: "",
+        Category: "Seed",
+      },
+      {
+        image: "http://127.0.0.1:5500/pages/create.html?",
+        price: "3456",
+        name: "tomato_seeds",
+        ratings: "hj",
+        image_1: "https://iili.io/HwazC3Q.jpg",
+        image_2: "https://iili.io/HwaISJp.jpg",
+        image_3: "https://iili.io/HXOUs7n.jpg",
+        about: "",
+        Type_of_plant: "",
+        Suitable_Location: "",
+        Container_Type: "",
+        Height: "",
+        Brand: "",
+        Planting_Season: "",
+        Hybrid: "",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HXOUs7n.jpg",
+        price: "123",
+        name: "Black Tomato seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HNOqRgn.jpg",
+        image_2: "https://iili.io/HwaISJp.jpg",
+        image_3: "https://iili.io/HXOUs7n.jpg",
+        about: "it is seed",
+        Type_of_plant: "seeds",
+        Suitable_Location: " Outdoor",
+        Container_Type: "Pot",
+        Height: "150 mm",
+        Brand: " E Garden",
+        Planting_Season: "Autumn",
+        Hybrid: "No",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HXOUs7n.jpg",
+        price: "175",
+        name: "Black Tomato seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HXOUs7n.jpg",
+        image_2: "https://iili.io/HXOUs7n.jpg",
+        image_3: "https://iili.io/HXOUs7n.jpg",
+        about: "jhgveycA",
+        Type_of_plant: "SEED",
+        Suitable_Location: " Outdoor",
+        Container_Type: "Pot",
+        Height: "100MM",
+        Brand: " E Garden",
+        Planting_Season: "Autumn",
+        Hybrid: "jk",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HXOUs7n.jpg",
+        price: "175",
+        name: "Black Tomato seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HXOUs7n.jpg",
+        image_2: "https://iili.io/HXOUs7n.jpg",
+        image_3: "https://iili.io/HXOUs7n.jpg",
+        about: "jhgveycA",
+        Type_of_plant: "SEED",
+        Suitable_Location: " Outdoor",
+        Container_Type: "Pot",
+        Height: "100MM",
+        Brand: " E Garden",
+        Planting_Season: "Autumn",
+        Hybrid: "jk",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HXOUs7n.jpg",
+        price: "175",
+        name: "Black Tomato seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HXOUs7n.jpg",
+        image_2: "https://iili.io/HXOUs7n.jpg",
+        image_3: "https://iili.io/HXOUs7n.jpg",
+        about: "jhgveycA",
+        Type_of_plant: "SEED",
+        Suitable_Location: " Outdoor",
+        Container_Type: "Pot",
+        Height: "100MM",
+        Brand: " E Garden",
+        Planting_Season: "Autumn",
+        Hybrid: "jk",
+        Category: "Seed",
+      },
+    ])
+  );
+}
