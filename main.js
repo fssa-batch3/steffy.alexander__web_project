@@ -101,7 +101,6 @@ if (localStorage.getItem("create_plant")) {
         Hybrid: "No",
         Category: "Plant",
       },
-      a,
     ])
   );
 }
@@ -169,7 +168,26 @@ if (localStorage.getItem("seed_details")) {
           Hybrid: "No",
           Category: "Seed",
         },
-      g
+        {
+          image: "https://iili.io/HNLUJDB.webp",
+          price: "85",
+          name: "Cucamelon_seeds",
+          ratings: "5",
+          image_1: "https://iili.io/HNLUFiF.webp",
+          image_2: "https://iili.io/HNLUTxI.jpg",
+          image_3: "https://iili.io/HNLUcJf.jpg",
+          about:
+            "Cucamelon seeds produce vines that could be mistaken for regular cucumber plants.",
+          Type_of_plant: "Vegetable",
+          Suitable_Location: " Indoor, Outdoor",
+          Container_Type: "garden beds",
+          Height: "1 ft. tall, up to 10 ft. wide",
+          Brand: "cucumber",
+          Planting_Season: "April and May",
+          Hybrid: "cucumber",
+          Category: "Seed",
+        },
+    
     ])
   );
 }
