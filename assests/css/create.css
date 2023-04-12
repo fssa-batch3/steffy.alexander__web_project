@@ -13,3 +13,12 @@
   background-color: #d9ecce;
   margin: 150px auto;
 }
+.view{
+  display: block;
+}
+.not_view{
+  display: none;
+}
+.header{
+display:flex;
+}

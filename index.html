@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assests/css/style.css" />
 </head>
 
@@ -46,14 +47,83 @@
   </div>
   <!-- content1 ends -->
 
-  <div class="main2top">
-    <h1>Deals of the week</h1>
+  <div class="container_1">
+ <h1>Why we should be greening our homes with plants </h1>
+ <h3>Wellness can be fostered through the living decor plants provide - they absorb harmful chemicals and regulate humidity - <br>and they're an inexpensive way to add instant colour and glamour to home interiors</h3>
+ <div class="content_2_images">
+  <div class="imagecontent_1">
+    <img id="img_1" src="assests/images/design.avif" alt="plant">
+    <div class="designbox1"><p id="textinside">Plants for home designing</p><button>Explore more</button></div>
+  </div>
+
+  <div class="imagecontent_2">
+
+    <img id="img_2" src="assests/images/design3.jpg" alt="plant">
+    <div class="designbox2"><p id="textinside">Plants for healthy </p><button>Explore more</button></div>
+
+    </div>
+
+  <div class="imagecontent_3">
+
+    <img id="img_3" src="assests/images/pot design 2.jpg" alt="plant">
+    <div class="designbox3"><p id="textinside">Plants for interiors</p><button>Explore more</button></div>
+</div>
+  </div>
+     </div>
+
+
+     <div class="container_2">
+      <img id="watering" src="assests/images/seedling.webp" alt="gif">
+      <div class="plantquote">
+      <h2 class="fancy_title">Plants Make A Positive Impact On Your Environment </h2>
+      <h3 class="para_plants">Grow Your Own Favourite Plants Life</h3>
+      <p id="ad_quote">By buying rare type of plants and seeds here at affordable cost!</p>
+      <button id="home_shopnow">Shop Now</button>
+ 
+    </div>
+     </div>
+     <div class="Customer">
+      <h3 id="Customer_say">What Our <span id="cus_design">Customer</span> Say's?</h3>
+    </div>
+
+    
+     <div class="container_3">
+     
+      <div class="review_home">
+       
+     
+
+        <i  class="fa-sharp fa-solid fa-star"></i>
+        <i  class="fa-sharp fa-solid fa-star"></i>
+        <i  class="fa-sharp fa-solid fa-star"></i>
+        <i  class="fa-sharp fa-solid fa-star"></i>
+        <i  class="fa-sharp fa-solid fa-star"></i>
+      
+
+
+        <p id="about_review">10/10 marks for packaging.....plants were small but healthy...overall
+        good option to. Choose. I just hope the plants survive and flourish.</p>
+
+        <label for="text"><input type="text" id="text_review"  placeholder="Write a Review!"></label>
+        <button id="View_all">View all</button>
+      
+      </div>
+        <img id="reviewgirlimg" src="assests/images/reviewgirl.png">
+    <div class="quotation_symbol">
+      <img id="quotation" src="assests/images/right-quotation.png"></div>
+        
+    </div>
+  
+
+	
+
+    <!-- <h1>Deals of the week</h1>
     <div class="main2">
       <div class="left"></div>
 
       <div class="right"> 
 
-        <!-- <div class="box1">
+    <div class="box1">
           <div class="imgtrend" alt="trend">
             <img src="./assests/images/pink_rose_plant.jpg" alt="rose" />
             <i id="rs" class="fa-solid fa-indian-rupee-sign">450</i>
@@ -133,12 +203,12 @@
           </div>
           <a id="add" href="#">Add To Cart</a>
         </div> -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> --> 
   </div>
 
   <!-- review starts -->
-
+<!-- 
   <div id="review">
     <div class="box1">
       <div class="imgtrend" alt="trend">
@@ -217,9 +287,9 @@
         elegant. I am in love with my new plant corner.
       </p>
     </div>
-  </div>
+  </div> -->
 
-
+  
   <!-- footer starts -->
 
 
@@ -252,9 +322,9 @@
   <script src="./main.js"></script>
 
   <script>
-    // const user_name = localStorage.getItem("email");
-    // console.log(user_name);
-    // document.getElementById("user_name").innerText= user_name
+    const user_name = localStorage.getItem("email");
+    console.log(user_name);
+    document.getElementById("user_name").innerText= user_name
 
 
 
@@ -275,53 +345,50 @@
     //       <a id="add" href="pages/plantcart.html">Add To Cart</a>
     //     </div>
 
-    for(let j=0; j<=5; j++){
+//     for(let j=0; j<=5; j++){
 
-let  div_1=document.createElement("div")
-div_1.setAttribute("class","box1")
-document.querySelector(".right").prepend(div_1)
-
-
-let  div_2=document.createElement("div")
-div_2.setAttribute("class","imgtrend")
-document.querySelector(".box1").append(div_2)
-
- let img=document.createElement("img")
-img.setAttribute("src","./assests/images/pink_rose_plant.jpg")
-img.setAttribute("alt","rose")
-document.querySelector(".imgtrend").append(img)
-
-let  i_1=document.createElement("i")
-i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
-i_1.setAttribute("id","rs")
-document.querySelector(".imgtrend").append(i_1)
-
-let  h3=document.createElement("h3")
-h3.setAttribute("class","pinkrose")
-h3.innerText="Pink Rose Plant"
-document.querySelector(".imgtrend").append(h3)
-
-for(i=0; i<=4; i++){
-let  i_2=document.createElement("i")
-i_2.setAttribute("class","fa-sharp fa-solid fa-star")
-i_2.setAttribute("id","rs")
-document.querySelector(".imgtrend").append(i_2)
-}
-
-let a_1=document.createElement("anchor")
-a_1.setAttribute("href","pages/plantcart.html")
-a_1.setAttribute("id","add")
-a_1.innerText="Add to cart"
-document.querySelector(".box1").append(a_1)
+// let  div_1=document.createElement("div")
+// div_1.setAttribute("class","box1")
+// document.querySelector(".right").prepend(div_1)
 
 
-    }
+// let  div_2=document.createElement("div")
+// div_2.setAttribute("class","imgtrend")
+// document.querySelector(".box1").append(div_2)
+
+//  let img=document.createElement("img")
+// img.setAttribute("src","./assests/images/pink_rose_plant.jpg")
+// img.setAttribute("alt","rose")
+// document.querySelector(".imgtrend").append(img)
+
+// let  i_1=document.createElement("i")
+// i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
+// i_1.setAttribute("id","rs")
+// document.querySelector(".imgtrend").append(i_1)
+
+// let  h3=document.createElement("h3")
+// h3.setAttribute("class","pinkrose")
+// h3.innerText="Pink Rose Plant"
+// document.querySelector(".imgtrend").append(h3)
+
+// for(i=0; i<=4; i++){
+// let  i_2=document.createElement("i")
+// i_2.setAttribute("class","fa-sharp fa-solid fa-star")
+// i_2.setAttribute("id","rs")
+// document.querySelector(".imgtrend").append(i_2)
+// }
+
+// let a_1=document.createElement("anchor")
+// a_1.setAttribute("href","pages/plantcart.html")
+// a_1.setAttribute("id","add")
+// a_1.innerText="Add to cart"
+// document.querySelector(".box1").append(a_1)
 
 
+//     }
 
 
 
- 
 
   </script>
 </body>

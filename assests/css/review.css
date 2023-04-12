@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #f1f1f1;
+
+}
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #f2f4f1;
+  box-shadow: 0px 5px 20px black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 30px;
+  width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  color: #171a0f;
+  display: flex;
+  align-items: center;
+  font-family: "Carter One", cursive;
+  font-size: 80px;
+}
+
+#shopping {
+  color: blue;
+  margin-top: 100px;
+}
+
+.home {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a:nth-child(4) img {
+  margin-right: 13px;
+}
+
+#log {
+  width: 25px;
+  height: 25px;
+}
+
+.logo img {
+  width: 110px;
+  height: 65px;
+  margin-left: 25px;
+}
+
+.nav a {
+  margin: 10px;
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 18px;
+  color: #30650f;
+}
+
+#cart {
+  width: 80px;
+  height: 60px;
+}
+
+/* header ends */
+
+.container{
+/* border:1px solid black; */
+width: 350px;
+height:400px;
+margin: 40px;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+border-radius: 20px;
+background-color: white;
+
+}
+.left_content{
+  margin-left:120px;
+}
+.heading{
+display: flex;
+
+}
+#left_quote{
+width: 100px;
+height: 100px;
+margin-left: 12px;
+margin-top:30px;
+
+
+
+}
+#name{
+    margin-left: 100px;
+    
+}
+
+i{
+  position: relative;
+  left: 82px;
+  color: gold;
+margin-top:30px;
+
+
+}
+#review_content{
+  margin-top: 60px;
+  font-size: 18px;
+  margin:50px 40px 30px 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#review_bc{
+  width: 330px;
+  height: 350px;
+  padding: 10px;
+  margin-top: 28px;
+  margin-left:77px;
+}
+.write_box{
+  margin-top:70px;
+  width: 1000px;
+  height:340px;
+  /* border: 1px solid black; */
+  margin:50px auto;
+  display: flex;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+
+}
+
+input#name{
+margin-left: 18px;
+
+}
+#rating{
+margin-left: 33px;
+
+}
+input[type=file] {
+  border: 0px;
+  
+  
+}
+ label input {
+  width: 200px;
+  height: 30px;
+  margin-top: 30px;
+  
+}
+label{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 540;
+  font-size: 18px;
+  
+}
+
+textarea{
+  /* padding: 50px; */
+  width:480px;
+  height: 90px;
+  padding: 13px;
+  margin-top: 23px;
+}
+h3{
+  font-size: 18px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 25px;
+
+}
+#content{
+  height: auto;
+}

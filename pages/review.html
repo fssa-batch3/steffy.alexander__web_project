@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assests/css/review.css">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="/assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
+    </div>
+
+    <div class="nav">
+    
+      <a href="#">Home</a>
+      <a href="/pages/plant.html">Plants</a>
+      <a href="/pages/seeds.html">Seeds</a>
+      <a href="/pages/blog.html">Blog</a>
+      <a href="/pages/login.html"><img id="log" src="/assests/images/Untitled_design-removebg-preview.png" alt=""
+          LOGIN /><span id="user_name">Login/signup</span></a>
+      <a href="/pages/cart.html"><img id="cart" src="/assests/images/cart logo.png" alt="cart" /></a>
+    </div>
+  </header>
+
+
+
+  <!-- header 
+    ends -->
+
+
+<div class="write_box">
+ <form id="form">
+<div class="left_content">
+<label for="name">Full name<input type="text" id="name"></label><br>
+<label for="rating">Ratings<input type="text" id="rating"></label>
+<div id="Write_a_review">
+<h3>Write a Review:</h3>
+<textarea placeholder="Write a review" id="review"></textarea><br />
+<button  type="submit">Submit</button>
+</form>
+</div>
+
+</div>
+
+<div class="review_img">
+  <img id="review_bc" src="/assests/images/review_background.png">
+  </div>
+
+</div>
+
+<div class="div" id="content">
+<div class="container">
+  <div class="heading">
+
+    <img id="left_quote" src="/assests/images/left-quote (1).png">
+    <div class="right_content">
+    <h1 id="name">Name</h1>
+    <i  class="fa-sharp fa-solid fa-star"></i>
+    <i  class="fa-sharp fa-solid fa-star"></i>
+    <i  class="fa-sharp fa-solid fa-star"></i>
+    <i  class="fa-sharp fa-solid fa-star"></i>
+    <i  class="fa-sharp fa-solid fa-star"></i>
+  </div>
+ 
+ 
+  </div>
+  <p id="review_content">
+    Plants are very healthy and it came with really sturdy packaging with
+    instructions pamphlet for each plant. Pots also looks very nice and
+    elegant. I am in love with my new plant corner.
+  </p>
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const rating = document.getElementById("rating").value;
+  const review = document.getElementById("review").value;
+
+  if (name !== "" && rating !== "" && review !== "") {
+    let reviews = JSON.parse(localStorage.getItem("review_details")) || [];
+    let details = {
+      "name": name,
+      "rating": rating,
+      "review": review
+    };
+    reviews.push(details);
+    localStorage.setItem("review_details", JSON.stringify(reviews));
+  }
+});
+
+let username = JSON.parse(localStorage.getItem("arr")); 
+let profile_data = localStorage.getItem("profile");
+let res;
+
+username.find(e => {
+  if (e.email === profile_data) {
+    res = e; //arr[0]
+    return true;
+  }
+});
+
+let reviewDetails = JSON.parse(localStorage.getItem("review_details"));
+let reviewShow = "";
+
+for (let i of reviewDetails) {
+  let nameOfUser = i.name;
+  let review = i.review;
+  let rating = i.rating;
+
+  reviewShow += `
+    <div class="container">
+      <div class="heading">
+        <img id="left_quote" src="/assets/images/left-quote (1).png">
+        <div class="right_content">
+          <h1 id="name">${nameOfUser}</h1>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          <i class="fa-sharp fa-solid fa-star"></i>
+        </div>
+      </div>
+      <p id="review_content">
+        ${review}
+      </p>
+    </div>`;
+}
+
+let div = document.getElementById("content");
+div.innerHTML = reviewShow;
+//         </script>
+//       </body>
+//     </html>
