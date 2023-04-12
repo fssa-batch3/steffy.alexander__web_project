@@ -73,7 +73,15 @@ Vee Blooms live website - https://github.com/steffydominic/Steffy-portfolio.git
 <h4>Expected Result: A plant is Created and listed successfully </h4>
 
 <h4>Update a Plant</h4>
-<p>Yet to start</p>
+<h4>Update a Seed</h4>
+<h4> Scenario 1: Successfully Updated and listed a Plant</h4>
+<p>Steps:</p>
+<ol>
+    <li>Navigate to the plant update page</li>
+    <li>Fill the plant name which you want to change</li>
+    <li>Click on the search button</li>
+    <li>And edit the details</li>
+
 
 <h4>Delete a Plant</h4>
 <p>Yet to start</p>
@@ -92,10 +100,27 @@ Vee Blooms live website - https://github.com/steffydominic/Steffy-portfolio.git
 <h4>Expected Result: A seed is Created and listed successfully </h4>
 
 <h4>Update a Seed</h4>
-<p>Yet to start</p>
+
+<h4>Update a Seed</h4>
+<h4> Scenario 1: Successfully Updated and listed a Seed</h4>
+<p>Steps:</p>
+<ol>
+    <li>Navigate to the seed  update page</li>
+    <li>Fill the seed name which you want to change</li>
+    <li>Click on the search button</li>
+    <li>And edit the details</li>
+</ol>
+<h4>Expected Result: A seed is Created and listed successfully </h4>
+
 
 <h4>Delete a Seed</h4>
 <p>Yet to start</p>
+
+
+
+<h2>Review module</h2>
+<p>Yet to start</p>
+
 
 <h2>Cart module</h2>
 <p>Yet to start</p>

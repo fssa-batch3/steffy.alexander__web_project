@@ -110,84 +110,100 @@ if (localStorage.getItem("seed_details")) {
   localStorage.setItem(
     "seed_details",
     JSON.stringify([
-      
-        {
-          image: "https://iili.io/HNgR6Ft.jpg",
-          price: "195.99",
-          name: "Blacktomato_seeds",
-          ratings: "4",
-          image_1: "https://iili.io/HNgBp7p.jpg",
-          image_2: "https://iili.io/HNgC2Qn.jpg",
-          image_3: "https://iili.io/HNgCf4f.jpg",
-          about:
-            "Green Gallery Provide Best Quality Vegetables Seeds.Tomatoes Are The Fruit Of The Tomato Plant.Tomatoes Are The State Vegetable Of New Jersey",
-          Type_of_plant: "seeds",
-          Suitable_Location: "Full sun.",
-          Container_Type: "Pot or in land",
-          Height: "6 inches",
-          Brand: "Green Gallery",
-          Planting_Season: "Spring",
-          Hybrid: "No",
-          Category: "Seed",
-        },
-        {
-          image: "https://iili.io/HNgayzb.webp",
-          price: "45.25",
-          name: "Bean_seeds",
-          ratings: "5",
-          image_1: "https://iili.io/HNglZNe.jpg",
-          image_2: "https://iili.io/HNglpix.jpg",
-          image_3: "https://iili.io/HNg0KDg.jpg",
-          about:
-            "Bean seeds are rich sources of fiber and important vitamins and minerals. They're also great sources of vegetarian protein.",
-          Type_of_plant: "seeds",
-          Suitable_Location: "soils that are well-drained and fertile",
-          Container_Type: " 8 to 10-inch containers",
-          Height: "reaching about two-feet tall",
-          Brand: "Beans",
-          Planting_Season: "March or April",
-          Hybrid: "No",
-          Category: "Seed",
-        },
-        {
-          image: "https://iili.io/HNrK3a2.webp",
-          price: "200",
-          name: "Soakchia_seeds",
-          ratings: "5",
-          image_1: "https://iili.io/HNrKkPf.webp",
-          image_2: "https://iili.io/HNrKtKx.jpg",
-          image_3: "https://iili.io/HNrfCHN.jpg",
-          about:
-            "Soakchia seeds and contain a lot of water.Eating them soaked in water may help promotes hydration, healthy digestion and lower hunger.",
-          Type_of_plant: "seeds",
-          Suitable_Location: "Full sun.",
-          Container_Type: "box or any pot.",
-          Height: "2 millimetres ",
-          Brand: "Agrofoods",
-          Planting_Season: "Grows in all seasons",
-          Hybrid: "No",
-          Category: "Seed",
-        },
-        {
-          image: "https://iili.io/HNLUJDB.webp",
-          price: "85",
-          name: "Cucamelon_seeds",
-          ratings: "5",
-          image_1: "https://iili.io/HNLUFiF.webp",
-          image_2: "https://iili.io/HNLUTxI.jpg",
-          image_3: "https://iili.io/HNLUcJf.jpg",
-          about:
-            "Cucamelon seeds produce vines that could be mistaken for regular cucumber plants.",
-          Type_of_plant: "Vegetable",
-          Suitable_Location: " Indoor, Outdoor",
-          Container_Type: "garden beds",
-          Height: "1 ft. tall, up to 10 ft. wide",
-          Brand: "cucumber",
-          Planting_Season: "April and May",
-          Hybrid: "cucumber",
-          Category: "Seed",
-        },
-    
+
+      {
+        image: "https://iili.io/HNgR6Ft.jpg",
+        price: "195.99",
+        name: "Blacktomato_seeds",
+        ratings: "4",
+        image_1: "https://iili.io/HNgBp7p.jpg",
+        image_2: "https://iili.io/HNgC2Qn.jpg",
+        image_3: "https://iili.io/HNgCf4f.jpg",
+        about:
+          "Green Gallery Provide Best Quality Vegetables Seeds.Tomatoes Are The Fruit Of The Tomato Plant.Tomatoes Are The State Vegetable Of New Jersey",
+        Type_of_plant: "seeds",
+        Suitable_Location: "Full sun.",
+        Container_Type: "Pot or in land",
+        Height: "6 inches",
+        Brand: "Green Gallery",
+        Planting_Season: "Spring",
+        Hybrid: "No",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HNgayzb.webp",
+        price: "45.25",
+        name: "Bean_seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HNglZNe.jpg",
+        image_2: "https://iili.io/HNglpix.jpg",
+        image_3: "https://iili.io/HNg0KDg.jpg",
+        about:
+          "Bean seeds are rich sources of fiber and important vitamins and minerals. They're also great sources of vegetarian protein.",
+        Type_of_plant: "seeds",
+        Suitable_Location: "soils that are well-drained and fertile",
+        Container_Type: " 8 to 10-inch containers",
+        Height: "reaching about two-feet tall",
+        Brand: "Beans",
+        Planting_Season: "March or April",
+        Hybrid: "No",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HNrK3a2.webp",
+        price: "200",
+        name: "Soakchia_seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HNrKkPf.webp",
+        image_2: "https://iili.io/HNrKtKx.jpg",
+        image_3: "https://iili.io/HNrfCHN.jpg",
+        about:
+          "Soakchia seeds and contain a lot of water.Eating them soaked in water may help promotes hydration, healthy digestion and lower hunger.",
+        Type_of_plant: "seeds",
+        Suitable_Location: "Full sun.",
+        Container_Type: "box or any pot.",
+        Height: "2 millimetres ",
+        Brand: "Agrofoods",
+        Planting_Season: "Grows in all seasons",
+        Hybrid: "No",
+        Category: "Seed",
+      },
+      {
+        image: "https://iili.io/HNLUJDB.webp",
+        price: "85",
+        name: "Cucamelon_seeds",
+        ratings: "5",
+        image_1: "https://iili.io/HNLUFiF.webp",
+        image_2: "https://iili.io/HNLUTxI.jpg",
+        image_3: "https://iili.io/HNLUcJf.jpg",
+        about:
+          "Cucamelon seeds produce vines that could be mistaken for regular cucumber plants.",
+        Type_of_plant: "Vegetable",
+        Suitable_Location: " Indoor, Outdoor",
+        Container_Type: "garden beds",
+        Height: "1 ft. tall, up to 10 ft. wide",
+        Brand: "cucumber",
+        Planting_Season: "April and May",
+        Hybrid: "cucumber",
+        Category: "Seed",
+      },
+
     ])
   );
 }
+
+
+if (localStorage.getItem("seed_details")) {
+} else {
+  localStorage.setItem(
+    "seed_details",
+    JSON.stringify(
+
+      [{ "name": "Steffy_Alexander",
+       "rating": "5",
+        "review": "Great selection of plants and shrubs very reasonable prices and helpful staff,buy my plants here every year" },
+
+         {"name": "Barath",
+          "rating": "5",
+          "review": "Great selection of perennials and other plants\nTop nursery for plant lovers, free from all the furniture clothing and other grot found in large garden centres. This is the place to go when you want to buy plants and get advice about growing them." },
+          ]));}

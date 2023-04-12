@@ -58,7 +58,7 @@
 </div>
 
 <div class="div" id="content">
-<div class="container">
+<!-- <div class="container">
   <div class="heading">
 
     <img id="left_quote" src="/assests/images/left-quote (1).png">
@@ -79,7 +79,7 @@
     elegant. I am in love with my new plant corner.
   </p>
 </div>
-
+ -->
 
 
 </div>
@@ -112,6 +112,8 @@ let profile_data = localStorage.getItem("profile");
 let res;
 
 username.find(e => {
+
+        
   if (e.email === profile_data) {
     res = e; //arr[0]
     return true;
@@ -121,6 +123,7 @@ username.find(e => {
 let reviewDetails = JSON.parse(localStorage.getItem("review_details"));
 let reviewShow = "";
 
+        
 for (let i of reviewDetails) {
   let nameOfUser = i.name;
   let review = i.review;
@@ -129,9 +132,9 @@ for (let i of reviewDetails) {
   reviewShow += `
     <div class="container">
       <div class="heading">
-        <img id="left_quote" src="/assets/images/left-quote (1).png">
+        <img id="left_quote" src="/assests/images/left-quote (1).png">
         <div class="right_content">
-          <h1 id="name">${nameOfUser}</h1>
+          <h4 id="name">${nameOfUser}</h4>
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
@@ -148,5 +151,5 @@ for (let i of reviewDetails) {
 let div = document.getElementById("content");
 div.innerHTML = reviewShow;
 //         </script>
-//       </body>
-//     </html>
+       </body>
+    </html>
