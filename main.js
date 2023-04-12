@@ -193,10 +193,10 @@ if (localStorage.getItem("seed_details")) {
 }
 
 
-if (localStorage.getItem("seed_details")) {
+if (localStorage.getItem("review_details")) {
 } else {
   localStorage.setItem(
-    "seed_details",
+    "review_details",
     JSON.stringify(
 
       [{ "name": "Steffy_Alexander",
