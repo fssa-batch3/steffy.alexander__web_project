@@ -21,7 +21,7 @@
 
     <div class="nav">
     
-      <a href="#">Home</a>
+      <a href="/index.html">Home</a>
       <a href="/pages/plant.html">Plants</a>
       <a href="/pages/seeds.html">Seeds</a>
       <a href="/pages/blog.html">Blog</a>
@@ -40,12 +40,25 @@
 <div class="write_box">
  <form id="form">
 <div class="left_content">
-<label for="name">Full name<input type="text" id="name"></label><br>
-<label for="rating">Ratings<input type="text" id="rating"></label>
+<!-- <label for="name">Full name<input type="text" id="name"></label><br> -->
+<!-- <label for="rating">Ratings<input type="text" id="rating"></label> -->
+
+
 <div id="Write_a_review">
-<h3>Write a Review:</h3>
+  
+  <h3>Rate Your Experience</h3>
+ 
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+ 
+<!-- <h3>Write a Review:</h3> -->
 <textarea placeholder="Write a review" id="review"></textarea><br />
-<button  type="submit">Submit</button>
+<button id="submit"  type="submit">Submit</button>
 </form>
 </div>
 
@@ -56,99 +69,187 @@
   </div>
 
 </div>
+<h2 id="Customer_Feedback">Customer's Feedback</h2>
 
 <div class="div" id="content">
-<!-- <div class="container">
-  <div class="heading">
-
-    <img id="left_quote" src="/assests/images/left-quote (1).png">
-    <div class="right_content">
-    <h1 id="name">Name</h1>
-    <i  class="fa-sharp fa-solid fa-star"></i>
-    <i  class="fa-sharp fa-solid fa-star"></i>
-    <i  class="fa-sharp fa-solid fa-star"></i>
-    <i  class="fa-sharp fa-solid fa-star"></i>
-    <i  class="fa-sharp fa-solid fa-star"></i>
-  </div>
  
+<div class="container">
+  <img id="review_logo" src="/assests/images/review_logo.png">
+<div class="right_content">
+      <h1 id="name"></h1>
  
   </div>
-  <p id="review_content">
-    Plants are very healthy and it came with really sturdy packaging with
-    instructions pamphlet for each plant. Pots also looks very nice and
-    elegant. I am in love with my new plant corner.
-  </p>
+  <p id="review_content"></p>
 </div>
- -->
-
-
 </div>
-
 
 
 <script>
-document.getElementById("form").addEventListener("submit", e => {
-  e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const rating = document.getElementById("rating").value;
-  const review = document.getElementById("review").value;
+// document.getElementById("form").addEventListener("submit", e => {
+//   e.preventDefault();
 
-  if (name !== "" && rating !== "" && review !== "") {
-    let reviews = JSON.parse(localStorage.getItem("review_details")) || [];
-    let details = {
-      "name": name,
-      "rating": rating,
-      "review": review
-    };
-    reviews.push(details);
-    localStorage.setItem("review_details", JSON.stringify(reviews));
-  }
+//   const name = document.getElementById("name").value;
+//   const rating = document.getElementById("rating").value;
+//   const review = document.getElementById("review").value;
+
+//   if (name !== "" && rating !== "" && review !== "") {
+//     let reviews = JSON.parse(localStorage.getItem("review_details")) || [];
+//     let details = {
+//       "name": name,
+//       "rating": rating,
+//       "review": review
+//     };
+//     reviews.push(details);
+//     localStorage.setItem("review_details", JSON.stringify(reviews));
+//   }
+// });
+
+// let username = JSON.parse(localStorage.getItem("arr")); 
+// let profile_data = localStorage.getItem("profile");
+// let res;
+
+// username.find(e => {
+
+        
+//   if (e.email === profile_data) {
+//     res = e; //arr[0]
+//     return true;
+//   }
+// });
+
+// let reviewDetails = JSON.parse(localStorage.getItem("review_details"));
+// let reviewShow = "";
+
+        
+// for (let i of reviewDetails) {
+//   let nameOfUser = i.name;
+//   let review = i.review;
+//   let rating = i.rating;
+
+//   reviewShow += `
+//     <div class="container">
+//       <div class="heading">
+//         <img id="left_quote" src="/assests/images/left-quote (1).png">
+//         <div class="right_content">
+//           <h4 id="name">${nameOfUser}</h4>
+          
+
+//           <div class="rating-box">
+//       <div class="stars">
+//         <i class="fa-solid fa-star"></i>
+//         <i class="fa-solid fa-star"></i>
+//         <i class="fa-solid fa-star"></i>
+//         <i class="fa-solid fa-star"></i>
+//         <i class="fa-solid fa-star"></i>
+//       </div>
+//     </div>
+//         </div>
+//       </div>
+//       <p id="review_content">
+//         ${review}
+//       </p>
+//     </div>`;
+// }
+
+// let div = document.getElementById("content");
+// div.innerHTML = reviewShow; 
+
+
+
+
+//   Selecting ratings with star -----------
+ 
+ const stars = document.querySelectorAll(".stars i");
+
+// Loop through the "stars" NodeList
+stars.forEach((star, index1) => {
+ 
+  star.addEventListener("click", () => {
+    // Loop through the "stars" NodeList Again
+    stars.forEach((star, index2) => {
+      // Add the "active" class to the clicked star and any stars with a lower index
+      // and remove the "active" class from any stars with a higher index
+
+      index1 >= index2 
+      ? star.classList.add("active") //true
+      : star.classList.remove("active"); //false
+    });
+  });
 });
 
+// Storing reviews in the local storage ============
+
+let submit = document.getElementById("submit")
+let star_count;
+let review;
 let username = JSON.parse(localStorage.getItem("arr")); 
-let profile_data = localStorage.getItem("profile");
-let res;
+let profile_data = (localStorage.getItem("profile"));
+let user_name;
+    username.find(e=>{
+        if(e["email"]==profile_data){
+            return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+        }
+    })
 
-username.find(e => {
-
-        
-  if (e.email === profile_data) {
-    res = e; //arr[0]
-    return true;
-  }
-});
-
-let reviewDetails = JSON.parse(localStorage.getItem("review_details"));
-let reviewShow = "";
-
-        
-for (let i of reviewDetails) {
-  let nameOfUser = i.name;
-  let review = i.review;
-  let rating = i.rating;
-
-  reviewShow += `
-    <div class="container">
-      <div class="heading">
-        <img id="left_quote" src="/assests/images/left-quote (1).png">
-        <div class="right_content">
-          <h4 id="name">${nameOfUser}</h4>
-          <i class="fa-sharp fa-solid fa-star"></i>
-          <i class="fa-sharp fa-solid fa-star"></i>
-          <i class="fa-sharp fa-solid fa-star"></i>
-          <i class="fa-sharp fa-solid fa-star"></i>
-          <i class="fa-sharp fa-solid fa-star"></i>
-        </div>
-      </div>
-      <p id="review_content">
-        ${review}
-      </p>
-    </div>`;
+submit.addEventListener("click",e=>{
+  e.preventDefault()
+  star_count=0
+star_count = document.querySelectorAll(".active").length
+console.log(document.querySelectorAll(".active").length,"hi");
+review = document.getElementById("review").value
+let reviews={
+  "star_count":star_count,
+  "review":review,
+  "username":user_name
 }
+let review_array = JSON.parse(localStorage.getItem("review_array"))??[]
+review_array.push(reviews)
+
+localStorage.setItem("review_array",JSON.stringify(review_array))
+location.reload()
+})
+
+//  Showing reviews as a separate div============
+
+const review_content= JSON.parse(localStorage.getItem("review_array"))
+console.log("f");
+let review_show = "";
+    for( let k=0;k<review_content.length;k++){
+      console.log("efnjk");
+
+    let name_reviewer=review_content[k].username;
+
+    let star_reviewer=review_content[k].star_count;
+    let star_icon="";
+    console.log(star_reviewer);
+    
+    let reviewes=review_content[k].review;
+    for(let i=0;i<star_reviewer;i++){
+      star_icon+=`<i class="fa-solid fa-star active"></i>`
+      }
+
+    review_show+=` 
+<div class="container">
+  <img id="review_logo" src="/assests/images/review_logo.png">
+<div class="right_content">
+      <h4 id="name">${name_reviewer}</h4>
+      <div class="stars">
+      ${star_icon}
+      </div>
+      <p id="review_content">${reviewes}</p>
+  </div>
+  
+</div>`
+
+
+    }
 
 let div = document.getElementById("content");
-div.innerHTML = reviewShow;
-//         </script>
+div.innerHTML = review_show; 
+
+
+
+</script>
        </body>
     </html>

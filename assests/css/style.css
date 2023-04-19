@@ -64,7 +64,11 @@ header a {
   height: 65px;
   margin-left: 25px;
 }
+#profile_logo{
+  width:40px;
+  height:40px;
 
+}
 .nav a {
   margin: 10px;
   text-decoration: none;
