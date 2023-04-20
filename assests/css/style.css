@@ -286,6 +286,7 @@ header a {
   border: 2px solid rgb(37, 111, 72);
   margin-top: 60px;
   padding: 8px;
+  margin-left: 368px;
 }
 #home_shopnow:hover{
  background-color: white;
@@ -325,7 +326,7 @@ header a {
 width: 305px;
 height: 500px;
 position: relative;
-left: 220px;
+left: 246px;
 }
 .review_home{
   /* border:2px solid black; */
@@ -365,7 +366,7 @@ input:focus{
 }
 #quotation{
  position: relative;
-  left: 895px;
+  left: 925px;
   top:190px;
  width: 100px;
  height: 100px;

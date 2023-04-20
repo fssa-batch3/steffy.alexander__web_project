@@ -73,14 +73,14 @@
 
 <div class="div" id="content">
  
-<div class="container">
+<!-- <div class="container">
   <img id="review_logo" src="/assests/images/review_logo.png">
 <div class="right_content">
       <h1 id="name"></h1>
  
   </div>
   <p id="review_content"></p>
-</div>
+</div> -->
 </div>
 
 
@@ -154,10 +154,6 @@
 
 // let div = document.getElementById("content");
 // div.innerHTML = reviewShow; 
-
-
-
-
 //   Selecting ratings with star -----------
  
  const stars = document.querySelectorAll(".stars i");
@@ -170,8 +166,7 @@ stars.forEach((star, index1) => {
     stars.forEach((star, index2) => {
       // Add the "active" class to the clicked star and any stars with a lower index
       // and remove the "active" class from any stars with a higher index
-
-      index1 >= index2 
+      index1 >= index2 //4>=0
       ? star.classList.add("active") //true
       : star.classList.remove("active"); //false
     });
@@ -195,8 +190,9 @@ let user_name;
 submit.addEventListener("click",e=>{
   e.preventDefault()
   star_count=0
-star_count = document.querySelectorAll(".active").length
-console.log(document.querySelectorAll(".active").length,"hi");
+  let star_icon=document.querySelectorAll(".active")
+star_count = star_icon.length
+// console.log(document.querySelectorAll(".active").length,"hi");
 review = document.getElementById("review").value
 let reviews={
   "star_count":star_count,
@@ -213,10 +209,9 @@ location.reload()
 //  Showing reviews as a separate div============
 
 const review_content= JSON.parse(localStorage.getItem("review_array"))
-console.log("f");
+// console.log("f");
 let review_show = "";
     for( let k=0;k<review_content.length;k++){
-      console.log("efnjk");
 
     let name_reviewer=review_content[k].username;
 
@@ -226,7 +221,7 @@ let review_show = "";
     
     let reviewes=review_content[k].review;
     for(let i=0;i<star_reviewer;i++){
-      star_icon+=`<i class="fa-solid fa-star active"></i>`
+      star_icon+=`<i class="fa-solid fa-star star_color"></i>`
       }
 
     review_show+=` 
