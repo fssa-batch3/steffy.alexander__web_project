@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <form>
+ 
         
             <div class="content">
         <div class="left">
@@ -33,6 +33,7 @@
        <a href="/index.html"><div class="thirdname"><i class="fa-solid fa-user"></i>Back to Home</div></a>
         </div>
     </div>
+    <form id="profile_form">
     <div class="right">
     <!-- <div class="righttop">
         <textarea placeholder="What's in your mind today?"></textarea><br>
@@ -42,12 +43,13 @@
         
     </div> -->
 
-
+   
 <div class="bottomcontent">
     
     <div class="bottomquote">
   <p id="para">"Happiness blooms where seeds of love and joy are planted"</p>
     </div>
+    
     <div class="inputfields">
         <label for="fname">First name<input type="text" id="fname" disabled></label><br>
         <label for="lname">last name <input type="text" id="lname" disabled></label><br>
@@ -56,6 +58,7 @@
         <label for="address">Address<input type="text" id="address" disabled></label><br>
         <label for="gender">Gender <input type="text" id="gender" disabled></label><br>
     </div>
+
 </div>
 
 
@@ -66,11 +69,12 @@
         <h2>Add Bio</h2>
         <textarea placeholder="Add Bio"></textarea>
         <button id="edit" >Edit</button>
-        <button id="save">update</button>
+        <button type="submit" id="save">update</button>
         <button id="delete">Delete</button>
     </div>
    <div><img src="../assests/images/img gif.gif" alt="plants"></div>
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -242,7 +246,8 @@ let res;
 
 
 
-    document.getElementById("save").addEventListener("click",e=>{
+    const formbtn=document.getElementById("profile_form")
+    formbtn.addEventListener("submit",e=>{
         e.preventDefault();
         let res1={};
        let users=JSON.parse(localStorage.getItem("arr"))
