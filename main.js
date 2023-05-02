@@ -298,12 +298,10 @@ let plant_data = [
   },
 ];
 
-
 if (localStorage.getItem("create_plant")) {
 } else {
-  localStorage.setItem("create_plant",JSON.stringify(plant_data))
+  localStorage.setItem("create_plant", JSON.stringify(plant_data));
 }
-
 
 if (localStorage.getItem("seed_details")) {
 } else {
