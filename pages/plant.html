@@ -23,6 +23,7 @@
         </div>
 
         <div class="nav">
+            
             <a href="../index.html">Home</a>
             <a href="./plant.html">Plants</a>
             <a href="./seeds.html">Seeds</a>
@@ -31,8 +32,20 @@
                     LOGIN>Login/signup</a>
             <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
     </header>
-
+    <div class="search_box">
+ <input type="search" id="search"  placeholder="Search">
+ 
+ <!-- <img id="search_icon" src="/assests/images/search.png" > -->
+</div>
+     
+                  
     <div class="right">
+                                
+     
+
+
+
+
         <!-- <div class="box1">
             <div class="imgtrend" alt="trend">
                 <img src="../assests/images/pink_rose_plant.jpg" alt="rose">
@@ -369,8 +382,9 @@
             let products = JSON.parse(localStorage.getItem('create_plant'))
 
             for (let product of products) {
- 
-                let div_1 = document.createElement("a")
+                if(product["status"]==true){
+
+                    let div_1 = document.createElement("a")
                 div_1.setAttribute("href","../pages/details.html?name="+ product.name)
                 div_1.setAttribute("class", "box1")
                 document.querySelector(".right").prepend(div_1)
@@ -412,10 +426,29 @@
                 a_1.innerText = "Add to cart"
                 document.querySelector(".box1").append(a_1)
 
+                }
 
             }
+       
 
+           let result_of_search= document.getElementById("search")
+    result_of_search.addEventListener("input", (e) => {
+      let word = e.target.value.toLowerCase();
+      let div = document.querySelectorAll(".box1");
+console.log(word)
 
+div.forEach(ex => {
+        let child = ex.children[0].children[2].textContent.toLocaleLowerCase().trim();
+        
+        if (child.startsWith(word)) {
+          ex.style.display = "block"
+
+        }
+        else {
+          ex.style.display = "none"
+        }
+      })
+    })
 
 //             for(let k=10; k<=19; k++){
 

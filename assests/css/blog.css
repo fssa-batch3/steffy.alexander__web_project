@@ -97,6 +97,70 @@ header a {
   height: 300px;
  margin:0px 0px 100px 70px;
 }
+#add_blog{
+
+    /* margin:30px 20px; */
+    height: 42px;
+    width: 170px;
+    margin-left: 10px;
+    border-radius: 40px;
+    color:white;
+    background-color: #3d6921;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 60px;
+    border: 2px solid rgb(37, 111, 72);
+  }
+  #add_blog:hover{
+    background-color:white; 
+    color: #3d6921;
+    border-color: 2px solid rgb(37, 111, 72);
+    cursor: pointer;
+  }
+#blog_img{
+  width:760px;
+  height:300px;
+}
+.blog_content{
+  border:2px solid black;
+  width: 350px;
+  height: 400px;
+  margin:50px auto;
+  padding: 60px;
+}
+
+.inputfields{
+
+  display: flex;
+ flex-wrap: wrap;
+ justify-content:center; 
+ 
+ margin-top: 10px;
+
+ 
+}
+label input{
+ border: solid black;
+ border-width:0px 0px .5px 0px;
+ padding: 13px 15px;
+ font-size: 16px;
+ display: flex;
+ flex-wrap: wrap;
+ border: 1px solid grey;
+ border-radius: 5px;
+ width: 200px;
+ margin: 18px 19px 15px 0px;
+
+
+}
+label input:hover{
+border:1.5px solid black;
+}
+label input:focus,.side_one textarea:focus {
+ outline: none;
+}
+.blog_content{
+display: none;
+}
 .content{
  display: flex;
   width: 1070px;
@@ -107,6 +171,9 @@ header a {
   background-color: white;
   color: #203f0c;
 
+}
+.blog_cart{
+  display:flex;
 }
 .require li{
   margin:20px 100px 0px 100px;

@@ -18,10 +18,7 @@
         <div class="logo">
             <img src="../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
         </div>
-
         <div class="nav">
-
-
             <a href="../index.html">Home</a>
             <a href="./plant.html">Plants</a>
             <a href="./seeds.html">Seeds</a>
@@ -34,17 +31,32 @@
     </header>
 
     <main>
-       
+      <div class="blog_cart">
 
             <div class="center">
                 <p>Plants or Humans, <br>
                 No one grows without <br>
                 <span> Love & Care!</span></p>
+                <button id="add_blog">Add your own Blog</button>
             </div>
+<form>
+          <div class="blog_content">
+            
+            <label for="img" >img<input type="text" placeholder="Add a img.."  id="upload_img"></label><br>
+           <h4>Title</h4>
+           <textarea placeholder="Add a Title.." id="title"></textarea>
+           <h4>Content</h4><textarea placeholder="Add a content.." id="content"></textarea>
 
-          
-                <h3>ROSERY PEA CARING METHODS</h3>
+            <button id="submit" type="submit">Submit</button>
+
+          </div>
         
+        </form>
+    </div>
+
+
+
+            <h3>ROSERY PEA CARING METHODS</h3>
             <h2>REQUIREMENTS...</h2>
   <div class="content">
             <div class="require">
@@ -126,7 +138,53 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
 </div>
         </div>
     </main>
+<script>
 
+    
+let add_img= document.getElementById("upload_img")
+let add_title= document.getElementById("title")
+let add_content= document.getElementById("content")
+let add_blog= document.getElementById("add_blog")
+let blog_content= document.getElementsByClassName("blog_content")
+
+
+
+
+
+let blog;
+let username = JSON.parse(localStorage.getItem("arr")); 
+let profile_data = (localStorage.getItem("profile"));
+let user_name;
+    username.find(e=>{
+        if(e["email"]==profile_data){
+            return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+        }
+    })
+
+    submit.addEventListener("click",e=>{
+    e.preventDefault()
+
+   let blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
+  let blog={
+    "product_img":add_img.value,
+    "Title":add_title.value,
+    "Content":add_content.value,
+    "username":user_name
+  }
+  
+  blog_detail.push(blog)
+
+localStorage.setItem("blog",JSON.stringify(blog_detail))
+location.reload()
+
+})
+
+add_blog.addEventListener("click",e=>{
+    e.preventDefault()
+    blog_content[0].style.display='block';
+})
+
+</script>
 </body>
 
 </html>

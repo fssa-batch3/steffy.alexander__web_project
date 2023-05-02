@@ -217,9 +217,11 @@
 
   <footer>
     <div class="foot1">
-      <h1>Suggestions</h1>
-      <textarea placeholder="leave a comment..."></textarea><br />
-      <button>Submit</button>
+      <h1 >Suggestions</h1>
+      <form id="form">
+      <textarea id="suggestions" placeholder="leave a comment..."></textarea><br />
+      <button type="submit">Submit</button>
+      </form>
     </div>
     <div class="foot2">
       <img id="footlogo" src="./assests/images/Picsart_22-12-05_14-49-34-612.png" alt="footerlogo" />
@@ -308,6 +310,25 @@
 
 
 //     }
+
+let submit_btn=document.getElementById("form")
+let profile_data = (localStorage.getItem("profile"));
+
+submit_btn.addEventListener("submit",e=>{
+  e.preventDefault()
+  let suggestions=document.getElementById("suggestions").value
+let suggestion_details={
+     "suggestions_of_customer":suggestions,
+    "active_user":profile_data
+}
+
+let suggestion_data= JSON.parse(localStorage.getItem("suggestion_data"))??[]
+suggestion_data.push(suggestion_details)
+console.log(suggestion_data)
+localStorage.setItem("suggestion_data",JSON.stringify(suggestion_data))
+location.reload()
+})
+
 
 
 

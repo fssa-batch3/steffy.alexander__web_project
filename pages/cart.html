@@ -46,79 +46,110 @@
       </div>
     </header>
 
-    <h1>SHOPPING CART</h1>
 
-    <div class="main">
-      <div class="product">
-        <img id="pink" src="../assests/images/pink_rose_plant.jpg" alt="pink" />
+ <div class="center_content">
+  <div class="left_content" id="content">
+    <h1>Shopping Cart</h1>
+<!-- 
+    <div class="product" id="product_details">
+      <div class="product_img">
+      <img src="/assests/images/beanseed_2.jpg" alt="img">
+    </div>
+      <div class="details">
+      <h4 id="title">Bean Seeds</h4>
+      <div class="adding">
+      <img src="/assests/images/minus.png">
+      <p>1</p>
+      <img src="/assests/images/add.png">
+    </div>
+      <h5 id="ruppees">₹450</h5>
+      <img id="remove_cart" src="/assests/images/multiply-mathematical-sign.png">
+    </div>
+    </div>  -->
+    <!-- <hr>
+    <div class="product">
+      <div class="product_img">
+      <img src="/assests/images/beanseed_2.jpg" alt="img">
+    </div>
+      <div class="details">
+      <h4 id="title">Bean Seeds</h4>
+      <div class="adding">
+      <img src="/assests/images/minus.png">
+      <p>2</p>
+      <img src="/assests/images/add.png">
+    </div>
+      <h5 id="ruppees">₹450</h5>
+      <img id="remove_cart" src="/assests/images/multiply-mathematical-sign.png">
+    </div>
+    </div> -->
+  </div>
+  
+  <div class="right_content">
+    <div class="right_content_1">
+    <h2 id="summary">Summary</h2>
+    <!-- <div class="total_products">
+      <h5 id="product">Product</h5>
+      <h5 id="quantity">Quantity</h5>
+      <h5 id="price">Price</h5>
+    </div> -->
 
-        <div class="product1">
-          <h3>Pink Rose Plant</h3>
-          <h4>₹450</h4>
+    <!-- <div class="values">
+      <p id="product">Dieffenbranchia</p>
+      <p id="quantity">3x100</p>
+      <p id="price">300</p> -->
+      <!-- <p>300</p> -->
+      <h4>Your order</h4>
+      
 
-          <div class="star">
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-          </div>
-          <div class="bottom">
-            <form action="/action_page.php">
-              <label for="1" id="Quantity">Quantity</label>
-              <select name="1" id="cart-item">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-              </select>
-            </form>
-
-            <p class="product-remove">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-
-              <span class="remove">Remove</span>
-            </p>
-          </div>
+      <div class="product_order_details">
         </div>
-      </div>
-      <div class="product">
-        <img
-          id="hibiscus"
-          src="../assests/images/pumpkin seeds.jpg"
-          alt="hibiscus"
-        />
-
-        <div class="product1">
-          <h3>Pumpkin Seeds</h3>
-          <h4>₹130</h4>
-
-          <div class="star">
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-            <i  class="fa-sharp fa-solid fa-star"></i>
-          </div>
-          <div class="bottom">
-            <form action="/action_page.php">
-              <label for="1" id="Quantity">Quantity</label>
-              <select name="1" id="item">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-              </select>
-            </form>
-
-            <p class="product-remove">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-
-              <span class="remove">Remove</span>
-            </p>
-          </div>
+        <!-- <h3><img src="../assests/images/blacktomato.jpg" alt="images">
+        Hibiscus</h3>
+        <div class="multiply">
+          <span class="quantity">3 x</span>
+          <span class="actual_price">100</span>
         </div>
-      </div>
+        <p class="total_price">300</p>
+      </div> -->
+      <!-- <div class="product_order_detail">
+        <h3>Hibiscus</h3>
+        <div class="multiply">
+          <span class="quantity">3 x</span>
+          <span class="actual_price">100</span>
+        </div>
+        <p class="total_price">300</p>
+      </div> -->
+ 
+ <div class="right_content_2">
+      <div class="product_order_detail">
+        <h3 class="sub_total">SubTotal</h3>
+        <h3 class="subtotal_value">600</h3>
+        </div>
+        <div class="product_order_detail">
+          <h3 class="shipping">Shipping</h3>
+          <h3 class="shipping_value">0</h3>
+          </div>
+          <div class="product_order_detail">
+            <h3 class="total">Total</h3>
+            <h3 class="total_value">700</h3>
+            </div>
+     <a href="/pages/payments/payment.html"><button>Proceed to Checkout</button></a>
 
-      <div class="total">
+
+    <!-- <div class="total_calculation">
+      <p>
+        <span>Total</span>
+        <span id="total_in_num">340+450=790</span>
+      </p>
+
+    </div> -->
+
+    </div>
+  </div>
+  </div>
+
+ 
+      <!-- <div class="total">
         <p>
           <span>Number of Items</span>
           <span>2</span>
@@ -131,8 +162,8 @@
 
         <a href="payments/payment.html">Proceed to Checkout</a>
       </div>
-    </div>
-
+    </div> -->
+<!-- 
     <footer>
       <div class="foot1">
         <h1>Suggestions</h1>
@@ -163,6 +194,185 @@
           <p>Chennai</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <script>
+// 
+let users= JSON.parse(localStorage.getItem("arr")) 
+      let active_user = localStorage.getItem("profile")
+      let ac_user;
+      users.forEach(e=>{
+        if(active_user==e["email"]){
+          ac_user=e
+        }
+      })
+let cart_data=ac_user["cart"]
+console.log(cart_data)
+let user=localStorage.getItem("profile")
+console.log(user)
+cart_data.find(e=>{
+if(e.user_cart==user){
+  cart(e)
+}
+})
+
+for(let i =0;i<cart_data.length;i++){
+  cart(cart_data[i])
+}
+
+
+function cart(obj) {
+  let content = document.getElementById("content");
+  content.innerHTML +=
+    `
+    <div class="product" id="product_details">
+      <div class="product_img">
+        <img src="${obj.plant_image}" alt="img">
+      </div>
+      <div class="details">
+        <h4 id="title">${obj.plant_name}</h4>
+        <div class="adding">
+          <img src="/assests/images/minus.png" class="minus">
+          <p class="quantity">${obj.plantquantity}</p>
+          <img src="/assests/images/add.png" class="add" >
+        </div>
+        <h5 class="price">${obj.plant_price*obj.plantquantity}</h5>
+        <img class="remove_cart" src="/assests/images/multiply-mathematical-sign.png">
+      </div>
+    </div> 
+    <hr>`
+    
+}
+
+let totalCount = document.querySelectorAll(".quantity");
+let add_quantity = document.querySelectorAll(".add");
+let minus_quantity=document.querySelectorAll(".minus");
+let remove_cart = document.querySelectorAll(".remove_cart")
+let plant_price = document.querySelectorAll(".price")
+let subtotal=document.querySelectorAll(".sub_total")
+let shipping=document.querySelectorAll(".shipping")
+let sub_total_value=document.querySelector(".subtotal_value")
+let shipping_value=document.querySelectorAll(".shipping_value")
+let total_value=document.querySelector(".total_value")
+
+
+
+
+let count = 1
+totalCount.innerHTML = count;
+
+
+//  adding quantity to the product------
+
+add_quantity.forEach((e,index)=>{
+  e.addEventListener("click",element=>{
+ let count =Number(totalCount[index].innerHTML)
+ count+=1
+ let total_price =Number(cart_data[index]["plant_price"])*count
+ plant_price[index].innerHTML=total_price
+ totalCount[index].innerHTML=count
+ cart_data[index]["plantquantity"]=count
+ cart_data[index]["plant_total_price"]=Number(cart_data[index]["plant_price"])*count
+
+localStorage.setItem("cart",JSON.stringify(cart_data))
+// location.reload()
+saveinlocal()
+summary()
+summaryView()
+
+  })
+})
+
+
+//  minusing quantity to the product------
+minus_quantity.forEach((e,index)=>{
+  e.addEventListener("click",element=>{
+ let count =Number(totalCount[index].innerHTML)
+ if(count>1){
+  count-=1
+  let total_price =Number(cart_data[index]["plant_price"])*count
+ plant_price[index].innerHTML=total_price
+ totalCount[index].innerHTML=count
+ cart_data[index]["plantquantity"]=count
+ cart_data[index]["plant_total_price"]=Number(cart_data[index]["plant_price"])*count
+// localStorage.setItem("cart",JSON.stringify(cart_data))
+// location.reload()
+saveinlocal()
+// summaryView()
+
+ }
+ else{
+  alert("Wrong")
+ }
+})
+})
+
+//  removing quantity to the product------
+
+remove_cart.forEach((e,index)=>{
+  e.addEventListener("click",element=>{
+    cart_data.splice(index,1)
+    // localStorage.setItem("cart",JSON.stringify(cart_data))
+    // location.reload()
+saveinlocal()
+location.reload()
+
+
+  })
+})
+function saveinlocal(){
+  ac_user["cart"]=cart_data
+users.forEach(e=>{
+        if(active_user==e["email"]){
+          e=ac_user
+        }
+      })
+      localStorage.setItem("arr",JSON.stringify(users));
+}
+console.log(cart_data);
+
+//  Summary function ==  For summarising the quantity x actual price
+
+function summary(){
+  console.log("gfd");
+  let product_order_details= document.querySelector(".product_order_details")
+  let div_to_create=""
+
+cart_data.forEach(e=>{
+  
+  div_to_create+=`
+  <div class="product_order_detail">
+        <h3><img src=${e["plant_image"]} alt="images">
+        ${e["plant_name"]}</h3>
+        <div class="multiply">
+          <span class="quantity">${e["plantquantity"]} x</span>
+          <span class="actual_price">${e["plant_price"]}</span>
+        </div>
+        <p class="total_price">${e["plantquantity"]*e["plant_price"]}</p>
+      </div>
+  `
+})
+product_order_details.innerHTML=div_to_create
+
+}
+
+function summaryView() {
+  let total_cart_value=0
+cart_data.forEach(e=>{
+  total_cart_value+=Number(e["plant_total_price"]) 
+})
+
+sub_total_value.innerHTML=total_cart_value??0
+total_value.innerHTML=total_cart_value??0
+
+
+}
+
+
+
+summary()
+summaryView()
+
+
+    </script>
   </body>
 </html>

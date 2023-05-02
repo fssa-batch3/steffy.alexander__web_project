@@ -169,6 +169,7 @@ header a {
 }
 .content_2_images {
   display: flex;
+  margin-left: 40px;
 }
 
 .container_1 {

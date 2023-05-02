@@ -1,16 +1,13 @@
 /* body{
-    width:100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 } */
-
-
-.container {
+/* .container {
   width: 70%;
-  height:500px;
-  border: 2px solid black;
-  display:flex ;
-  align-items: center;
-  background-color: #d9ecce;
+  height:500px; 
+  border: 1px solid black;
+
+  
   margin: 150px auto;
 }
 .view{
@@ -20,5 +17,179 @@
   display: none;
 }
 .header{
-display:flex;
+
+}
+#name,#image,#price,#ratings{
+margin:10px ;
+}
+.card_details {
+   width:360px;
+   height:200px;
+   display: flex;
+  flex-direction: column;
+ align-self: center;
+   margin-top: 300px;
+}
+.details_page{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 300px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding:5px;
+}
+.about_the_product{
+  margin-top: 270px;
+}
+input {
+  padding:5px;
+  margin-top:15px;
+}
+.full_form{
+  display: flex;
+  width:800px;
+  height:00px;
+} */
+/* set font family and size for the whole document */
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* style the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.header p {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* style the form */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.full_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card_details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.card_details label {
+  margin-bottom: 10px;
+}
+
+.card_details input {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.details_page {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.details_page label {
+  margin-bottom: 10px;
+}
+
+.details_page input {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.about_the_product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.about_the_product p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.about_the_product textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* style the radio buttons and buttons */
+#plant_category,
+#seed_category {
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+/* hide the update form initially */
+.not_view {
+  display: none;
+}
+
+/* style the update form */
+#update_form {
+  margin-top: 30px;
+}
+
+#update_form p {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.update_details {
+  margin-top: 20px;
+}
+
+.update_details label {
+  margin-bottom: 10px;
+}
+
+.update_details input {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.update_details textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }

@@ -22,11 +22,11 @@
     </div>
 
     <div class="nav">
-      <a href="#">Home</a>
-      <a href="./pages/plant.html">Plants</a>
-      <a href="./pages/seeds.html">Seeds</a>
-      <a href="./pages/blog.html">Blog</a>
-      <a href="./pages/login.html"></a>
+      <a href="/index.html">Home</a>
+      <a href="/pages/plant.html">Plants</a>
+      <a href="/pages/seeds.html">Seeds</a>
+      <a href="/pages/blog.html">Blog</a>
+      <a href="/pages/login.html"></a>
       <img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt="" LOGIN /><span
         id="user_name">Login/signup</span></a>
       <a href="./pages/cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart" /></a>
@@ -174,9 +174,7 @@
         </table>
       </div> -->
   </div>
-
-
-  -
+  
   <script>
 
 
@@ -278,25 +276,31 @@
     const pr_arr = JSON.parse(localStorage.getItem("create_plant"))
 
    
+
+    let res
    pr_arr.find(function (obj){
 
+   
     if(obj["name"] == name){
-
       list_products(obj);
+      return res=obj
+
     }
 
    })
    const seed = JSON.parse(localStorage.getItem("seed_details"))
 
+
+   
   seed.find(function (obj){
    if(obj["name"] == name){
-
     list_products(obj);
+    return res=obj
 }
 
 })
 
-   
+  
     //console.log(pr_arr);
 
     function list_products(search) {
@@ -313,8 +317,6 @@
       div_3.setAttribute("class", "imgtrend")
       document.querySelector(".box1").append(div_3)
 
-
-
       let img = document.createElement("img")
       img.setAttribute("src", search["image"])
       img.setAttribute("alt", "hibiscuss")
@@ -323,7 +325,6 @@
       let div_4 = document.createElement("div")
       div_4.setAttribute("class", "plantimages")
       document.querySelector(".imgtrend").append(div_4)
-
 
       let img_1 = document.createElement("img")
       img_1.setAttribute("src", search["image_1"])
@@ -366,21 +367,14 @@
       span.innerHTML = "₹" + search["price"]
       document.querySelector(".right").append(span)
 
-      document.querySelector(".right").innerHTML += ` <form action="/action_page.php" class="quantity_form">
-          <label for="1" id="Quantity">Quantity</label>
-          <select name="1" id="item">
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="one">4</option>
-            <option value="two">5</option>
-            <option value="three">6</option>
-          </select>
-        </form>
+
+
+      document.querySelector(".right").innerHTML += 
+      `
         <div class="buttons">
           <button id="cart1">Add to Cart</button>
-          <button id="buy_now">Buy Now</button>
         </div>
+        <br>
         <hr />
         <br />
         <h3>Product description</h3>
@@ -479,9 +473,80 @@
         </table>
       </div>
     </div>`
+ }
+
+ 
 
 
-    }
+    let cart_btn=document.getElementById("cart1")
+    let active_user=localStorage.getItem("profile")
+   
+
+    let plant_price=res["price"]
+    let plant_name=res["name"]
+    let plant_image=res["image"]
+   
+    cart_btn.addEventListener('click',()=>{
+
+
+
+
+      // let add_to_cart=JSON.parse(localStorage.getItem("cart"))||[]
+      let check =0
+      let product
+      let users= JSON.parse(localStorage.getItem("arr")) 
+      let active_user = localStorage.getItem("profile")
+      let ac_user;
+      users.forEach(e=>{
+        if(active_user==e["email"]){
+          ac_user=e
+        }
+      })
+      console.log(ac_user);
+      
+      let add_to_cart=ac_user["cart"] ||[]
+      add_to_cart.forEach(e => {
+        if(plant_name==e["plant_name"]){
+          check=1
+          product=e
+          
+        }})
+        if(check==1){
+          let new_quantity =Number(product["plantquantity"])+1
+          product["plantquantity"]=new_quantity
+          product["plant_total_price"]= Number(product["plant_price"])*new_quantity
+          // console.log( Number(product["plant_price"]),new_quantity,Number(product["plant_price"])*new_quantity);
+          add_to_cart.forEach((e,index)=>{
+            if(plant_name==e["plant_name"]){
+              add_to_cart[index]=product
+            }
+          })
+        }
+        else{
+          let data_of_cart={
+     "plant_name":plant_name,
+     "plant_image":plant_image,
+     "plant_price":plant_price,
+     "plant_total_price":plant_price,
+    //  "user_cart":active_user,
+     "plantquantity":1
+
+      }
+
+      add_to_cart.push(data_of_cart)
+
+        }
+        ac_user["cart"]=add_to_cart
+        users.forEach(e=>{
+        if(active_user==e["email"]){
+          e=ac_user
+        }
+      })
+      localStorage.setItem("arr",JSON.stringify(users));
+      window.location.href="./cart.html"
+    })
+  
+
 
 
   </script>

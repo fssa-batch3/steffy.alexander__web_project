@@ -30,8 +30,13 @@
                     LOGIN>Login/signup</a>
             <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
     </header>
-
+    <div class="search_box">
+        <input type="search" id="search"  placeholder="Search">
+        
+        <!-- <img id="search_icon" src="/assests/images/search.png" > -->
+       </div>
     <div class="right">
+        
         <!-- <div class="box1">
             <div class="imgtrend" alt="trend">
                 <img src="../assests/images/sunflower seeds.jpg" alt="sunflower seeds">
@@ -368,8 +373,8 @@ let seed_details = JSON.parse(localStorage.getItem('seed_details'))
     
         for(let j=0; j<seed_details.length; j++){
 console.log(seed_details[0]["name"]);
-    
-            let  div_1=document.createElement("a")
+if(seed_details[j]["status"]==true){
+    let  div_1=document.createElement("a")
             div_1.setAttribute("href","../pages/details.html?name="+ seed_details[j]["name"])
         div_1.setAttribute("class","box1")
         document.querySelector(".right").prepend(div_1)
@@ -452,7 +457,29 @@ a_1.innerText="Add to cart"
 document.querySelector(".box2").append(a_1)
  
         }
+}
+    
+  
 
+
+        let result_of_search= document.getElementById("search")
+    result_of_search.addEventListener("input", (e) => {
+      let word = e.target.value.toLowerCase();
+      let div = document.querySelectorAll(".box1");
+console.log(word)
+let count_res
+div.forEach(ex => {
+        let child = ex.children[0].children[2].textContent.toLocaleLowerCase();
+        
+        if (child.startsWith(word)) {
+          ex.style.display = "block"
+
+        }
+        else {
+          ex.style.display = "none"
+        }
+      })
+    })
 
     
     </script>

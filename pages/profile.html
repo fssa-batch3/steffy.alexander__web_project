@@ -13,7 +13,7 @@
 </head>
 <body>
  
-        
+    
             <div class="content">
         <div class="left">
     <div class="leftbox">
@@ -22,7 +22,7 @@
          <input type="file" id="file">
          <label for="file"><img id="editcam" src="../assests/images/photo-camera.png" alt="editimg"></label>
          <br><br>
-         <p class="username" id="displayProfile">Steffy Alexander</p>
+         <p class="username" id="displayProfile"></p>
          <!-- <label for="name"> name <input type="text" id="name"></label><br><br>
          <label for="email">Email <input type="text"  id="email"></label> -->
         </div>
@@ -60,9 +60,6 @@
     </div>
 
 </div>
-
-
-
 
 <div class="lastcontent">
     <div class="side_one">
@@ -285,18 +282,25 @@ let res;
         window.location.href="./profile.html"
     })
 
+
+
     document.getElementById("delete").addEventListener("click",e=>{
         e.preventDefault();
-        // console.log(res) //current object
-        // res["fname"]=""
-        // console.log(res)
-        // let num=username.indexOf(res) //1
 
-        // delete username[num] //username[1]
-        // username.splice(num,1)//splice(index,1,replacement)
-        // console.log(username)
-        // localStorage.setItem("arr",JSON.stringify(username))
-       localStorage.removeItem("profile")
+        let active_user= localStorage.getItem("profile")
+      let users = JSON.parse(localStorage.getItem("arr"))
+      users.forEach((e,index)=>{
+        if(active_user==e["email"]){
+          users.splice(index,1)
+          
+
+        }
+      })
+      localStorage.setItem("arr",JSON.stringify(users))
+      localStorage.removeItem("profile")
+      location.reload()
+       window.location.href ="./login.html"
+
 
      
     })
