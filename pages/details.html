@@ -29,7 +29,8 @@
       <a href="/pages/login.html"></a>
       <img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt="" LOGIN /><span
         id="user_name">Login/signup</span></a>
-      <a href="./pages/cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart" /></a>
+       <a href="/pages/signup.html"></a>
+        <a href="./pages/cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart" /></a>
     </div>
   </header>
 
@@ -176,7 +177,6 @@
   </div>
   
   <script>
-
 
 
 
@@ -476,6 +476,21 @@
  }
 
  
+ let cart_page=document.getElementById("cart1")
+
+cart_page.addEventListener("click",e=>{
+  e.preventDefault()
+  if(localStorage.getItem("profile")){
+  window.location.href="./pages/cart.html"
+  console.log("already signed");
+}
+else{
+  window.location.href="/pages/signup.html"
+  console.log("");
+
+}
+
+})
 
 
     let cart_btn=document.getElementById("cart1")

@@ -18,7 +18,7 @@
 <body>
 <header>
     <div class="logo">
-      <img src="./assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
+      <img id="logo_img" src="./assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
     </div>
 
     <div class="nav">
@@ -27,10 +27,9 @@
       <a href="./pages/plant.html">Plants</a>
       <a href="./pages/seeds.html">Seeds</a>
       <a href="./pages/blog.html">Blog</a>
-      <a href="./pages/login.html"><img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""
-          LOGIN /><span id="user_name">Login/signup</span></a>
-          <a href="./pages/profile.html"><img id="profile_logo" src="./assests/images/girl.png" alt=""></a>
-      <a href="./pages/cart.html"><img id="cart" src="./assests/images/cart logo.png" alt="cart" /></a>
+      <a href="./pages/login.html" ><img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""/><span id="login_title">Login/signup</span></a>
+      <a href="./pages/profile.html" id="profile_logo_a" ><img id="profile_logo" src="./assests/images/girl.png" alt=""></a>
+      <a href=""><img id="cart" src="./assests/images/cart logo.png" alt="cart" /></a>
     </div>
   </header>
   
@@ -106,7 +105,7 @@
         <p id="about_review">10/10 marks for packaging.....plants were small but healthy...overall
         good option to. Choose. I just hope the plants survive and flourish.</p>
 
-        <a href="pages/review.html"><button id="text_review" >Write a Review</button></a>
+        <a href="" id="review_button" ><button id="text_review" >Write a Review</button></a>
         
       
       </div>
@@ -244,11 +243,14 @@
     </div>
   </footer>
   <script src="./main.js"></script>
-
+<script src="./assests/js/model.js"></script>
   <script>
-    const user_name = localStorage.getItem("email");
-    console.log(user_name);
-    document.getElementById("user_name").innerText= user_name
+    // const user_name = localStorage.getItem("profile");
+    // console.log(user_name);
+    // if(localStorage.getItem("profile")){
+    // document.getElementById("user_name").innerText= user_name
+      
+    // }
 
 
 
@@ -327,6 +329,25 @@ suggestion_data.push(suggestion_details)
 console.log(suggestion_data)
 localStorage.setItem("suggestion_data",JSON.stringify(suggestion_data))
 location.reload()
+})
+
+let profile_username=document.getElementById("profile_logo_a")
+
+
+let review=document.getElementById("review_button")
+
+review.addEventListener("click",e=>{
+  e.preventDefault()
+  if(localStorage.getItem("profile")){
+  window.location.href="./pages/review.html"
+  console.log("already signed");
+}
+else{
+  window.location.href="./pages/signup.html"
+  console.log("");
+
+}
+
 })
 
 

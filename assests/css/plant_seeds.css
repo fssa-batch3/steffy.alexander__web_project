@@ -60,7 +60,11 @@ header a {
     width: 80px;
     height: 60px;
 }
-
+#profile_logo{
+    width:40px;
+    height:40px;
+  
+  }
 /* header ends */
 .right ,.right2{
     margin: 50px auto;

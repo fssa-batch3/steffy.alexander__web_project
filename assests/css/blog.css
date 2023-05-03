@@ -172,6 +172,11 @@ display: none;
   color: #203f0c;
 
 }
+#profile_logo{
+  width:40px;
+  height:40px;
+
+}
 .blog_cart{
   display:flex;
 }

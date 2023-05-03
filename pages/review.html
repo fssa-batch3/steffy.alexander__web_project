@@ -25,8 +25,9 @@
       <a href="/pages/plant.html">Plants</a>
       <a href="/pages/seeds.html">Seeds</a>
       <a href="/pages/blog.html">Blog</a>
-      <a href="/pages/login.html"><img id="log" src="/assests/images/Untitled_design-removebg-preview.png" alt=""
+      <a href="/pages/login.html" id="log"><img id="log" src="/assests/images/Untitled_design-removebg-preview.png" alt=""
           LOGIN /><span id="user_name">Login/signup</span></a>
+          <a href="./pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
       <a href="/pages/cart.html"><img id="cart" src="/assests/images/cart logo.png" alt="cart" /></a>
     </div>
   </header>
@@ -83,6 +84,7 @@
 </div> -->
 </div>
 
+<script src="/assests/js/model.js"></script>
 
 <script>
 
@@ -154,6 +156,9 @@
 
 // let div = document.getElementById("content");
 // div.innerHTML = reviewShow; 
+
+
+
 //   Selecting ratings with star -----------
  
  const stars = document.querySelectorAll(".stars i");
@@ -162,6 +167,7 @@
 stars.forEach((star, index1) => {
  
   star.addEventListener("click", () => {
+    
     // Loop through the "stars" NodeList Again
     stars.forEach((star, index2) => {
       // Add the "active" class to the clicked star and any stars with a lower index
@@ -186,6 +192,8 @@ let user_name;
             return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
         }
     })
+   
+
 
 submit.addEventListener("click",e=>{
   e.preventDefault()
