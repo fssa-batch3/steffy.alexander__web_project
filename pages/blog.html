@@ -25,7 +25,7 @@
             <a href="./blog.html">Blog</a>
             <a href="./login.html" id="log"><img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
                     LOGIN>Login/signup</a>
-                    <a href="./pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
+                    <a href="/pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
             <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
 
         </div>
@@ -41,22 +41,67 @@
                 <button id="add_blog">Add your own Blog</button>
             </div>
 <form>
+    
           <div class="blog_content">
             
-            <label for="img" >img<input type="text" placeholder="Add a img.."  id="upload_img"></label><br>
-           <h4>Title</h4>
+            <label for="img" >img<input type="text" placeholder="Add a img link(ex:https://..)"  id="upload_img"></label><br>
+           
+           
+           <div class="title_input">
+            <h4 id="title_name">Title</h4>
            <textarea placeholder="Add a Title.." id="title"></textarea>
-           <h4>Content</h4><textarea placeholder="Add a content.." id="content"></textarea>
+        </div>
+        <div class="content_input">
+           <h4 id="content_name">Content</h4><textarea placeholder="Add a content.." id="content"></textarea>
 
-            <button id="submit" type="submit">Submit</button>
+         
+        </div>
+        <button id="add">want to add on more points</button>
 
+        <div class="additional_points">
+
+            <div class="title_input_2">
+            <h4 id="heading_1_input">heading_1</h4>
+           
+           <textarea placeholder="Add a heading." id="points"></textarea>
+        </div>
+
+        <div class="content_2">
+
+           <h4 id="extra_points_input">extra_content</h4>
+
+           <textarea placeholder="Add on points.." id="extra_points"></textarea>
+
+           </div>
+           <div class="heading_2">
+
+           <h4 id="heading_2_input">heading_2</h4>
+
+           <textarea placeholder="Add a heading.." id="heading_2"></textarea>
+           </div>
+        <div class="content_3">
+            
+           <h4 id="extra_content_2_input">extra_content_2</h4>
+
+           <textarea placeholder="Add some more points.." id="extra_content_2"></textarea>
+        </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
           </div>
         
-        </form>
+            </form>
+    </div>
+    
+    <div class="blog_view">
+     <!-- <h3 id="title_view">title</h3>
+     <img id="image_view"src="/assests/images/beanseed_1.jpg">
+     <p id="content_view">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ    
+        Dieffenbranchia_3</p> -->
+
     </div>
 
 
-
+<!-- 
             <h3>ROSERY PEA CARING METHODS</h3>
             <h2>REQUIREMENTS...</h2>
   <div class="content">
@@ -137,7 +182,7 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
 
 </div>
 </div>
-        </div>
+        </div> -->
     </main>
 
 <script src="/assests/js/model.js"></script>
@@ -150,6 +195,13 @@ let add_title= document.getElementById("title")
 let add_content= document.getElementById("content")
 let add_blog= document.getElementById("add_blog")
 let blog_content= document.getElementsByClassName("blog_content")
+let additional_data= document.getElementsByClassName("additional_points")
+let heading= document.getElementById("heading_1")
+let points= document.getElementById("extra_points")
+let sub_heading= document.getElementById("heading_2")
+let extra_points= document.getElementById("extra_content_2")
+
+
 
 
 
@@ -164,6 +216,14 @@ let user_name;
             return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
         }
     })
+
+    add.addEventListener("click",e=>{
+    e.preventDefault()
+    additional_data[0].style.display='block';
+    add.style.display='none';
+   
+
+})
 
     submit.addEventListener("click",e=>{
     e.preventDefault()
@@ -182,11 +242,39 @@ localStorage.setItem("blog",JSON.stringify(blog_detail))
 location.reload()
 
 })
+// submit.addEventListener("click",e=>{
+//     e.preventDefault()
+//     document.getElementById("additional_data")
+//     blog_content[0].style.display='block';
 
+// })
 add_blog.addEventListener("click",e=>{
     e.preventDefault()
+    const center = document.querySelector('.center');
+    center.style.filter = 'blur(4.3px)';
     blog_content[0].style.display='block';
 })
+let title_of=document.getElementById("title_view")
+let image_of=document.getElementById("image_view")
+let content_of=document.getElementById("add_content")
+
+
+
+let blog_detail=JSON.parse(localStorage.getItem("blog")) ??0
+let blog_details=""
+for( let i=0;i<blog_detail.length;i++){
+blog_details+=`
+<div class="blog_view">
+     <h3 id="title_view">${blog_detail[i]["Title"]}</h3>
+     <img id="image_view"src="${blog_detail[i]["product_img"]}">
+     <p id="content_view">${blog_detail[i]["Content"]}</p>
+
+    </div>
+`
+}
+let div = document.querySelector(".blog_view");
+div.innerHTML+=blog_details; 
+
 
 </script>
 </body>

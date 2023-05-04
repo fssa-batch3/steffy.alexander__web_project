@@ -220,6 +220,11 @@ button{
      border: 2px solid rgb(37, 111, 72);
      cursor: pointer;
 }
+#profile_logo{
+  width:40px;
+  height:40px;
+}
+
 #content{
   height: auto;
   display: flex;
