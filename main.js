@@ -413,3 +413,54 @@ if (localStorage.getItem("review_array")) {
     ])
   );
 }
+
+if (localStorage.getItem("blog")) {
+} else {
+  localStorage.setItem(
+    "seed_details",
+    JSON.stringify([
+      {
+        product_img: "https://iili.io/HSr3MAX.jpg",
+        Title: "The Guide to growing Dieffenbachia Plants Indoors\n",
+        Content:
+          "Do you know how Dieffenbachia got its name? \nThe director of the Botanical Gardens in Vienna - Heinrich Wilhelm Schott named Dieffenbachia in honor of his head gardener Joseph Dieffenbach. Apart from The Dumb Cane, the decorative plant is also known as the mother-in-law tongue (i.e., the common name used for Sansevieria). This is because, the plant has a toxic sap with calcium oxalate crystals, which once ingested causes tongue and throat inflammation leading to temporary inability to speak. Dieffenbachia or the “dumb cane plant” varieties range from small dwarf types to the large dark green mottled foliage. This plant can thrive for years indoors and reach up to 4 to 5 feet as an attractive floor plant.",
+        heading_1: "Dieffenbachia Plant Lighting and Temperatures:",
+        points_1:
+          "Dieffenbachia thrives well indoors, with room temperatures ranging from 65-75 degrees. It cannot tolerate temperatures below 60 degrees. The plant likes optimum light but cannot handle full sun; though it does well when grown under artificial lighting.",
+        heading_2: "Watering and Feeding Dieffenbachia Plant:",
+        points_2:
+          "Dieffenbachia belongs to the Araceae family. It likes humidity and lots of water during summer. You need to keep the soil moist, not wet. Remember to reduce watering during winter. March to October – feed the plant with a slow-release fertilizer every other week. During winter avoid using plant food and water only.\n",
+        username: "Madhu bala",
+        id: 507,
+      },
+      {
+        product_img: "https://iili.io/HSrRD5g.jpg",
+        Title: "Materials needed to grow Black Tomato in Soil:",
+        Content:
+          "Well-drained loamy organic soil or enrich potting mixture (free from pest and disease) pH: The ideal pH of the plant is 6 to 7.5 Planting container size: A good drainage 8 to 16-inch diameter and 8-14 deep inches ideal. y",
+        heading_1: "Maintenance\n",
+        points_1:
+          "Apply regular organic nourishment for the plants Weekly once neem spray to reduce the pest and diseases. Plants require little water when necessary and avoid overwatering. Need staking for support and better growing Remove the older and unhealthy affected leaves and branches of plants and its give regular air circulation into the all the branches of plants its help full for disease-free plant\n",
+        heading_2: "Where do I grow Black Tomato at home?",
+        points_2:
+          " Temperature: it's suitable for all Indian weather conditions except frost. For best temperature between 21 to 32 C Sunlight: The sunlight requirement more than 7 hrs Climate: Tomato is a warm season-loving crop. The best fruit color and quality is obtained at a temperature range between 21-24°C. Temperatures above 32o C adversely affect the fruit set and development. The plants cannot withstand frost and high humidity.",
+        username: "Steffy Alexander",
+        id: 73,
+      },
+      {
+        product_img: "https://iili.io/HSr9vqB.jpg",
+        Title: "Hibiscus as a Houseplant",
+        Content:
+          "Hibiscus are sun-loving, tropical plants that have big showy flowers with a famous, prominent stamen. You don’t need to live in California or Florida to grow them. In temperate climates, you can grow them outside during the summer and enjoy them indoors as houseplants over the winter. Here’s all the information you need to grow these plants inside!",
+        heading_1: "\nWhere Should I Put My Hibiscus Indoors?",
+        points_1:
+          " \nAll houseplants have an ideal spot where they’ll thrive indoors. As for hibiscus, they like to be near a bright window, where they’ll receive as much sunshine as possible. The sunniest window in your house is the best place for them. They will survive with less rays, but may not bloom. ",
+        heading_2: "How Much Should I Water My Hibiscus?\n",
+        points_2:
+          "Hibiscus like to be watered, but of course, not over-watered. Once the soil is dry to touch, it’s time to give them a drink. When they’re dormant in the winter, they may not drink as much. On the other hand, because furnaces easily dry out the air, water may evaporate from a plant pot more quickly. It’s best to do a touch test before watering, and establish a watering routine based on that.   ",
+        username: "Steffy Alexander",
+        id: 583,
+      },
+    ])
+  );
+}

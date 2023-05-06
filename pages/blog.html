@@ -1,107 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assests/css/blog.css" >
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assests/css/blog.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img src="../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
-        </div>
-        <div class="nav">
-            <a href="../index.html">Home</a>
-            <a href="./plant.html">Plants</a>
-            <a href="./seeds.html">Seeds</a>
-            <a href="./blog.html">Blog</a>
-            <a href="./login.html" id="log"><img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
-                    LOGIN>Login/signup</a>
-                    <a href="/pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
-            <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
-
-        </div>
+      <div class="logo">
+        <img
+          src="../assests/images/Picsart_22-12-05_14-49-34-612.png"
+          alt="LOGO"
+        />
+      </div>
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="./plant.html">Plants</a>
+        <a href="./seeds.html">Seeds</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./login.html" id="log"
+          ><img
+            id="log"
+            src="../assests/images/Untitled_design-removebg-preview.png"
+            alt=""
+            id="login_title"
+          />Login/signup</a
+        >
+        <a href="/pages/profile.html"
+          ><img id="profile_logo" src="/assests/images/girl.png" alt=""
+        /></a>
+        <a href="./cart.html"
+          ><img id="cart" src="../assests/images/cart logo.png" alt="cart"
+        /></a>
+      </div>
     </header>
 
     <main>
       <div class="blog_cart">
-
-            <div class="center">
-                <p>Plants or Humans, <br>
-                No one grows without <br>
-                <span> Love & Care!</span></p>
-                <button id="add_blog">Add your own Blog</button>
-            </div>
-<form>
-    
+        <div class="center">
+          <p>
+            Plants or Humans, <br />
+            No one grows without <br />
+            <span> Love & Care!</span>
+          </p>
+          <button id="add_blog">Add your own Blog</button>
+        </div>
+        <form>
           <div class="blog_content">
-            
-            <label for="img" >img<input type="text" placeholder="Add a img link(ex:https://..)"  id="upload_img"></label><br>
-           
-           
-           <div class="title_input">
-            <h4 id="title_name">Title</h4>
-           <textarea placeholder="Add a Title.." id="title"></textarea>
-        </div>
-        <div class="content_input">
-           <h4 id="content_name">Content</h4><textarea placeholder="Add a content.." id="content"></textarea>
+            <label for="img"
+              >img<input
+                type="text"
+                placeholder="Add a img link(ex:https://..)"
+                id="upload_img" /></label
+            ><br />
 
-         
-        </div>
-        <button id="add">want to add on more points</button>
+            <div class="title_input">
+              <h4 id="title_name">Title</h4>
+              <textarea placeholder="Add a Title.." id="title"></textarea>
+            </div>
+            <div class="content_input">
+              <h4 id="content_name">Content</h4>
+              <textarea placeholder="Add a content.." id="content"></textarea>
+            </div>
+            <button id="add">want to add on more points</button>
 
-        <div class="additional_points">
+            <div class="additional_points">
+              <div class="title_input_2">
+                <h4 id="heading_1_input">heading_1</h4>
 
-            <div class="title_input_2">
-            <h4 id="heading_1_input">heading_1</h4>
-           
-           <textarea placeholder="Add a heading." id="points"></textarea>
-        </div>
+                <textarea placeholder="Add a heading." id="points"></textarea>
+              </div>
 
-        <div class="content_2">
+              <div class="content_2">
+                <h4 id="extra_points_input">extra_content</h4>
 
-           <h4 id="extra_points_input">extra_content</h4>
+                <textarea
+                  placeholder="Add on points.."
+                  id="extra_points"
+                ></textarea>
+              </div>
+              <div class="heading_2">
+                <h4 id="heading_2_input">heading_2</h4>
 
-           <textarea placeholder="Add on points.." id="extra_points"></textarea>
+                <textarea
+                  placeholder="Add a heading.."
+                  id="heading_2"
+                ></textarea>
+              </div>
+              <div class="content_3">
+                <h4 id="extra_content_2_input">extra_content_2</h4>
 
-           </div>
-           <div class="heading_2">
-
-           <h4 id="heading_2_input">heading_2</h4>
-
-           <textarea placeholder="Add a heading.." id="heading_2"></textarea>
-           </div>
-        <div class="content_3">
-            
-           <h4 id="extra_content_2_input">extra_content_2</h4>
-
-           <textarea placeholder="Add some more points.." id="extra_content_2"></textarea>
-        </div>
-        </div>
-        <button id="submit" type="submit">Submit</button>
+                <textarea
+                  placeholder="Add some more points.."
+                  id="extra_content_2"
+                ></textarea>
+              </div>
+            </div>
+            <button id="submit" type="submit">Submit</button>
           </div>
-        
-            </form>
-    </div>
-    
-    <div class="blog_view">
-     <!-- <h3 id="title_view">title</h3>
+        </form>
+      </div>
+
+      <div class="blog_view">
+        <!-- <h3 id="title_view">title</h3>
      <img id="image_view"src="/assests/images/beanseed_1.jpg">
      <p id="content_view">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ    
         Dieffenbranchia_3</p> -->
+        <!-- <h4 id="title_view_1">title</h4>
+        <p id="content_view_1">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p> 
+        <h4 id="title_view_2">title</h4>
+        <p id="content_view_2">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p>  -->
+     
+       
+      </div>
+    
 
-    </div>
-
-
-<!-- 
+      <!-- 
             <h3>ROSERY PEA CARING METHODS</h3>
             <h2>REQUIREMENTS...</h2>
   <div class="content">
@@ -132,7 +161,12 @@
 </div>
 
 <div class="first">
-
+  //    <p id="content_view">${blog_detail[i]["Content"]}</p>
+        //    <h4 id="title_view_1">${blog_detail[i]["heading_1"]}</h4>
+        //       <p id="content_view_1">${blog_detail[i]["points_1"]}</p>
+        //       <h4 id="title_view_2">${blog_detail[i]["heading_2"]}</h4>
+        //       <p id="content_view_2">${blog_detail[i]["points_2"]}</p>
+          </div>
 
 <div class="firstimage">
     
@@ -185,98 +219,116 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
         </div> -->
     </main>
 
-<script src="/assests/js/model.js"></script>
+    <script>
 
-<script>
 
-    
-let add_img= document.getElementById("upload_img")
-let add_title= document.getElementById("title")
-let add_content= document.getElementById("content")
-let add_blog= document.getElementById("add_blog")
-let blog_content= document.getElementsByClassName("blog_content")
-let additional_data= document.getElementsByClassName("additional_points")
-let heading= document.getElementById("heading_1")
-let points= document.getElementById("extra_points")
-let sub_heading= document.getElementById("heading_2")
-let extra_points= document.getElementById("extra_content_2")
-
+      let add_img= document.getElementById("upload_img")
+      let add_title= document.getElementById("title")
+      let add_content= document.getElementById("content")
+      let add_blog= document.getElementById("add_blog")
+      let blog_content= document.getElementsByClassName("blog_content")
+      let additional_data= document.getElementsByClassName("additional_points")
+      let heading= document.getElementById("points")
+      let points= document.getElementById("extra_points")
+      let sub_heading_= document.getElementById("heading_2")
+      let extra_points= document.getElementById("extra_content_2")
+     
 
 
 
 
 
+      let blog;
+      let username = JSON.parse(localStorage.getItem("arr"));
+      let profile_data = (localStorage.getItem("profile"));
+      let user_name;
+          username.find(e=>{
+              if(e["email"]==profile_data){
+                  return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+              }
+          })
 
-let blog;
-let username = JSON.parse(localStorage.getItem("arr")); 
-let profile_data = (localStorage.getItem("profile"));
-let user_name;
-    username.find(e=>{
-        if(e["email"]==profile_data){
-            return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+          add.addEventListener("click",e=>{
+          e.preventDefault()
+          additional_data[0].style.display='block';
+          add.style.display='none';
+
+
+      })
+    //   let blog_id = 0
+          submit.addEventListener("click",e=>{
+          e.preventDefault()
+          let user_id = Math.floor(Math.random() * 700);
+
+       
+
+
+         let blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
+        let blog={
+          "product_img":add_img.value,
+          "Title":add_title.value,
+          "Content":add_content.value,
+          "heading_1":heading.value,
+          "points_1":points.value,
+          "heading_2":sub_heading_.value,
+          "points_2":extra_points.value,
+          "username":user_name,
+          // "date":date,
+          "id" : user_id
         }
-    })
 
-    add.addEventListener("click",e=>{
-    e.preventDefault()
-    additional_data[0].style.display='block';
-    add.style.display='none';
-   
-
-})
-
-    submit.addEventListener("click",e=>{
-    e.preventDefault()
-
-   let blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
-  let blog={
-    "product_img":add_img.value,
-    "Title":add_title.value,
-    "Content":add_content.value,
-    "username":user_name
-  }
-  
-  blog_detail.push(blog)
+        blog_detail.push(blog)
 
 localStorage.setItem("blog",JSON.stringify(blog_detail))
 location.reload()
-
-})
-// submit.addEventListener("click",e=>{
-//     e.preventDefault()
-//     document.getElementById("additional_data")
-//     blog_content[0].style.display='block';
-
-// })
-add_blog.addEventListener("click",e=>{
-    e.preventDefault()
-    const center = document.querySelector('.center');
-    center.style.filter = 'blur(4.3px)';
-    blog_content[0].style.display='block';
-})
-let title_of=document.getElementById("title_view")
-let image_of=document.getElementById("image_view")
-let content_of=document.getElementById("add_content")
+    })
 
 
+      // --ends
 
-let blog_detail=JSON.parse(localStorage.getItem("blog")) ??0
-let blog_details=""
-for( let i=0;i<blog_detail.length;i++){
-blog_details+=`
-<div class="blog_view">
-     <h3 id="title_view">${blog_detail[i]["Title"]}</h3>
-     <img id="image_view"src="${blog_detail[i]["product_img"]}">
-     <p id="content_view">${blog_detail[i]["Content"]}</p>
+      // submit.addEventListener("click",e=>{
+      //     e.preventDefault()
+      //     document.getElementById("additional_data")
+      //     blog_content[0].style.display='block';
 
-    </div>
-`
-}
-let div = document.querySelector(".blog_view");
-div.innerHTML+=blog_details; 
+      // })
+      add_blog.addEventListener("click",e=>{
+          e.preventDefault()
+          const center = document.querySelector('.center');
+          center.style.filter = 'blur(4.3px)';
+          blog_content[0].style.display='block';
+      })
+      let title_of=document.getElementById("title_view")
+      let image_of=document.getElementById("image_view")
+      let content_of=document.getElementById("add_content")
+
+     
+      let currentDate = new Date().toJSON().slice(0, 10);
+      console.log(currentDate); 
 
 
-</script>
-</body>
+      let blog_detail=JSON.parse(localStorage.getItem("blog"))??0
+      let blog_details=""
+      for( let i=0;i<blog_detail.length;i++){
+      blog_details+=`
+      <a href = "blog_details.html?id=${blog_detail[i]["id"]}"><div class="blog_details">
+        <img id="image_view"src="${blog_detail[i]["product_img"]}">
+           <h3 id="title_view">${blog_detail[i]["Title"]}</h3>
+           <div class="name_date">
+           <p id="name_view">${blog_detail[i]["username"]}</p>
+           <p id="date_view">${currentDate}</p>
+           </div>
+           </div></a>
+      
+      `
+     
+      }
+      let blog_div = document.querySelector(".blog_view");
+      console.log(blog_div);
+      blog_div.innerHTML+=blog_details;
 
+      let login_title =document.getElementById("login_title")
+    </script>
+    <script src="/assests/js/model.js"></script>
+  </body>
 </html>

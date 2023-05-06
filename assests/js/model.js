@@ -2,7 +2,7 @@ let login_logo=document.getElementById("log")
 
 if(localStorage.getItem("profile")){
     login_logo.style.display="none"
-    login_title.style.display="none"
+    // login_title.style.display="none"
     console.log("success")
 }
 else{
