@@ -417,7 +417,7 @@ if (localStorage.getItem("review_array")) {
 if (localStorage.getItem("blog")) {
 } else {
   localStorage.setItem(
-    "seed_details",
+    "blog",
     JSON.stringify([
       {
         product_img: "https://iili.io/HSr3MAX.jpg",
