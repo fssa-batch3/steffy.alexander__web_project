@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assests/css/order.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../assests/images/Picsart_22-12-05_14-49-34-612.png"
+          alt="LOGO"
+        />
+      </div>
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="./plant.html">Plants</a>
+        <a href="./seeds.html">Seeds</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./login.html" id="log"
+          ><img
+            id="log"
+            src="../assests/images/Untitled_design-removebg-preview.png"
+            alt=""
+            id="login_title"
+          />Login/signup</a
+        >
+        <a href="/pages/profile.html"
+          ><img id="profile_logo" src="/assests/images/girl.png" alt=""
+        /></a>
+        <a href="./cart.html"
+          ><img id="cart" src="../assests/images/cart logo.png" alt="cart"
+        /></a>
+      </div>
+    </header>
+    <h1 class="heading">Order History</h1>
+    <h3 class="all_orders">All Orders</h3>
+    <div class="order">
+      <div class="titles">
+        <p class="id">ID</p>
+        <p class="name">Name</p>
+        <p class="product">Product</p>
+        <p class="quantity">Quantity</p>
+        <p class="price">Price</p>
+        <p class="delivery_address">Delivery address</p>
+        <p class="expected_date">Expected Delivery Date</p>
+        <p class="delivered_date">Delivered Date</p>
+        <p class="status">Status</p>
+      </div>
+
+      <div class="details">
+        <p class="id">1</p>
+        <p class="name">steffy</p>
+        <p class="product">plant</p>
+        <p class="quantity">2</p>
+        <p class="price">123</p>
+        <p class="delivery_address">54ca</p>
+        <p class="expected_date">9.05.2023</p>
+        <p class="delivered_date">10.09.2023</p>
+        <p class="status">Delivered</p>
+      </div>
+    </div>
+    <script src="/assests/js/model.js"></script>
+    <script>
+      
+      let id = document.querySelector(".id");
+      let name = document.querySelector(".name");
+      let product = document.querySelector(".product");
+      let quantity = document.querySelector(".quantity");
+      let price = document.querySelector(".price");
+      let delivery_address = document.querySelector(".delivery_address");
+      let expected_date = document.querySelector(".expected_date");
+      let status = document.querySelector(".status");
+     
+    
+
+      // let history = JSON.parse(localStorage.getItem("cart"));
+      // let email = JSON.stringify(localStorage.getItem("profile"));
+      // let address_details = JSON.parse(localStorage.getItem("details"));
+
+
+      // let product_order_details =
+      
+      //   JSON.parse(localStorage.getItem("history_details")) || [];
+
+
+      // let history_details = {
+
+      //   "id":id.length+1,
+      //   "name": document.getElementById("profile"),
+      //   "product": document.getElementById("plant_name"),
+      //   "quantity": document.getElementById("plantquantity"),
+      //   "price": document.getElementById("plant_total_price"),
+      //   "delivery_address": document.getElementById("address"),
+      //   "expected_date": document.getElementById("expected_date")
+      // };
+
+
+      // product_order_details.push(history_details);
+      // localStorage.setItem(
+      //   "history_details",
+      //   JSON.stringify(product_order_details)
+      // );
+    </script>
+  </body>
+</html>

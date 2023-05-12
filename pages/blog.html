@@ -218,7 +218,7 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
 </div>
         </div> -->
     </main>
-
+    <script src="/assests/js/model.js"></script>
     <script>
 
 
@@ -292,11 +292,22 @@ location.reload()
       //     blog_content[0].style.display='block';
 
       // })
+
+
       add_blog.addEventListener("click",e=>{
           e.preventDefault()
-          const center = document.querySelector('.center');
+          if(localStorage.getItem("profile")){
+            const center = document.querySelector('.center');
           center.style.filter = 'blur(4.3px)';
           blog_content[0].style.display='block';
+  // window.location.href="/pages/blog.html"
+}
+else{
+  window.location.href="signup.html"
+  console.log("");
+  
+} 
+         
       })
       let title_of=document.getElementById("title_view")
       let image_of=document.getElementById("image_view")
@@ -329,6 +340,6 @@ location.reload()
 
       let login_title =document.getElementById("login_title")
     </script>
-    <script src="/assests/js/model.js"></script>
+   
   </body>
 </html>

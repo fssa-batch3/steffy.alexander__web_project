@@ -1,8 +1,9 @@
-let login_logo=document.getElementById("log")
-
+let login_logo=document.getElementById("log")//
+ profile_logo=document.getElementById("profile_logo")
+ login_titles=document.getElementById("login_title")
 if(localStorage.getItem("profile")){
     login_logo.style.display="none"
-    // login_title.style.display="none"
+    login_titles.style.display="none"
     console.log("success")
 }
 else{
@@ -21,7 +22,7 @@ cart_data_view.addEventListener("click",e=>{
   console.log("already signed");
 }
 else{
-  window.location.href="./pages/signup.html"
+  window.location.href="signup.html"
   console.log("");
 
 }
