@@ -73,12 +73,13 @@ header a {
 .logo img {
   width: 110px;
   height: 65px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 
 #profile_logo{
   width:40px;
   height:40px;
+  margin-right: 28px;
 }
 
 .nav a {
@@ -253,7 +254,7 @@ header a {
   text-align: center;
   border: 2px solid rgb(37, 111, 72);
   margin-top: 30px;
-  padding: 10px;
+  padding: 8px;
   width: 120px;
   margin-left: 50px;
 }
@@ -288,8 +289,8 @@ header a {
   margin-top: 28px;
 }
 #home_shopnow{
-  width:170px;
-  height: 40px;
+  width:160px;
+  height: 37px;
   margin: 100px auto;
   border-radius: 40px;
   border-color: 1px solid rgb(37, 111, 72);
@@ -302,11 +303,12 @@ header a {
   margin-left: 368px;
 }
 #home_shopnow:hover{
- background-color: white;
-  color:  rgb(37, 111, 72);
-  border-style: none;
-  border: 2px solid rgb(37, 111, 72);
+  background-color:white; 
+  color: #3d6921;
+  /* border-color: 2px solid rgb(37, 111, 72); */
   cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
 }
 #ad_quote{
@@ -385,31 +387,61 @@ input:focus{
  height: 100px;
 }
 #text_review{
-  width:160px;
-  height: 42px;
-  /* margin: 100px auto; */
+  width:130px;
+  height: 35px;
   border-radius: 40px;
-  border-color: 1px solid rgb(37, 111, 72);
   color:white;
   background-color: #3d6921;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  border: 2px solid rgb(37, 111, 72);
+  border: 1px solid rgb(37, 111, 72);
+  /* font-weight: 600; */
   margin-top: 60px;
-  /* padding: 8px; */
+  letter-spacing: 0.75px;
   margin-left: 13px;
   position: relative;
   left: 310px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   
 
 }
 #text_review:hover{
-  background-color: white;
-   color:  rgb(37, 111, 72);
+  background-color:white; 
+  color: #3d6921;;
    border-style: none;
-   border: 2px solid rgb(37, 111, 72);
+   border: none;
    cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+ }
+ #submit{
+  background-color: #fafcf9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border: 1px solid rgb(230, 235, 232);
+ }
+ #submit:hover{
+  background-color:rgb(255, 255, 255); 
+  color: #000000;
+   border-style: none;
+   border: none;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+ }
+ button{
+  background-color: #3d6921;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border: 1px solid rgb(37, 111, 72);
+ }
+ button:hover{
+  background-color:white; 
+  color: #3d6921;;
+   border-style: none;
+   border: none;
+   cursor: pointer;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
  
  }
 .fa-sharp {

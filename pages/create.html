@@ -168,13 +168,13 @@
     </div>
   </body>
   <script>
-    let create_plant = document.getElementById("create_plant");
-    let update_plant = document.getElementById("update_plant");
-    let delete_plant = document.getElementById("delete_plant");
+    const create_plant = document.getElementById("create_plant");
+    const update_plant = document.getElementById("update_plant");
+    const delete_plant = document.getElementById("delete_plant");
 
-    let create_form = document.getElementById("form");
-    let update_form = document.getElementById("update_form");
-    let detete_form = document.getElementById("delete_form");
+    const create_form = document.getElementById("form");
+    const update_form = document.getElementById("update_form");
+    const detete_form = document.getElementById("delete_form");
 
     create_plant.addEventListener("click", (e) => {
       window.location.href = "./create.html";
@@ -186,13 +186,13 @@
     });
     delete_plant.addEventListener("click", (e) => {});
 
-    let plant_product = JSON.parse(localStorage.getItem("create_plant"))
-      ? JSON.parse(localStorage.getItem("create_plant"))
-      : [];
+    const plant_product = JSON.parse(localStorage.getItem("create_plant"))
+  ? JSON.parse(localStorage.getItem("create_plant"))
+  : [];
 
-    let seed_details = JSON.parse(localStorage.getItem("seed_details"))
-      ? JSON.parse(localStorage.getItem("seed_details"))
-      : [];
+    const seed_details = JSON.parse(localStorage.getItem("seed_details"))
+  ? JSON.parse(localStorage.getItem("seed_details"))
+  : [];
 
     document.getElementById("create").addEventListener("click", (e) => {
       e.preventDefault();
@@ -224,25 +224,25 @@
         category = "Seed";
       }
 
-      let product_create = {
-        image: image.value,
-        price: price.value,
-        name: name.value,
-        ratings: ratings.value,
-        image_1: image_1.value,
-        image_2: image_2.value,
-        image_3: image_3.value,
-        about: about.value,
-        Type_of_plant: Type_of_plant.value,
-        Suitable_Location: Suitable_Location.value,
-        Container_Type: Container_Type.value,
-        Height: Height.value,
-        Brand: Brand.value,
-        Planting_Season: Planting_Season.value,
-        Hybrid: Hybrid.value,
-        Category: category,
-        status:true
-      };
+      const product_create = {
+    image: image.value,
+    price: price.value,
+    name: name.value,
+    ratings: ratings.value,
+    image_1: image_1.value,
+    image_2: image_2.value,
+    image_3: image_3.value,
+    about: about.value,
+    Type_of_plant: Type_of_plant.value,
+    Suitable_Location: Suitable_Location.value,
+    Container_Type: Container_Type.value,
+    Height: Height.value,
+    Brand: Brand.value,
+    Planting_Season: Planting_Season.value,
+    Hybrid: Hybrid.value,
+    Category: category,
+    status:true
+  };
 
       if (plant_category.checked) {
         plant_product.push(product_create);
@@ -278,32 +278,32 @@
     //     }
     //   }
     // }
-    let update = document.getElementById("update");
+    const update = document.getElementById("update");
     update.addEventListener("click", (e) => {});
 
     function update_product() {
       product_update = {};
-      let product = JSON.parse(localStorage.getItem("create_plant")) ?? [];
+      const product = JSON.parse(localStorage.getItem("create_plant")) ?? [];
       const image = document.getElementById("image").value;
       const price = document.getElementById("price").value;
       const name = document.getElementById("name").value;
       const ratings = document.getElementById("ratings").value;
-      product_create["image"] = image;
-      product_create["price"] = price;
-      product_create["name"] = name;
-      product_create["ratings"] = ratings;
+      product_create.image = image;
+      product_create.price = price;
+      product_create.name = name;
+      product_create.ratings = ratings;
       product.push(product_create);
     }
-    let search = document.getElementById("search");
-    let update_details_div = document.querySelector(".update_details");
+    const search = document.getElementById("search");
+    const update_details_div = document.querySelector(".update_details");
     search.addEventListener("click", (e) => {
       e.preventDefault();
-      let update_input_value = document.getElementById("update_input").value;
+      const update_input_value = document.getElementById("update_input").value;
       let res = 0;
-      let plants_array = JSON.parse(localStorage.getItem("create_plant"));
+      const plants_array = JSON.parse(localStorage.getItem("create_plant"));
       let current_plant;
       plants_array.forEach((e) => {
-        if (update_input_value == e["name"]) {
+        if (update_input_value == e.name) {
           current_plant = e;
           res = 1;
           return current_plant;
@@ -314,38 +314,38 @@
         update_details_div.classList.remove("not_view");
         update_details_div.classList.add("view");
         console.log(current_plant, "sdghcvey");
-        document.getElementById("update_image").value = current_plant["image"];
-        document.getElementById("update_price").value = current_plant["price"];
-        document.getElementById("update_name").value = current_plant["name"];
+        document.getElementById("update_image").value = current_plant.image;
+        document.getElementById("update_price").value = current_plant.price;
+        document.getElementById("update_name").value = current_plant.name;
         document.getElementById("update_ratings").value =
-          current_plant["ratings"];
+          current_plant.ratings;
         document.getElementById("update_image_1").value =
-          current_plant["image_1"];
+          current_plant.image_1;
         document.getElementById("update_image_2").value =
-          current_plant["image_2"];
+          current_plant.image_2;
         document.getElementById("update_image_3").value =
-          current_plant["image_3"];
-        document.getElementById("update_about").value = current_plant["about"];
+          current_plant.image_3;
+        document.getElementById("update_about").value = current_plant.about;
         document.getElementById("update_Type_of_plant").value =
-          current_plant["Type_of_plant"];
+          current_plant.Type_of_plant;
         document.getElementById("update_Suitable_Location").value =
-          current_plant["Suitable_Location"];
+          current_plant.Suitable_Location;
         document.getElementById("update_Container_Type").value =
-          current_plant["Container_Type"];
+          current_plant.Container_Type;
         document.getElementById("update_Height").value =
-          current_plant["Height"];
-        document.getElementById("update_Brand").value = current_plant["Brand"];
+          current_plant.Height;
+        document.getElementById("update_Brand").value = current_plant.Brand;
         document.getElementById("update_Planting_Season").value =
-          current_plant["Planting_Season"];
+          current_plant.Planting_Season;
         document.getElementById("update_Hybrid").value =
-          current_plant["Hybrid"];
+          current_plant.Hybrid;
       } else alert("No plants/seeds like that");
     });
     if (document.getElementById("update_product")) {
-      let update_product = document.getElementById("update_product");
+      const update_product = document.getElementById("update_product");
       update_product.addEventListener("click", (e) => {
         e.preventDefault();
-        let update_input_value = document.getElementById("update_input").value;
+        const update_input_value = document.getElementById("update_input").value;
 
         const update_image = document.getElementById("update_image").value;
         const update_price = document.getElementById("update_price").value;
@@ -376,29 +376,29 @@
 
         // const update_seed_category = document.getElementById("update_seed_category").value;
 
-        let updated_product = {
-          image: update_image,
-          price: update_price,
-          name: update_name,
-          ratings: update_ratings,
-          image_1: update_image_1,
-          image_2: update_image_2,
-          image_3: update_image_3,
-          about: update_about,
-          Type_of_plant: update_Type_of_plant,
-          Suitable_Location: update_Suitable_Location,
-          Container_Type: update_Container_Type,
-          Height: update_Height,
-          Brand: update_Brand,
-          Planting_Season: update_Planting_Season,
-          Hybrid: update_Hybrid,
-          status:true
-        };
+        const updated_product = {
+      image: update_image,
+      price: update_price,
+      name: update_name,
+      ratings: update_ratings,
+      image_1: update_image_1,
+      image_2: update_image_2,
+      image_3: update_image_3,
+      about: update_about,
+      Type_of_plant: update_Type_of_plant,
+      Suitable_Location: update_Suitable_Location,
+      Container_Type: update_Container_Type,
+      Height: update_Height,
+      Brand: update_Brand,
+      Planting_Season: update_Planting_Season,
+      Hybrid: update_Hybrid,
+      status:true
+    };
 
         console.log(updated_product);
-        let plants_array = JSON.parse(localStorage.getItem("create_plant"));
+        const plants_array = JSON.parse(localStorage.getItem("create_plant"));
         plants_array.forEach((e, index) => {
-          if (e["name"] == update_input_value) {
+          if (e.name == update_input_value) {
             plants_array[index] = updated_product;
             localStorage.setItem("create_plant", JSON.stringify(plants_array));
           }
@@ -407,37 +407,35 @@
     }
 
     // function delete_product()--------------------
-    let delete_product = document.getElementById("delete_plant");
+    const delete_product = document.getElementById("delete_plant");
     delete_product.addEventListener("click", (e) => {
       e.preventDefault()
       create_form.classList.add("not_view");
       update_form.classList.add("not_view");
       delete_form.classList.remove("not_view");
 
-
       });
       // location.reload()
 
-
-    let delete_button =document.getElementById("delete_product")
+    const delete_button =document.getElementById("delete_product")
     delete_button.addEventListener("click",e=>{
       e.preventDefault()
 
-      let delete_input = document.querySelector("#delete_input").value;
-      let delete_brand = document.querySelector("#delete_brand").value;
+      const delete_input = document.querySelector("#delete_input").value;
+      const delete_brand = document.querySelector("#delete_brand").value;
 
-      let plant_details = JSON.parse(localStorage.getItem("create_plant"));
-      let seed_details = JSON.parse(localStorage.getItem("seed_details"));
+      const plant_details = JSON.parse(localStorage.getItem("create_plant"));
+      const seed_details = JSON.parse(localStorage.getItem("seed_details"));
       plant_details.forEach((e, index) => {
-        if(e["name"]==delete_input&&e["Brand"]==delete_brand){
-          e["status"]=false
+        if(e.name==delete_input&&e.Brand==delete_brand){
+          e.status=false
     localStorage.setItem("create_plant", JSON.stringify(plant_details));
     
         }
       });
       seed_details.forEach((e, index) => {
-        if(e["name"]==delete_input&&e["Brand"]==delete_brand){
-          e["status"]=false
+        if(e.name==delete_input&&e.Brand==delete_brand){
+          e.status=false
            localStorage.setItem("seed_details", JSON.stringify(seed_details));
            console.log("seed");
 
@@ -461,32 +459,29 @@
 
     // Function restore-------------------------------------
 
-
-
-    let restore_buttton =document.getElementById("restore_button")
+    const restore_buttton =document.getElementById("restore_button")
     restore_buttton.addEventListener("click",e=>{
       e.preventDefault()
-      let restore_input = document.getElementById("restore_input").value
-    let restore_brand = document.getElementById("restore_brand").value
+      const restore_input = document.getElementById("restore_input").value
+    const restore_brand = document.getElementById("restore_brand").value
 
-      let plant_details = JSON.parse(localStorage.getItem("create_plant"));
-      let seed_details = JSON.parse(localStorage.getItem("seed_details"));
+      const plant_details = JSON.parse(localStorage.getItem("create_plant"));
+      const seed_details = JSON.parse(localStorage.getItem("seed_details"));
       plant_details.forEach((e, index) => {
-        if(e["name"]==restore_input&&e["Brand"]==restore_brand){
-          e["status"]=true
+        if(e.name==restore_input&&e.Brand==restore_brand){
+          e.status=true
     localStorage.setItem("create_plant", JSON.stringify(plant_details));
     
         }
       });
       seed_details.forEach((e, index) => {
-        if(e["name"]==restore_input&&e["Brand"]==restore_brand){
-          e["status"]=true
+        if(e.name==restore_input&&e.Brand==restore_brand){
+          e.status=true
            localStorage.setItem("seed_details", JSON.stringify(seed_details));
            console.log("seed");
 
 }    });
 
     })
-
   </script>
 </html>

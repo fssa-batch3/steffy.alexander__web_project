@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assests/css/review.css">
-  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <img src="/assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
+      <img src="/assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
     </div>
 
     <div class="nav">
@@ -25,25 +25,28 @@
       <a href="/pages/plant.html">Plants</a>
       <a href="/pages/seeds.html">Seeds</a>
       <a href="/pages/blog.html">Blog</a>
-      <a href="/pages/login.html" id="log"><img id="log" src="/assests/images/Untitled_design-removebg-preview.png" alt=""
-          LOGIN /><span id="user_name">Login/signup</span></a>
-          <a href="./pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
-      <a href="/pages/cart.html"><img id="cart" src="/assests/images/cart logo.png" alt="cart" /></a>
+      <a href="/pages/login.html" id="log">
+<img id="log" src="/assests/images/Untitled_design-removebg-preview.png" alt=""
+          LOGIN>
+<span id="user_name">Login/signup</span>
+</a>
+          <a href="/pages/profile.html">
+<img id="profile_logo" src="/assests/images/girl.png" alt="">
+</a>
+      <a href="/pages/cart.html">
+<img id="cart" src="/assests/images/cart logo.png" alt="cart">
+</a>
     </div>
   </header>
 
-
-
   <!-- header 
     ends -->
-
 
 <div class="write_box">
  <form id="form">
 <div class="left_content">
 <!-- <label for="name">Full name<input type="text" id="name"></label><br> -->
 <!-- <label for="rating">Ratings<input type="text" id="rating"></label> -->
-
 
 <div id="Write_a_review">
   
@@ -58,8 +61,9 @@
     </div>
  
 <!-- <h3>Write a Review:</h3> -->
-<textarea placeholder="Write a review" id="review"></textarea><br />
-<button id="submit"  type="submit">Submit</button>
+<textarea placeholder="Write a review" id="review"></textarea>
+<br >
+<button id="submit" type="submit">Submit</button>
 </form>
 </div>
 
@@ -87,7 +91,6 @@
 <script src="/assests/js/model.js"></script>
 
 <script>
-
 // document.getElementById("form").addEventListener("submit", e => {
 //   e.preventDefault();
 
@@ -112,7 +115,6 @@
 // let res;
 
 // username.find(e => {
-
         
 //   if (e.email === profile_data) {
 //     res = e; //arr[0]
@@ -122,7 +124,6 @@
 
 // let reviewDetails = JSON.parse(localStorage.getItem("review_details"));
 // let reviewShow = "";
-
         
 // for (let i of reviewDetails) {
 //   let nameOfUser = i.name;
@@ -135,7 +136,6 @@
 //         <img id="left_quote" src="/assests/images/left-quote (1).png">
 //         <div class="right_content">
 //           <h4 id="name">${nameOfUser}</h4>
-          
 
 //           <div class="rating-box">
 //       <div class="stars">
@@ -156,8 +156,6 @@
 
 // let div = document.getElementById("content");
 // div.innerHTML = reviewShow; 
-
-
 
 //   Selecting ratings with star -----------
  
@@ -181,33 +179,31 @@ stars.forEach((star, index1) => {
 
 // Storing reviews in the local storage ============
 
-let submit = document.getElementById("submit")
+const submit = document.getElementById("submit")
 let star_count;
 let review;
-let username = JSON.parse(localStorage.getItem("arr")); 
-let profile_data = (localStorage.getItem("profile"));
+const username = JSON.parse(localStorage.getItem("arr")); 
+const profile_data = (localStorage.getItem("profile"));
 let user_name;
     username.find(e=>{
-        if(e["email"]==profile_data){
-            return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+        if(e.email==profile_data){
+            return user_name=(`${e.fname} ${e.lastname}`); //arr[0]
         }
     })
-   
-
 
 submit.addEventListener("click",e=>{
   e.preventDefault()
   star_count=0
-  let star_icon=document.querySelectorAll(".active")
+  const star_icon=document.querySelectorAll(".active")
 star_count = star_icon.length
 // console.log(document.querySelectorAll(".active").length,"hi");
 review = document.getElementById("review").value
-let reviews={
-  "star_count":star_count,
-  "review":review,
+const reviews={
+  star_count,
+  review,
   "username":user_name
 }
-let review_array = JSON.parse(localStorage.getItem("review_array"))??[]
+const review_array = JSON.parse(localStorage.getItem("review_array"))??[]
 review_array.push(reviews)
 
 localStorage.setItem("review_array",JSON.stringify(review_array))
@@ -221,17 +217,16 @@ const review_content= JSON.parse(localStorage.getItem("review_array"))
 let review_show = "";
     for( let k=0;k<review_content.length;k++){
 
-    let name_reviewer=review_content[k].username;
+    const name_reviewer=review_content[k].username;
 
-    let star_reviewer=review_content[k].star_count;
+    const star_reviewer=review_content[k].star_count;
     let star_icon="";
     console.log(star_reviewer);
     
-    let reviewes=review_content[k].review;
+    const reviewes=review_content[k].review;
     for(let i=0;i<star_reviewer;i++){
       star_icon+=`<i class="fa-solid fa-star star_color"></i>`
       }
-
       
     review_show+=` 
 <div class="container">
@@ -246,14 +241,10 @@ let review_show = "";
   
 </div>`
 
-
     }
 
-let div = document.getElementById("content");
+const div = document.getElementById("content");
 div.innerHTML = review_show; 
-
-
-
 </script>
        </body>
     </html>

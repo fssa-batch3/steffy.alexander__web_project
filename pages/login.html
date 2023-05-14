@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assests/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -24,43 +24,49 @@
             </div>
         </div>
 
-        <label><i id="loglog" class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="Email..." id="email" required></label><br>
-        <label><i id="loglog" class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password..." id="password" title="Enter a uppercase, a lowercase, a number/special character" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></label><br>
+        <label>
+<i id="loglog" class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Email..." id="email" required>
+</label>
+<br>
+        <label>
+<i id="loglog" class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password..." id="password" title="Enter a uppercase, a lowercase, a number/special character" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+</label>
+<br>
 
-        <a id="account" href="./signup.html">don't have an account?</a><br><br><br>
+        <a id="account" href="./signup.html">don't have an account?</a>
+<br>
+<br>
+<br>
         <!-- <a id="signin" href="./signup.html">sign in</a>
          -->
         <button type="button" onclick="submit()">sign in</button>
 
     </div>
-
   
   <script>
-
-
 function submit(){
       
         const email= document.getElementById("email").value
         const password =  document.getElementById("password").value
-        let data={
-            "email":email,
-            "password":password
+        const data={
+            email,
+            password
         }
        
        const user=JSON.parse(localStorage.getItem("arr"))
 let check;
         user.find(element=>{
-                if(element["email"]==email && element["password"]==password){
+                if(element.email==email && element.password==password){
                     // const users=JSON.stringify(element)
                     // localStorage.setItem("arr",users)
                         return check=1
   
                 }
-                else{
+                
                    return check=0
-                }
+                
         })
 if(check==1){
     alert("Successfully logged in") 
@@ -71,12 +77,10 @@ if(check==1){
 else{
     alert("incorrect")
 }
-
   
 }
   </script>
 
 </body>
-
 
 </html>

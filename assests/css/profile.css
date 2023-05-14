@@ -178,5 +178,28 @@ label input:focus,.side_one textarea:focus {
 .lastcontent img{
     width: 350px;
 } 
-
-
+select{
+    height: 20px;
+}
+#edit,#save,#delete{
+    margin: 30px 20px; 
+    height: 25px;
+    width: 100px;
+    margin-left: 8px;
+    border-radius: 0px;
+    color: white;
+    background-color: #5da478;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 60px;
+    border: 2px solid  #5da478;
+    font-weight: 500;
+    
+}
+#edit:hover,#save:hover,#delete:hover{
+    background-color:white; 
+    color: #3d6921;
+    /* border-color: 2px solid rgb(37, 111, 72); */
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}

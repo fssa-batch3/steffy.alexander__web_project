@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="../assests/css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 <body>
- 
     
             <div class="content">
         <div class="left">
@@ -20,17 +19,28 @@
         
          <img class="profile" src="../assests/images/bc.jpeg" alt="profile img">
          <input type="file" id="file">
-         <label for="file"><img id="editcam" src="../assests/images/photo-camera.png" alt="editimg"></label>
-         <br><br>
+         <label for="file">
+<img id="editcam" src="../assests/images/photo-camera.png" alt="editimg">
+</label>
+         <br>
+<br>
          <p class="username" id="displayProfile"></p>
          <!-- <label for="name"> name <input type="text" id="name"></label><br><br>
          <label for="email">Email <input type="text"  id="email"></label> -->
         </div>
         <div class="bottomleft">
 
-        <div class="fstname"><i class="fa-solid fa-user"></i>Profile</div>
-        <div class="secname"><i class="fa-solid fa-user"></i>Edit Profile</div>
-       <a href="/index.html"><div class="thirdname"><i class="fa-solid fa-user"></i>Back to Home</div></a>
+        <div class="fstname">
+<i class="fa-solid fa-user"></i>Profile
+</div>
+        <!-- <div class="secname">
+<i class="fa-solid fa-user"></i>Edit Profile
+</div> -->
+       <a href="/index.html">
+<div class="thirdname">
+<i class="fa-solid fa-user"></i>Back to Home
+</div>
+</a>
         </div>
     </div>
     <form id="profile_form">
@@ -42,7 +52,6 @@
         <i class="fa-solid fa-microphone"></i><span><button id="post">POST</button></span>
         
     </div> -->
-
    
 <div class="bottomcontent">
     
@@ -51,12 +60,31 @@
     </div>
     
     <div class="inputfields">
-        <label for="fname">First name<input type="text" id="fname" disabled></label><br>
-        <label for="lname">last name <input type="text" id="lname" disabled></label><br>
-        <label for="email">Email <input type="text"  id="email" disabled></label><br>
-        <label for="number">Mobile.No <input  type="tel" pattern="[0-9]{10}"  id="number" disabled required></label><br>
-        <label for="address">Address<input type="text" id="address" disabled></label><br>
-        <label for="gender">Gender <input type="text" id="gender" disabled></label><br>
+        <label for="fname">
+First name<input type="text" id="fname" disabled>
+</label>
+<br>
+        <label for="lname">
+last name <input type="text" id="lname" disabled>
+</label>
+<br>
+        <label for="email">
+Email <input type="text" id="email" disabled>
+</label>
+<br>
+        <label for="number">
+Mobile.No <input type="tel" pattern="[0-9]{10}" id="number" disabled required>
+</label>
+<br>
+        <label for="address">
+Address<input type="text" id="address" disabled>
+</label>
+<br>
+
+         <label for="gender">
+Gender <input type="text" id="gender" disabled>
+</label> 
+<br>
     </div>
 
 </div>
@@ -65,26 +93,22 @@
     <div class="side_one">
         <h2>Add Bio</h2>
         <textarea placeholder="Add Bio"></textarea>
-        <button id="edit" >Edit</button>
+        <button id="edit">Edit</button>
         <button type="submit" id="save">update</button>
         <button id="delete">Delete</button>
     </div>
-   <div><img src="../assests/images/img gif.gif" alt="plants"></div>
-</div>
-</form>
-</div>
+   <div>
+<img src="../assests/images/img gif.gif" alt="plants">
 </div>
 </div>
 </form>
-
-
-
- 
-
+</div>
+</div>
+</div>
+</form>
 
 <script>
-   
-    const img_div =document.querySelector(".leftbox")
+       const img_div =document.querySelector(".leftbox")
     const profile =document.querySelector(".profile")
     const file=document.querySelector("#file")
     const uploadbtn=document.querySelector("#button")
@@ -96,25 +120,22 @@
         if(choosed_file) {
             const reader= new FileReader()
    // filereader is predefiden function of js
-            reader.addEventListener('load',function(){
+            reader.addEventListener('load',() =>{
              profile.setAttribute("src",reader.result)
          })
          reader.readAsDataURL(choosed_file)
         }
     })
 
-    let username = JSON.parse(localStorage.getItem("arr")); 
+    const username = JSON.parse(localStorage.getItem("arr")); 
     //array of objects
-
    
-    let profile_data = (localStorage.getItem("profile"));
-     
+    const profile_data = (localStorage.getItem("profile"));
      
 let res;
 
-
     username.find(e=>{
-        if(e["email"]==profile_data){
+        if(e.email==profile_data){
             return res=e; //arr[0]
 
         }
@@ -124,20 +145,18 @@ let res;
     // res["mobile_num"]="56767676"
     // console.log(res)
 
-    document.getElementById("fname").value = res["fname"];
-    document.getElementById("lname").value = res["lastname"];
-    document.getElementById("email").value = res["email"]; 
-    document.getElementById("number").value = res["number"]?? ""; 
-    document.getElementById("address").value = res["address"]??""; 
-    document.getElementById("gender").value = res["gender"]??"";
+    document.getElementById("fname").value = res.fname;
+    document.getElementById("lname").value = res.lastname;
+    document.getElementById("email").value = res.email; 
+    document.getElementById("number").value = res.number?? ""; 
+    document.getElementById("address").value = res.address??""; 
+    document.getElementById("gender").value = res.gender??"";
     //  document.getElementById("number").value = ""; 
     // document.getElementById("address").value = ""; 
     // document.getElementById("gender").value = "";
 
-    displayName.innerText=res["fname"] +" " +res["lastname"];
+    displayName.innerText=`${res.fname } ${ res.lastname}`;
     // displayName.innerText = res["fname"] + " "+res["lastname"] 
-    
-    
 
     document.getElementById("edit").addEventListener("click",e=>{
         e.preventDefault();
@@ -151,31 +170,28 @@ let res;
        
     })
 
-
-
     const formbtn=document.getElementById("profile_form")
     formbtn.addEventListener("submit",e=>{
         e.preventDefault();
-        let res1={};
-       let users=JSON.parse(localStorage.getItem("arr"))
-       res1["email"]=document.getElementById("email").value;
+        const res1={};
+       const users=JSON.parse(localStorage.getItem("arr"))
+       res1.email=document.getElementById("email").value;
        users.forEach((e,i) => {
-        if(res1["email"]==e["email"]){
-         
+        if(res1.email==e.email){
         
-        e["fname"]=document.getElementById("fname").value;
-        e["lastname"]=document.getElementById("lname").value;
-        e["number"]=document.getElementById("number").value;
-        e["address"]=document.getElementById("address").value;
-        e["gender"]=document.getElementById("gender").value;
+        e.fname=document.getElementById("fname").value;
+        e.lastname=document.getElementById("lname").value;
+        e.number=document.getElementById("number").value;
+        e.address=document.getElementById("address").value;
+        e.gender=document.getElementById("gender").value;
             
         }
        });
 
         localStorage.setItem("arr",JSON.stringify(users))
-        if(res["number"]){
+        if(res.number){
             console.log(res)
-            document.getElementById("number").value=res["number"]
+            document.getElementById("number").value=res.number
 
         }
         
@@ -188,17 +204,14 @@ let res;
         window.location.href="./profile.html"
     })
 
-
-
     document.getElementById("delete").addEventListener("click",e=>{
         e.preventDefault();
 
-        let active_user= localStorage.getItem("profile")
-      let users = JSON.parse(localStorage.getItem("arr"))
+        const active_user= localStorage.getItem("profile")
+      const users = JSON.parse(localStorage.getItem("arr"))
       users.forEach((e,index)=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           users.splice(index,1)
-          
 
         }
       })
@@ -206,22 +219,18 @@ let res;
       localStorage.removeItem("profile")
       location.reload()
        window.location.href ="./login.html"
-
-
      
     })
-
-    
   
+    let admin;
+    let create_plant=document.getElementById("create_plant")
+    let seed_details=document.getElementById("seed_details")
 
-  
+
+    // if(email==steffyalexander20.gmail.com){
     
 
+    // }
 </script>
 </body>
 </html>
-
-
-
-
-

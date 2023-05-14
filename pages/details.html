@@ -3,22 +3,22 @@
 
 <head>
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../assests/css/details.css" />
+  <link rel="stylesheet" href="../assests/css/details.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
   
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
+      <img src="../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
     </div>
 
     <div class="nav">
@@ -27,10 +27,13 @@
       <a href="/pages/seeds.html">Seeds</a>
       <a href="/pages/blog.html">Blog</a>
       <a href="/pages/login.html"></a>
-      <img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt="" LOGIN /><span
+      <img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt="" LOGIN>
+<span
         id="user_name">Login/signup</span></a>
        <a href="/pages/signup.html"></a>
-        <a href="./pages/cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart" /></a>
+        <a href="./pages/cart.html">
+<img id="cart" src="../assests/images/cart logo.png" alt="cart">
+</a>
     </div>
   </header>
 
@@ -39,8 +42,6 @@
       <div class="box1">
         <div class="imgtrend" alt="hibiscusimg">
           <img src="../assests/images/hibiscuss.jpg" alt="hibiscus" />
-
-
 
           <div class="plantimages">
             <img id="hibiscus_1" src="../assests/images/hibiscus_1.jpg" alt="hibiscus" />
@@ -176,11 +177,7 @@
       </div> -->
   </div>
   
-  <script>
-
-
-
-    const product_list = [{
+  <script>    const product_list = [{
 
       "name": "Venus Flytrap",
       "image": {
@@ -218,7 +215,6 @@
       Brand: "tcycvy",
       table_Plantname: "Hibiscus Plant",
       Hybrid: "No"
-
 
     },
     {
@@ -260,28 +256,22 @@
       table_Plantname: "Hibiscus Plant",
       Hybrid: "No"
 
-
     }
     ]
 
-
-    let url = window.location.search;  //?name=venmus flytrap (key, value)
+    const url = window.location.search;  //?name=venmus flytrap (key, value)
     // console.log(url)
-    let urls = new URLSearchParams(url)
+    const urls = new URLSearchParams(url)
     // console.log(urls)//"name":"venus flytrap"
-    let name = urls.get("name")
+    const name = urls.get("name")
     // console.log(name);
-
   
     const pr_arr = JSON.parse(localStorage.getItem("create_plant"))
 
-   
-
     let res
-   pr_arr.find(function (obj){
-
+   pr_arr.find((obj) =>{
    
-    if(obj["name"] == name){
+    if(obj.name == name){
       list_products(obj);
       return res=obj
 
@@ -289,85 +279,78 @@
 
    })
    const seed = JSON.parse(localStorage.getItem("seed_details"))
-
-
    
-  seed.find(function (obj){
-   if(obj["name"] == name){
+  seed.find((obj) =>{
+   if(obj.name == name){
     list_products(obj);
     return res=obj
 }
 
 })
-
   
     //console.log(pr_arr);
 
     function list_products(search) {
 
-      let div_1 = document.createElement("div")
+      const div_1 = document.createElement("div")
       div_1.setAttribute("class", "left")
       document.querySelector(".container").prepend(div_1)
 
-      let div_2 = document.createElement("div")
+      const div_2 = document.createElement("div")
       div_2.setAttribute("class", "box1")
       document.querySelector(".left").append(div_2)
 
-      let div_3 = document.createElement("div")
+      const div_3 = document.createElement("div")
       div_3.setAttribute("class", "imgtrend")
       document.querySelector(".box1").append(div_3)
 
-      let img = document.createElement("img")
-      img.setAttribute("src", search["image"])
+      const img = document.createElement("img")
+      img.setAttribute("src", search.image)
       img.setAttribute("alt", "hibiscuss")
       document.querySelector(".imgtrend").append(img)
 
-      let div_4 = document.createElement("div")
+      const div_4 = document.createElement("div")
       div_4.setAttribute("class", "plantimages")
       document.querySelector(".imgtrend").append(div_4)
 
-      let img_1 = document.createElement("img")
-      img_1.setAttribute("src", search["image_1"])
+      const img_1 = document.createElement("img")
+      img_1.setAttribute("src", search.image_1)
       img_1.setAttribute("alt", "hibiscus_1")
       document.querySelector(".plantimages").append(img_1)
 
-      let img_2 = document.createElement("img")
-      img_2.setAttribute("src", search["image_2"])
+      const img_2 = document.createElement("img")
+      img_2.setAttribute("src", search.image_2)
       img_2.setAttribute("alt", "hibiscus_2")
       document.querySelector(".plantimages").append(img_2)
 
-      let img_3 = document.createElement("img")
-      img_3.setAttribute("src", search["image_3"])
+      const img_3 = document.createElement("img")
+      img_3.setAttribute("src", search.image_3)
       img_3.setAttribute("alt", "hibiscus_3")
       document.querySelector(".plantimages").append(img_3)
 
-
-      let div_5 = document.createElement("div")
+      const div_5 = document.createElement("div")
       div_5.setAttribute("class", "right")
       document.querySelector(".container").append(div_5)
 
-      let h2 = document.createElement("h2")
-      h2.innerText = search["name"]
+      const h2 = document.createElement("h2")
+      h2.innerText = search.name
 
       document.querySelector(".right").append(h2)
 
       for (i = 0; i <= 4; i++) {
-        let i_2 = document.createElement("i")
+        const i_2 = document.createElement("i")
         i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
         i_2.setAttribute("id", "rs")
         document.querySelector(".right").append(i_2)
       }
 
-      let br = document.createElement("br")
+      const br = document.createElement("br")
       document.querySelector(".right").append(br)
-
   
-      let span = document.createElement("span")
+      const span = document.createElement("span")
       span.setAttribute("id", "numinrs")
-      span.innerHTML = "₹" + search["price"]
+      span.innerHTML = `₹${  search.price}`
       document.querySelector(".right").append(span)
-
-
 
       document.querySelector(".right").innerHTML += 
       `
@@ -380,17 +363,17 @@
         <h3>Product description</h3>
         <h6>About this item</h6>
         <ul>
-          <li>${search["about"]}</li>
+          <li>${search.about}</li>
           
         </ul>
 
         <h5>Highlights</h5>
         <ul>
-          <li>Plant Name:${search["name"]}</li>
-          <li>Type: ${search["Type_of_plant"]}</li>
-          <li>Suitable Location:${search["Suitable_Location"]} </li>
-          <li>Container Type: ${search["Container_Type"]}</li>
-          <li>Height: ${search["Height"]}</li>
+          <li>Plant Name:${search.name}</li>
+          <li>Type: ${search.Type_of_plant}</li>
+          <li>Suitable Location:${search.Suitable_Location} </li>
+          <li>Container Type: ${search.Container_Type}</li>
+          <li>Height: ${search.Height}</li>
         </ul>
         <table>
           <thead>
@@ -403,42 +386,42 @@
             <tr>
               <td id="general">General</td>
 
-              <td>${search["name"]}</td>
+              <td>${search.name}</td>
 
             </tr>
 
             <tr>
               <td>Brand</td>
 
-              <td>${search["Brand"]}</td>
+              <td>${search.Brand}</td>
 
             </tr>
 
             <tr>
               <td>Type</td>
 
-              <td>${search["Type_of_plant"]}</td>
+              <td>${search.Type_of_plant}</td>
 
             </tr>
 
             <tr>
               <td>Plant name</td>
 
-              <td>${search["name"]}</td>
+              <td>${search.name}</td>
 
             </tr>
 
             <tr>
               <td>Suitable Location</td>
 
-              <td>${search["Suitable_Location"]}</td>
+              <td>${search.Suitable_Location}</td>
 
             </tr>
 
             <tr>
               <td>Container Type</td>
 
-              <td>${search["Container_Type"]}</td>
+              <td>${search.Container_Type}</td>
 
             </tr>
 
@@ -452,21 +435,21 @@
             <tr>
               <td>Recommended Planting Season</td>
 
-              <td>${search["Planting_Season"]}</td>
+              <td>${search.Planting_Season}</td>
 
             </tr>
 
             <tr>
               <td>Suitable for</td>
 
-              <td>${search["Suitable_Location"]}</td>
+              <td>${search.Suitable_Location}</td>
 
             </tr>
 
             <tr>
               <td>Hybrid</td>
 
-              <td>${search["Hybrid"]}</td>
+              <td>${search.Hybrid}</td>
 
             </tr>
           </tbody>
@@ -474,9 +457,8 @@
       </div>
     </div>`
  }
-
  
- let cart_page=document.getElementById("cart1")
+ const cart_page=document.getElementById("cart1")
 
 cart_page.addEventListener("click",e=>{
   e.preventDefault()
@@ -492,78 +474,69 @@ else{
 
 })
 
+    const cart_btn=document.getElementById("cart1")
+    const active_user=localStorage.getItem("profile")
 
-    let cart_btn=document.getElementById("cart1")
-    let active_user=localStorage.getItem("profile")
-   
-
-    let plant_price=res["price"]
-    let plant_name=res["name"]
-    let plant_image=res["image"]
+    const plant_price=res.price
+    const plant_name=res.name
+    const plant_image=res.image
    
     cart_btn.addEventListener('click',()=>{
-
-
-
 
       // let add_to_cart=JSON.parse(localStorage.getItem("cart"))||[]
       let check =0
       let product
-      let users= JSON.parse(localStorage.getItem("arr")) 
-      let active_user = localStorage.getItem("profile")
+      const users= JSON.parse(localStorage.getItem("arr")) 
+      const active_user = localStorage.getItem("profile")
       let ac_user;
       users.forEach(e=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           ac_user=e
         }
       })
       console.log(ac_user);
       
-      let add_to_cart=ac_user["cart"] ||[]
+      const add_to_cart=ac_user.cart ||[]
       add_to_cart.forEach(e => {
-        if(plant_name==e["plant_name"]){
+        if(plant_name==e.plant_name){
           check=1
           product=e
           
         }})
         if(check==1){
-          let new_quantity =Number(product["plantquantity"])+1
-          product["plantquantity"]=new_quantity
-          product["plant_total_price"]= Number(product["plant_price"])*new_quantity
+          const new_quantity =Number(product.plantquantity)+1
+          product.plantquantity=new_quantity
+          product.plant_total_price= Number(product.plant_price)*new_quantity
           // console.log( Number(product["plant_price"]),new_quantity,Number(product["plant_price"])*new_quantity);
           add_to_cart.forEach((e,index)=>{
-            if(plant_name==e["plant_name"]){
+            if(plant_name==e.plant_name){
               add_to_cart[index]=product
             }
           })
         }
         else{
-          let data_of_cart={
-     "plant_name":plant_name,
-     "plant_image":plant_image,
-     "plant_price":plant_price,
-     "plant_total_price":plant_price,
-    //  "user_cart":active_user,
-     "plantquantity":1
+          const data_of_cart={
+ plant_name,
+ plant_image,
+ plant_price,
+ "plant_total_price":plant_price,
+//  "user_cart":active_user,
+ "plantquantity":1
 
-      }
+  }
 
       add_to_cart.push(data_of_cart)
 
         }
-        ac_user["cart"]=add_to_cart
+        ac_user.cart=add_to_cart
         users.forEach(e=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           e=ac_user
         }
       })
       localStorage.setItem("arr",JSON.stringify(users));
       window.location.href="./cart.html"
     })
-  
-
-
-
   </script>
 
 </body>

@@ -109,7 +109,7 @@ header a {
   display: flex;
   justify-content: space-around;
 
-  width: 1400px;
+  width: 1450px;
   margin: 30px auto;
   /* border: 2px solid black; */
   text-align: center;
@@ -119,7 +119,7 @@ header a {
   display: flex;
   justify-content: space-around;
   /* border: 2px solid black; */
-  width: 1400px;
+  width: 1450px;
   margin: 20px auto;
   border: solid grey;
   border-width: 0px 0px 1px 0px;
@@ -130,7 +130,7 @@ header a {
 .details p {
   width: 120px;
 
-  padding: 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,3 +141,24 @@ header a {
   color: rgb(70, 70, 70);
   font-size:15px;
 }
+.titles p:nth-of-type(1),.details p:nth-of-type(1) {
+  width: 30px;
+}
+.titles p:nth-of-type(3),.details p:nth-of-type(3) {
+  width: 140px;
+}
+.titles p:nth-of-type(4),.details p:nth-of-type(4) {
+  width: 70px;
+}
+.titles p:nth-of-type(5),.details p:nth-of-type(5) {
+width: 280px;
+}
+.titles p{
+  border: 0.5px solid white;
+  height:28px;
+}
+.details p:nth-of-type(9) {
+ color:#ce0a2e;
+ letter-spacing: 0.75px;
+}
+

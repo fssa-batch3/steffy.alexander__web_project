@@ -7,7 +7,7 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
     rel="stylesheet"
-  />
+  >
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assests/css/blog_details.css">
 </head>
@@ -25,33 +25,27 @@
         <p id="content_view_2">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p>  -->
 
       </div>
-    
 
     <script>
-
-let blog_view_div =document.querySelector(".blog_view")
+const blog_view_div =document.querySelector(".blog_view")
 
      //  ---url params--
-     let url = window.location.search; 
+     const url = window.location.search; 
           // console.log(url)
-          let urls = new URLSearchParams(url)
+          const urls = new URLSearchParams(url)
        
-          let Title= urls.get("id")
+          const Title= urls.get("id")
           console.log(Title);
-      
 
-          let currentDate = new Date().toJSON().slice(0, 10);
+          const currentDate = new Date().toJSON().slice(0, 10);
       console.log(currentDate); 
 
           const blog_item= JSON.parse(localStorage.getItem("blog"))
 
-
-
           let res
-          blog_item.find(function (obj){
+          blog_item.find((obj) =>{
 
-
-          if(obj["id"] == Title){
+          if(obj.id == Title){
             list_blog(obj);
             return res=obj
 
@@ -60,17 +54,16 @@ let blog_view_div =document.querySelector(".blog_view")
          })
 function list_blog(product){
 
-
     blog_view_div.innerHTML+=` 
-    <h3 id="title_view">${product["Title"]}</h3><hr id="line">
+    <h3 id="title_view">${product.Title}</h3><hr id="line">
     <p id="date_view">${currentDate}</p>
-           <img id="image_view" src=${product["product_img"]}></div></a>
-            <p id="content_view">${product["Content"]}</p><hr>
-            <h4 id="title_view_1">${product["heading_1"]}</h4>
-             <p id="content_view_1">${product["points_1"]}</p><hr>
-             <h4 id="title_view_2">${product["heading_2"]}</h4>
-              <p id="content_view_2">${product["points_2"]}</p>     
-           <p id="name_view">-Written by ${product["username"]}</p>
+           <img id="image_view" src=${product.product_img}></div></a>
+            <p id="content_view">${product.Content}</p><hr>
+            <h4 id="title_view_1">${product.heading_1}</h4>
+             <p id="content_view_1">${product.points_1}</p><hr>
+             <h4 id="title_view_2">${product.heading_2}</h4>
+              <p id="content_view_2">${product.points_2}</p>     
+           <p id="name_view">-Written by ${product.username}</p>
            
     `
 }
@@ -96,8 +89,6 @@ function list_blog(product){
 //     })
 // let blog_page_details=JSON.parse(localStorage.getItem("blog"))
 
-
-
       // --ends
 
       // submit.addEventListener("click",e=>{
@@ -115,8 +106,6 @@ function list_blog(product){
     //   let title_of=document.getElementById("title_view")
     //   let image_of=document.getElementById("image_view")
     //   let content_of=document.getElementById("add_content")
-
-
 
     //   let blog_detail=JSON.parse(localStorage.getItem("blog")) ??0
     //   let blog_details=""
@@ -140,7 +129,6 @@ function list_blog(product){
 
     //   let login_title =document.getElementById("login_title")
     </script>
-      
 
     </script>
 </body>

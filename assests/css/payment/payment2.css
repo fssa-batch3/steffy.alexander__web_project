@@ -417,3 +417,10 @@ body > h1 {
   font-weight: 600;
   color: rgb(94, 94, 94);
 }
+#order_history{
+  color:green;
+
+}
+#order_history:hover{
+  color:red;
+}

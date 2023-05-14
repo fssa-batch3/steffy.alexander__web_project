@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assests/css/seller.css">
 </head>
 
@@ -24,16 +24,15 @@
             <a href="./plant.html">Plants</a>
             <a href="./seeds.html">Seeds</a>
             <a href="./blog.html">Blog</a>
-            <a href="./login.html"><img id="log" src="../assests/images/Untitled_design-removebg-preview.png"
+            <a href="./login.html">
+<img id="log" src="../assests/images/Untitled_design-removebg-preview.png"
                     alt="login">Login/signup</a>
 
-            <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
+            <a href="./cart.html">
+<img id="cart" src="../assests/images/cart logo.png" alt="cart">
+</a>
         </div>
     </header>
-
-
-
-
 
     <div class="main">
         <div class="seller">
@@ -43,16 +42,32 @@
             <h2>Personal Details</h2>
             <div class="personal">
 
-                <label for="name">Full name <input type="text" id="name"></label>
-                <label for="email">Email <input type="text"  id="email"></label>
-                <label for="number">MobileNumber <input type="text"  id="number"></label>
-                <label for="address">Address<input type="text" id="address"></label>
+                <label for="name">
+Full name <input type="text" id="name">
+</label>
+                <label for="email">
+Email <input type="text" id="email">
+</label>
+                <label for="number">
+MobileNumber <input type="text" id="number">
+</label>
+                <label for="address">
+Address<input type="text" id="address">
+</label>
             </div>
             <div class="personal">
-                <label for="gender">Gender <input type="text" id="gender"></label>
-                <label for="plantname">Plant Name/Type<input type="text"  id="plantname"></label>
-                <label for="numplants">No.of Plants<input type="text"   id="numplants"></label>
-                <label for="image">Upload image<input type="file"></label>
+                <label for="gender">
+Gender <input type="text" id="gender">
+</label>
+                <label for="plantname">
+Plant Name/Type<input type="text" id="plantname">
+</label>
+                <label for="numplants">
+No.of Plants<input type="text" id="numplants">
+</label>
+                <label for="image">
+Upload image<input type="file">
+</label>
             </div>
 
             <!-- <a href="../index.html">Submit</a> -->
@@ -61,8 +76,6 @@
         </div>
     </div>
 <script>
-
-
 function submit(){
 const name = document.getElementById("name").value
 const email = document.getElementById("email").value
@@ -72,18 +85,18 @@ const gender =  document.getElementById("gender").value
 const plantname = document.getElementById("plantname").value
 const numplants = document.getElementById("numplants").value
 if(name!="" && email!="" && number!="" && address!="" && gender!="" && plantname!="" && numplants!=""){
-let user_data={
+const user_data={
     
      "fullname": name,
-     "email":email,
-     "number":number,
-     "address":address,
-     "gender":gender,
-     "plantname":plantname,
-     "numplants":numplants
+     email,
+     number,
+     address,
+     gender,
+     plantname,
+     numplants
 }
 
-     let arr= localStorage.getItem("arr")
+     const arr= localStorage.getItem("arr")
         ?JSON.parse(localStorage.getItem("arr")):
          [];
             arr.push(user_data)
@@ -95,15 +108,7 @@ let user_data={
         alert("fill the fields")
     }
 }
-
-
-
-
-
 </script>
-
-
-
 
 </body>
 

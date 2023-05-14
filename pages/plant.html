@@ -8,14 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assests/css/plant_seeds.css">
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- <link rel="stylesheet" href="../pages/details.html"> -->
-    
 
     <header>
         <div class="logo">
@@ -28,24 +27,23 @@
             <a href="./plant.html">Plants</a>
             <a href="./seeds.html">Seeds</a>
             <a href="./blog.html">Blog</a>
-            <a href="./login.html" id="log"><img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
+            <a href="./login.html" id="log">
+<img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
                     LOGIN>Login/signup</a>
-                    <a href="/pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt=""></a>
-            <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
+                    <a href="/pages/profile.html">
+<img id="profile_logo" src="/assests/images/girl.png" alt="">
+</a>
+            <a href="./cart.html">
+<img id="cart" src="../assests/images/cart logo.png" alt="cart">
+</a>
     </header>
     <div class="search_box">
- <input type="search" id="search"  placeholder="Search">
+ <input type="search" id="search" placeholder="Search">
  
  <!-- <img id="search_icon" src="/assests/images/search.png" > -->
 </div>
-     
                   
     <div class="right">
-                                
-     
-
-
-
 
         <!-- <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -59,7 +57,6 @@
                 <i  class="fa-sharp fa-solid fa-star"></i>
             </div>
             <a id="add" href="plantcart.html">Add To Cart</a>
-
 
         </div>
         <div class="box1">
@@ -89,7 +86,6 @@
                 <i  class="fa-regular fa-star-half-stroke"></i>
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
-
 
         </div>
         <div class="box1">
@@ -133,7 +129,6 @@
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
 
-
         </div>
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -147,7 +142,6 @@
                 <i  class="fa-sharp fa-solid fa-star"></i>
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
-
 
         </div>
 
@@ -164,9 +158,7 @@
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
 
-
         </div>
-
 
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -181,9 +173,7 @@
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
 
-
         </div>
-
 
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -198,10 +188,7 @@
             </div>
             <a id="add" href="./cart.html">Add To Cart</a>
 
-
         </div> -->
-
-
 
         <!-- </div> -->
         <div class="right2"></div>
@@ -235,11 +222,7 @@
         <script src="../main.js"></script>
         <script src="/assests/js/model.js"></script>
 
-        <script>
-
-
-
-            // const product_list=[{
+        <script>            // const product_list=[{
 
             //     "name":"Pinkrose Plant",
             //     "image":{
@@ -306,9 +289,6 @@
             //         alt:"Rose cactus img"}
             // },
 
-
-
-
             // {
             //     "name":"Strawberry",
             //     "image":{
@@ -337,7 +317,6 @@
             //         alt:"Tulsi img"}
             // },
 
-
             // {
             //     "name":"White Flamingo",
             //     "image":{
@@ -345,14 +324,12 @@
             //         alt:" mini orange img"}
             // },
 
-
             // {
             //     "name":"Red Mimosa",
             //     "image":{
             //         source:"../assests/images/red mimosa.jpg",
             //         alt:" Red mimosa img"}
             // },
-
 
             // {
             //     "name":"Mini orange",
@@ -381,50 +358,45 @@
 
             // ]
 
+            const products = JSON.parse(localStorage.getItem('create_plant'))
 
-            let products = JSON.parse(localStorage.getItem('create_plant'))
+            for (const product of products) {
+                if(product.status==true){
 
-            for (let product of products) {
-                if(product["status"]==true){
-
-                    let div_1 = document.createElement("a")
-                div_1.setAttribute("href","../pages/details.html?name="+ product.name)
+                    const div_1 = document.createElement("a")
+                div_1.setAttribute("href",`../pages/details.html?name=${ product.name}`)
                 div_1.setAttribute("class", "box1")
                 document.querySelector(".right").prepend(div_1)
 
-
-                let div_2 = document.createElement("div")
+                const div_2 = document.createElement("div")
                 div_2.setAttribute("class", "imgtrend")
                 document.querySelector(".box1").append(div_2)
 
-
-                let img = document.createElement("img")
-                img.setAttribute("src", product["image"])
+                const img = document.createElement("img")
+                img.setAttribute("src", product.image)
                 img.setAttribute("alt", "rose")
                 document.querySelector(".imgtrend").append(img)
 
-                let i_1 = document.createElement("i")
+                const i_1 = document.createElement("i")
                 i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
                 i_1.setAttribute("id", "rs")
-                i_1.innerText = product["price"]
+                i_1.innerText = product.price
                 document.querySelector(".imgtrend").append(i_1)
 
-
-
-                let h3 = document.createElement("h3")
+                const h3 = document.createElement("h3")
                 h3.setAttribute("class", "pinkrose")
-                h3.innerText = product["name"]
+                h3.innerText = product.name
                 document.querySelector(".imgtrend").append(h3)
 
                 for (i = 0; i <= 4; i++) {
-                    let i_2 = document.createElement("i")
+                    const i_2 = document.createElement("i")
                     i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
                     i_2.setAttribute("id", "rs")
                     document.querySelector(".imgtrend").append(i_2)
                 }
 
-                let a_1 = document.createElement("a")
-                a_1.setAttribute("href", "../pages/details.html?name="+ product.name)
+                const a_1 = document.createElement("a")
+                a_1.setAttribute("href", `../pages/details.html?name=${ product.name}`)
                 a_1.setAttribute("id", "add")
                 a_1.innerText = "Add to cart"
                 document.querySelector(".box1").append(a_1)
@@ -432,16 +404,15 @@
                 }
 
             }
-       
 
-           let result_of_search= document.getElementById("search")
+           const result_of_search= document.getElementById("search")
     result_of_search.addEventListener("input", (e) => {
-      let word = e.target.value.toLowerCase();
-      let div = document.querySelectorAll(".box1");
+      const word = e.target.value.toLowerCase();
+      const div = document.querySelectorAll(".box1");
 console.log(word)
 
 div.forEach(ex => {
-        let child = ex.children[0].children[2].textContent.toLocaleLowerCase().trim();
+        const child = ex.children[0].children[2].textContent.toLocaleLowerCase().trim();
         
         if (child.startsWith(word)) {
           ex.style.display = "block"
@@ -458,7 +429,6 @@ div.forEach(ex => {
 // let  div_1=document.createElement("div")
 // div_1.setAttribute("class","box2")
 // document.querySelector(".right2").prepend(div_1)
-
 
 // let  div_2=document.createElement("div")
 // div_2.setAttribute("class","imgtrend1")
@@ -492,10 +462,7 @@ div.forEach(ex => {
 // a_1.innerText="Add to cart"
 // document.querySelector(".box2").append(a_1)
 
-
 //     }
-
-
         </script>
 
 </body>

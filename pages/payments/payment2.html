@@ -58,7 +58,7 @@
 
       <label for="City"
         >Phone Number
-        <input id="city" type="number" required /> </label
+        <input id="phone_num" type="number" required /> </label
       ><br />
       <br /><br />
 
@@ -76,9 +76,18 @@
 
       <label for="pincode"
         >Pincode
-        <input id="pincode" type="number" required /> </label
+        <input id="pincode"   autocomplete="off"
+        
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type="number"
+        maxlength="6"
+        inputmode="numerical"
+        placeholder="xxxxxx"
+        type="number"
+        data-pattern-validatetype="number" required /> </label
       ><br />
       <br /><br />
+      
 
       <!-- <div class="last">
             <a href="payment2.html" id="submit">Next</a>
@@ -119,16 +128,15 @@
             <p>Expiry Date</p>
             <div class="expiry_date">
               <input
-                autocomplete="off"
-                id="month"
-                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, thismaxLength);"
-                type="number"
-                maxlength="2"
-                pattern="[0-9]*"
-                inputmode="numerical"
-                placeholder="MM"
-                type="number"
-                data-pattern-validate
+              autocomplete="off"
+              id="month"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type="number"
+              maxlength="2"
+              inputmode="numerical"
+              placeholder="MM"
+              type="number"
+              data-pattern-validate
               />
 
               <input
@@ -148,13 +156,14 @@
 
             <div class="cvc">
               <input
-                autocomplete="off"
+              autocomplete="off"
                 id="cvv"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type="number"
                 maxlength="3"
-                pattern="[0-9]*"
                 inputmode="numerical"
                 placeholder="123"
-                type="text"
+                type="number"
                 data-pattern-validate
               />
             </div>
@@ -224,6 +233,8 @@
           <p>Total Amount Payable</p>
           <p>₹<span class="rs">200</span></p>
         </div>
+      <a  id="order_history" href="/pages/order.html">Want to see Order history?</a>
+
       </div>
     </div>
     <script>
@@ -239,10 +250,10 @@
 
       // let pincode = document.getElementById("pincode");
 
-      let submit = document.getElementById("submit");
+      const submit = document.getElementById("submit");
 
-      let data = JSON.parse(localStorage.getItem("arr"));
-      let profile = localStorage.getItem("profile");
+      const data = JSON.parse(localStorage.getItem("arr"));
+      const profile = localStorage.getItem("profile");
       console.log(profile);
       console.log(data);
 
@@ -255,13 +266,13 @@
 
       console.log(res);
 
-      document.getElementById("fname").value = res["fname"];
+      document.getElementById("fname").value = res.fname;
       // document.getElementById("lname").value = res["lastname"];
-      document.getElementById("email").value = res["email"];
+      document.getElementById("email").value = res.email;
       document.getElementById("email").setAttribute("disabled", "");
-      document.getElementById("address").value = res["address"];
-      let pincode = document.getElementById("pincode");
-      let city = document.getElementById("city");
+      document.getElementById("address").value = res.address;
+      const pincode = document.getElementById("pincode");
+      const city = document.getElementById("city");
       // submit.addEventListener("click", (e) => {
       //   e.preventDefault();
 
@@ -300,13 +311,13 @@
       //   }
       // });
 
-      let card = document.querySelector(".click");
-      let upipay = document.querySelector(".upipay");
-      let paylater = document.querySelector(".paylater");
-      let cash_delivery = document.querySelector(".cash_delivery");
+      const card = document.querySelector(".click");
+      const upipay = document.querySelector(".upipay");
+      const paylater = document.querySelector(".paylater");
+      const cash_delivery = document.querySelector(".cash_delivery");
 
       console.log(card);
-      let card_details = document.querySelector(".card_details");
+      const card_details = document.querySelector(".card_details");
       console.log(card_details);
 
       card.addEventListener("click", (e) => {
@@ -315,14 +326,14 @@
         order_btn.classList.remove("view");
       });
 
-      let icons = document.querySelector(".upi_trans");
+      const icons = document.querySelector(".upi_trans");
       upipay.addEventListener("click", (e) => {
         icons.classList.toggle("view");
         card_details.classList.remove("view");
         order_btn.classList.remove("view");
       });
 
-      let order_btn = document.querySelector(".cash_delivery");
+      const order_btn = document.querySelector(".cash_delivery");
 
       paylater.addEventListener("click", (e) => {
         order_btn.classList.toggle("view");
@@ -333,22 +344,22 @@
       //  showing the total items in the cart0-----
       let total_amount = 0;
       let total_quantity = 0;
-      let active_email = localStorage.getItem("profile");
-      let users = JSON.parse(localStorage.getItem("arr"));
+      const active_email = localStorage.getItem("profile");
+      const users = JSON.parse(localStorage.getItem("arr"));
       let current_user;
       users.forEach((e) => {
-        if (active_email == e["email"]) {
+        if (active_email == e.email) {
           orderdetails(e);
         }
       });
       function orderdetails(e) {
-        for (let u = 0; u < e["cart"].length; u++) {
+        for (let u = 0; u < e.cart.length; u++) {
           total_quantity += 1;
-          total_amount += Number(e["cart"][u]["plant_total_price"]);
+          total_amount += Number(e.cart[u].plant_total_price);
         }
       }
-      let num_items = document.getElementById("num_items");
-      let rs_to_show = document.querySelectorAll(".rs");
+      const num_items = document.getElementById("num_items");
+      const rs_to_show = document.querySelectorAll(".rs");
       num_items.innerHTML = total_quantity;
       rs_to_show.forEach((e) => {
         e.innerHTML = total_amount;
@@ -356,27 +367,51 @@
 
       //  Place order using the card details=================
 
-
-      let place_order_button = document.getElementById("place_order_button")
+      function gettingvalue(){
+      
+      }
+      const place_order_button = document.getElementById("place_order_button")
       place_order_button.addEventListener("click",e=>{
-        let fname = document.getElementById("fname").value;
-        let email = document.getElementById("email").value;
-        let address = document.getElementById("address").value;
-        let city = document.getElementById("city").value;
-        let pincode = document.getElementById("pincode").value;
-        let card_number = document.getElementById("card_number").value
-        let card_month = document.getElementById("month").value
-        let card_year = document.getElementById("year").value
-        let card_cvv =document.getElementById("cvv").value
-
-
+        let  fname = document.getElementById("fname").value;
+        let  email = document.getElementById("email").value;
+        let  address = document.getElementById("address").value;
+        let phone_num = document.getElementById("phone_num").value
+        let  city = document.getElementById("city").value;
+        let  pincode = document.getElementById("pincode").value;
+        let  card_number = document.getElementById("card_number").value
+        let  card_month = document.getElementById("month").value
+        let  card_year = document.getElementById("year").value
+        let  card_cvv =document.getElementById("cvv").value
+        let date = new Date().toLocaleDateString()
 
         if(fname!=""&&address!=""&&city!=""&&pincode!=""&&card_number!=""&&card_month!=""&&card_year!=""&&card_cvv!="" ){
 
    users.forEach((e) => {
         if (active_email == e["email"]) {
-          e[]
+        let order_history =e["order_history"]?? []
+        let order_details ={
+          fname,
+          email,
+          address,
+          city,
+          phone_num,
+          pincode,
+          card_number,
+          card_month,
+          card_year,
+          card_cvv,
+          date,
+          cart_details:e["cart"]
         }
+        order_history.push(order_details)
+        e["order_history"]=order_history
+        delete e["cart"]
+        localStorage.setItem("arr",JSON.stringify(users))
+        alert("Ordered succesfully")
+
+        }
+
+
       });
         }
         else{
@@ -385,6 +420,14 @@
 
 
       })
+
+       let us = JSON.parse(localStorage.getItem("arr"))
+       us.forEach((e) => {
+        if (active_email == e.email) {
+          delete e["order_history"]
+        }
+      });
+      localStorage.setItem("arr",JSON.stringify(us))
     </script>
   </body>
 </html>

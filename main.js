@@ -1,4 +1,4 @@
-let plant_data = [
+const plant_data = [
   {
     image: "https://iili.io/HNOJiVn.jpg",
     price: "200",
@@ -409,6 +409,24 @@ if (localStorage.getItem("review_array")) {
         rating: "5",
         review:
           "Great selection of perennials and other plants\nTop nursery for plant lovers, free from all the furniture clothing and other grot found in large garden centres. This is the place to go when you want to buy plants and get advice about growing them.",
+      },
+      {
+        star_count: 5,
+        review:
+          "Veeblooms products are really good. The delivery was on time and the plants were good.",
+        username: "steffy alexander",
+      },
+      {
+        star_count: 4,
+        review:
+          'I really loved the packing, my plants are always safe and in a good condition 👍 even after so many years it has not been changed. This is not my first time, it has been around 5-6 years that I am ordering plants from "Veeblooms", and I will keep purchasing 🤗',
+        username: "madhu bala",
+      },
+      {
+        star_count: 3,
+        review:
+          "Out of the way quick delivery due to urgent requirement. Excellent outer",
+        username: "madhu bala",
       },
     ])
   );

@@ -134,7 +134,7 @@
             <h3 class="total">Total</h3>
             <h3 class="total_value">0</h3>
             </div>
-     <a href="/pages/payments/payment.html"><button>Proceed to Checkout</button></a>
+     <a href="/pages/payments/payment2.html"><button>Proceed to Checkout</button></a>
 
 
     <!-- <div class="total_calculation">
@@ -198,24 +198,23 @@
     </footer> -->
 
     <script>
-      let login_title=document.getElementById("log")
-      let profile_logo =document.getElementById("profile_logo")
+      const login_title=document.getElementById("log")
+      const profile_logo =document.getElementById("profile_logo")
     </script>
 
     <script src="/assests/js/model.js"></script>
     <script>
-
-let users= JSON.parse(localStorage.getItem("arr")) 
-      let active_user = localStorage.getItem("profile")
+const users= JSON.parse(localStorage.getItem("arr")) 
+      const active_user = localStorage.getItem("profile")
       let ac_user;
       users.forEach(e=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           ac_user=e
         }
       })
-let cart_data=ac_user["cart"]
+const cart_data=ac_user.cart
 console.log(cart_data)
-let user=localStorage.getItem("profile")
+const user=localStorage.getItem("profile")
 console.log(user)
 cart_data.find(e=>{
 if(e.user_cart==user){
@@ -227,9 +226,8 @@ for(let i =0;i<cart_data.length;i++){
   cart(cart_data[i])
 }
 
-
 function cart(obj) {
-  let content = document.getElementById("content");
+  const content = document.getElementById("content");
   content.innerHTML +=
     `
     <div class="product" id="product_details">
@@ -251,24 +249,20 @@ function cart(obj) {
     
 }
 
-let totalCount = document.querySelectorAll(".quantity");
-let add_quantity = document.querySelectorAll(".add");
-let minus_quantity=document.querySelectorAll(".minus");
-let remove_cart = document.querySelectorAll(".remove_cart")
-let plant_price = document.querySelectorAll(".price")
-let subtotal=document.querySelectorAll(".sub_total")
-let shipping=document.querySelectorAll(".shipping")
-let sub_total_value=document.querySelector(".subtotal_value")
-let shipping_value=document.querySelectorAll(".shipping_value")
-let total_value=document.querySelector(".total_value")
-let login_titles =document.getElementById("login_title")
+const totalCount = document.querySelectorAll(".quantity");
+const add_quantity = document.querySelectorAll(".add");
+const minus_quantity=document.querySelectorAll(".minus");
+const remove_cart = document.querySelectorAll(".remove_cart")
+const plant_price = document.querySelectorAll(".price")
+const subtotal=document.querySelectorAll(".sub_total")
+const shipping=document.querySelectorAll(".shipping")
+const sub_total_value=document.querySelector(".subtotal_value")
+const shipping_value=document.querySelectorAll(".shipping_value")
+const total_value=document.querySelector(".total_value")
+const login_titles =document.getElementById("login_title")
 
-
-
-
-let count = 1
+const count = 1
 totalCount.innerHTML = count;
-
 
 //  adding quantity to the product------
 
@@ -276,11 +270,11 @@ add_quantity.forEach((e,index)=>{
   e.addEventListener("click",element=>{
  let count =Number(totalCount[index].innerHTML)
  count+=1
- let total_price =Number(cart_data[index]["plant_price"])*count
+ const total_price =Number(cart_data[index].plant_price)*count
  plant_price[index].innerHTML=total_price
  totalCount[index].innerHTML=count
- cart_data[index]["plantquantity"]=count
- cart_data[index]["plant_total_price"]=Number(cart_data[index]["plant_price"])*count
+ cart_data[index].plantquantity=count
+ cart_data[index].plant_total_price=Number(cart_data[index].plant_price)*count
 
 // localStorage.setItem("cart",JSON.stringify(cart_data))
 // location.reload()
@@ -291,18 +285,17 @@ summaryView()
   })
 })
 
-
 //  minusing quantity to the product------
 minus_quantity.forEach((e,index)=>{
   e.addEventListener("click",element=>{
  let count =Number(totalCount[index].innerHTML)
  if(count>1){
   count-=1
-  let total_price =Number(cart_data[index]["plant_price"])*count
+  const total_price =Number(cart_data[index].plant_price)*count
  plant_price[index].innerHTML=total_price
  totalCount[index].innerHTML=count
- cart_data[index]["plantquantity"]=count
- cart_data[index]["plant_total_price"]=Number(cart_data[index]["plant_price"])*count
+ cart_data[index].plantquantity=count
+ cart_data[index].plant_total_price=Number(cart_data[index].plant_price)*count
 // localStorage.setItem("cart",JSON.stringify(cart_data))
 // location.reload()
 saveinlocal()
@@ -326,13 +319,12 @@ remove_cart.forEach((e,index)=>{
 saveinlocal()
 location.reload()
 
-
   })
 })
 function saveinlocal(){
-  ac_user["cart"]=cart_data
+  ac_user.cart=cart_data
 users.forEach(e=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           e=ac_user
         }
       })
@@ -344,20 +336,20 @@ console.log(cart_data);
 
 function summary(){
   console.log("gfd");
-  let product_order_details= document.querySelector(".product_order_details")
+  const product_order_details= document.querySelector(".product_order_details")
   let div_to_create=""
 
 cart_data.forEach(e=>{
   
   div_to_create+=`
   <div class="product_order_detail">
-        <h3><img src=${e["plant_image"]} alt="images">
-        ${e["plant_name"]}</h3>
+        <h3><img src=${e.plant_image} alt="images">
+        ${e.plant_name}</h3>
         <div class="multiply">
-          <span class="quantity">${e["plantquantity"]} x</span>
-          <span class="actual_price">${e["plant_price"]}</span>
+          <span class="quantity">${e.plantquantity} x</span>
+          <span class="actual_price">${e.plant_price}</span>
         </div>
-        <p class="total_price">${e["plantquantity"]*e["plant_price"]}</p>
+        <p class="total_price">${e.plantquantity*e.plant_price}</p>
       </div>
   `
 })
@@ -368,67 +360,60 @@ product_order_details.innerHTML=div_to_create
 function summaryView() {
   let total_cart_value=0
 cart_data.forEach(e=>{
-  total_cart_value+=Number(e["plant_total_price"]) 
+  total_cart_value+=Number(e.plant_total_price) 
 })
 
 sub_total_value.innerHTML=total_cart_value??0
 total_value.innerHTML=total_cart_value??0
 
-
 }
-
-
 
 summary()
 summaryView()
 
-
 //   dont delete it is used in the history page============
 
-let proceed_button =document.getElementById("proceed_button") //22187
+const proceed_button =document.getElementById("proceed_button") //22187
 proceed_button.addEventListener("click",el=>{
   el.preventDefault()
-  let active_email= localStorage.getItem("profile")
-      let users=JSON.parse(localStorage.getItem("arr"))
+  const active_email= localStorage.getItem("profile")
+      const users=JSON.parse(localStorage.getItem("arr"))
       let current_user
       users.forEach(e => {
-        if(active_email==e["email"]){
+        if(active_email==e.email){
         orderdetails(e)
         }
       });
       function orderdetails(e){
         let total_amount =0
       let total_quantity =0
-      let order_cart_items =[]
-      for(let u=0;u<e["cart"].length;u++){
+      const order_cart_items =[]
+      for(let u=0;u<e.cart.length;u++){
         total_quantity+=1
-        let plant_details ={
-          "plant_name":e["cart"][u]["plant_name"],
-          "plant_quantity":e["cart"][u]["plantquantity"],
-          "plant_base_price":e["cart"][u]["plant_price"]
+        const plant_details ={
+          "plant_name":e.cart[u].plant_name,
+          "plant_quantity":e.cart[u].plantquantity,
+          "plant_base_price":e.cart[u].plant_price
         }
         order_cart_items.push(plant_details)
-        total_amount+=Number(e["cart"][u]["plant_total_price"])
+        total_amount+=Number(e.cart[u].plant_total_price)
       }
 
-      let order_items={
+      const order_items={
         total_quantity,
         total_amount,
         order_cart_items,
       }
-      let order_array = e["order_details"]??[]
+      const order_array = e.order_details??[]
 
       order_array.push(order_items)
 
-      e["order_details"]=order_array
+      e.order_details=order_array
 
       }
       localStorage.setItem("arr",JSON.stringify(users))
 
 })
-
-
-
     </script>
   </body>
 </html>

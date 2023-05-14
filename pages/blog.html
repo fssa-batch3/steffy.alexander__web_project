@@ -219,32 +219,24 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
         </div> -->
     </main>
     <script src="/assests/js/model.js"></script>
-    <script>
-
-
-      let add_img= document.getElementById("upload_img")
-      let add_title= document.getElementById("title")
-      let add_content= document.getElementById("content")
-      let add_blog= document.getElementById("add_blog")
-      let blog_content= document.getElementsByClassName("blog_content")
-      let additional_data= document.getElementsByClassName("additional_points")
-      let heading= document.getElementById("points")
-      let points= document.getElementById("extra_points")
-      let sub_heading_= document.getElementById("heading_2")
-      let extra_points= document.getElementById("extra_content_2")
-     
-
-
-
-
+    <script>      const add_img= document.getElementById("upload_img")
+      const add_title= document.getElementById("title")
+      const add_content= document.getElementById("content")
+      const add_blog= document.getElementById("add_blog")
+      const blog_content= document.getElementsByClassName("blog_content")
+      const additional_data= document.getElementsByClassName("additional_points")
+      const heading= document.getElementById("points")
+      const points= document.getElementById("extra_points")
+      const sub_heading_= document.getElementById("heading_2")
+      const extra_points= document.getElementById("extra_content_2")
 
       let blog;
-      let username = JSON.parse(localStorage.getItem("arr"));
-      let profile_data = (localStorage.getItem("profile"));
+      const username = JSON.parse(localStorage.getItem("arr"));
+      const profile_data = (localStorage.getItem("profile"));
       let user_name;
           username.find(e=>{
-              if(e["email"]==profile_data){
-                  return user_name=(e["fname"]+" "+e["lastname"]); //arr[0]
+              if(e.email==profile_data){
+                  return user_name=(`${e.fname} ${e.lastname}`); //arr[0]
               }
           })
 
@@ -253,36 +245,31 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
           additional_data[0].style.display='block';
           add.style.display='none';
 
-
       })
     //   let blog_id = 0
           submit.addEventListener("click",e=>{
           e.preventDefault()
-          let user_id = Math.floor(Math.random() * 700);
+          const user_id = Math.floor(Math.random() * 700);
 
-       
-
-
-         let blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
-        let blog={
-          "product_img":add_img.value,
-          "Title":add_title.value,
-          "Content":add_content.value,
-          "heading_1":heading.value,
-          "points_1":points.value,
-          "heading_2":sub_heading_.value,
-          "points_2":extra_points.value,
-          "username":user_name,
-          // "date":date,
-          "id" : user_id
-        }
+         const blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
+        const blog={
+    "product_img":add_img.value,
+    "Title":add_title.value,
+    "Content":add_content.value,
+    "heading_1":heading.value,
+    "points_1":points.value,
+    "heading_2":sub_heading_.value,
+    "points_2":extra_points.value,
+    "username":user_name,
+    // "date":date,
+    "id" : user_id
+  }
 
         blog_detail.push(blog)
 
 localStorage.setItem("blog",JSON.stringify(blog_detail))
 location.reload()
     })
-
 
       // --ends
 
@@ -292,7 +279,6 @@ location.reload()
       //     blog_content[0].style.display='block';
 
       // })
-
 
       add_blog.addEventListener("click",e=>{
           e.preventDefault()
@@ -309,24 +295,22 @@ else{
 } 
          
       })
-      let title_of=document.getElementById("title_view")
-      let image_of=document.getElementById("image_view")
-      let content_of=document.getElementById("add_content")
-
+      const title_of=document.getElementById("title_view")
+      const image_of=document.getElementById("image_view")
+      const content_of=document.getElementById("add_content")
      
-      let currentDate = new Date().toJSON().slice(0, 10);
+      const currentDate = new Date().toJSON().slice(0, 10);
       console.log(currentDate); 
 
-
-      let blog_detail=JSON.parse(localStorage.getItem("blog"))??0
+      const blog_detail=JSON.parse(localStorage.getItem("blog"))??0
       let blog_details=""
       for( let i=0;i<blog_detail.length;i++){
       blog_details+=`
-      <a href = "blog_details.html?id=${blog_detail[i]["id"]}"><div class="blog_details">
-        <img id="image_view"src="${blog_detail[i]["product_img"]}">
-           <h3 id="title_view">${blog_detail[i]["Title"]}</h3>
+      <a href = "blog_details.html?id=${blog_detail[i].id}"><div class="blog_details">
+        <img id="image_view"src="${blog_detail[i].product_img}">
+           <h3 id="title_view">${blog_detail[i].Title}</h3>
            <div class="name_date">
-           <p id="name_view">${blog_detail[i]["username"]}</p>
+           <p id="name_view">${blog_detail[i].username}</p>
            <p id="date_view">${currentDate}</p>
            </div>
            </div></a>
@@ -334,11 +318,11 @@ else{
       `
      
       }
-      let blog_div = document.querySelector(".blog_view");
+      const blog_div = document.querySelector(".blog_view");
       console.log(blog_div);
       blog_div.innerHTML+=blog_details;
 
-      let login_title =document.getElementById("login_title")
+      const login_title =document.getElementById("login_title")
     </script>
    
   </body>
