@@ -397,19 +397,7 @@ if (localStorage.getItem("review_array")) {
   localStorage.setItem(
     "review_array",
     JSON.stringify([
-      {
-        name: "Steffy_Alexander",
-        rating: "5",
-        review:
-          "Great selection of plants and shrubs very reasonable prices and helpful staff,buy my plants here every year",
-      },
-
-      {
-        name: "Barath",
-        rating: "5",
-        review:
-          "Great selection of perennials and other plants\nTop nursery for plant lovers, free from all the furniture clothing and other grot found in large garden centres. This is the place to go when you want to buy plants and get advice about growing them.",
-      },
+      
       {
         star_count: 5,
         review:
