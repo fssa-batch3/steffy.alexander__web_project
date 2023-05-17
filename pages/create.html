@@ -1,400 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assests/css/create.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="header">
-      <p id="create_plant">Create a plant</p>
-      <p id="update_plant">Update a plant</p>
-      <p id="delete_plant">Delete a plant</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assests/css/create.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
     </div>
 
-    <div class="container">
-      <form id="form" class="view">
-        <div class="full_form">
-          <div class="card_details">
-            <label for="name"> Name:<input type="text" id="name" /></label>
-            <label for="img">Image url:<input type="url" id="image" /></label>
-            <label for="Tittle"> Price:<input type="text" id="price" /></label>
-            <label for="rate">Rating:<input type="text" id="ratings" /></label
-            ><br /><br />
-          </div>
-          <div class="details_page">
-            <label for="image_1">
-              image_1:<input type="text" id="image_1"
-            /></label>
-            <label for="image_2">
-              image_2:<input type="text" id="image_2"
-            /></label>
-            <label for="image_3">
-              image_3:<input type="text" id="image_3"
-            /></label>
-            <br />
+    <div class="nav">
 
-            <label for=" Type_of_plant">
-              Type: <input type="text" id="Type_of_plant"
-            /></label>
-            <label for=" Suitable_Location">
-              Suitable_Location:<input
-                type="text"
-                id="Suitable_Location" /></label
-            ><br />
-            <label for=" Container_Type"
-              >Container_Type:<input type="text" id="Container_Type"
-            /></label>
+      <a href="../index.html">Home</a>
+      <a href="./plant.html">Plants</a>
+      <a href="./seeds.html">Seeds</a>
+      <a href="./blog.html">Blog</a>
 
-            <label for="Height">
-              Height: <input type="text" id="Height"
-            /></label>
-            <label for="Brand"> Brand: <input type="text" id="Brand" /></label
-            ><br />
-            <label for=" Planting_Season">
-              Planting Season: <input type="text" id="Planting_Season"
-            /></label>
-            <label for="Hybrid">
-              Hybrid: <input type="text" id="Hybrid"
-            /></label>
-            <br /><br />
-          </div>
+      <a id="profile_logo" href="/pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt="">
+      </a>
+
+      <a id="cart1" href="./cart.html">
+        <img id="cart1" src="../assests/images/cart logo.png" alt="cart">
+      </a>
+
+
+      <a id="log" href="./pages/login.html">
+        <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+        <span id="login_title">Login</span>
+      </a>
+  </header>
+
+
+  <div class="header">
+    <p id="create_plant">Create a plant</p>
+    <p id="update_plant">Update a plant</p>
+    <p id="delete_plant">Delete a plant</p>
+  </div>
+
+  <div class="container">
+    <form id="form" class="view">
+      <div class="full_form">
+        <div class="card_details">
+          <label for="name"> Name:<input type="text" id="name" /></label>
+          <label for="img">Image url:<input type="url" id="image" /></label>
+          <label for="Tittle"> Price:<input type="text" id="price" /></label>
+          <label for="rate">Rating:<input type="text" id="ratings" /></label><br /><br />
         </div>
-        <div class="about_the_product">
-          <p>About:</p>
-          <textarea id="about"></textarea><br />
-        </div>
-
-        <label for="plant_category">
-          <input type="radio" id="plant_category" name="category" />
-          Plant
-        </label>
-        <label for="seed_category">
-          <input type="radio" name="category" id="seed_category" />
-          Seed </label
-        ><br /><br />
-
-        <button id="create">Create</button>
-        <button onclick="delete_product()">Delete</button>
-        <button onclick="update_product()">Update</button>
-      </form>
-      <form id="update_form" class="not_view">
-        <p id="update">Update</p>
-        <label for="update_input">
-          Enter the name of the Plant / Seed :
-          <input type="text" id="update_input" />
-        </label>
-        <button id="search">Search</button>
-        <div class="update_details not_view">
-          <label for="image"
-            >Image url:<input type="url" id="update_image"
-          /></label>
-          <label for="price">
-            Price:<input type="text" id="update_price"
-          /></label>
-          <label for="update_name">
-            Name:<input type="text" id="update_name"
-          /></label>
-          <label for="ratings"
-            >Rating:<input type="text" id="update_ratings" /></label
-          ><br /><br />
+        <div class="details_page">
           <label for="image_1">
-            image_1:<input type="text" id="update_image_1"
-          /></label>
+            image_1:<input type="text" id="image_1" /></label>
           <label for="image_2">
-            image_2:<input type="text" id="update_image_2"
-          /></label>
+            image_2:<input type="text" id="image_2" /></label>
           <label for="image_3">
-            image_3:<input type="text" id="update_image_3"
-          /></label>
+            image_3:<input type="text" id="image_3" /></label>
           <br />
-          <p>About:</p>
-          <textarea id="update_about"></textarea><br />
 
           <label for=" Type_of_plant">
-            Type: <input type="text" id="update_Type_of_plant"
-          /></label>
+            Type: <input type="text" id="Type_of_plant" /></label>
           <label for=" Suitable_Location">
-            Suitable_Location:<input
-              type="text"
-              id="update_Suitable_Location" /></label
-          ><br /><br />
-          <label for=" Container_Type"
-            >Container_Type:<input type="text" id="update_Container_Type"
-          /></label>
+            Suitable_Location:<input type="text" id="Suitable_Location" /></label><br />
+          <label for=" Container_Type">Container_Type:<input type="text" id="Container_Type" /></label>
 
           <label for="Height">
-            Height: <input type="text" id="update_Height"
-          /></label>
-          <label for="Brand">
-            Brand: <input type="text" id="update_Brand" /></label
-          ><br /><br />
+            Height: <input type="text" id="Height" /></label>
+          <label for="Brand"> Brand: <input type="text" id="Brand" /></label><br />
           <label for=" Planting_Season">
-            Planting Season: <input type="text" id="update_Planting_Season"
-          /></label>
+            Planting Season: <input type="text" id="Planting_Season" /></label>
           <label for="Hybrid">
-            Hybrid: <input type="text" id="update_Hybrid"
-          /></label>
+            Hybrid: <input type="text" id="Hybrid" /></label>
           <br /><br />
-          <button id="update_product">Update</button>
         </div>
-      </form>
-      <form id="delete_form" class="not_view">
-        <h3>Delete a product</h3>
-        <label for="delete_input">
-          Enter the name of the Plant / Seed :
-          <input type="text" id="delete_input" />
-        </label>
-        <label for="delete_brand">
-          Enter the brand of the Plant / Seed :
-          <input type="text" id="delete_brand" />
-        </label>
-        <button id="delete_product">Delete</button>
+      </div>
+      <div class="about_the_product">
+        <p>About:</p>
+        <textarea id="about"></textarea><br />
+      </div>
 
-        <h3>Restore deleted plant</h3>
-        <label for="restore_input">
-          Enter the name of the Plant / Seed :
-          <input type="text" id="restore_input" />
-        </label>
-        <label for="restore_brand">
-          Enter the brand of the Plant / Seed :
-          <input type="text" id="restore_brand" />
-        </label>
-        <button id="restore_button">Restore</button>
-      </form>
-    </div>
-  </body>
-  <script>
-    const create_plant = document.getElementById("create_plant");
-    const update_plant = document.getElementById("update_plant");
-    const delete_plant = document.getElementById("delete_plant");
+      <label for="plant_category">
+        <input type="radio" id="plant_category" name="category" />
+        Plant
+      </label>
+      <label for="seed_category">
+        <input type="radio" name="category" id="seed_category" />
+        Seed </label><br /><br />
 
-    const create_form = document.getElementById("form");
-    const update_form = document.getElementById("update_form");
-    const detete_form = document.getElementById("delete_form");
+      <button id="create">Create</button>
+      <button onclick="delete_product()">Delete</button>
+      <button onclick="update_product()">Update</button>
+    </form>
+    <form id="update_form" class="not_view">
+      <p id="update">Update</p>
+      <label for="update_input">
+        Enter the name of the Plant / Seed :
+        <input type="text" id="update_input" />
+      </label>
+      <button id="search">Search</button>
+      <div class="update_details not_view">
+        <label for="image">Image url:<input type="url" id="update_image" /></label>
+        <label for="price">
+          Price:<input type="text" id="update_price" /></label>
+        <label for="update_name">
+          Name:<input type="text" id="update_name" /></label>
+        <label for="ratings">Rating:<input type="text" id="update_ratings" /></label><br /><br />
+        <label for="image_1">
+          image_1:<input type="text" id="update_image_1" /></label>
+        <label for="image_2">
+          image_2:<input type="text" id="update_image_2" /></label>
+        <label for="image_3">
+          image_3:<input type="text" id="update_image_3" /></label>
+        <br />
+        <p>About:</p>
+        <textarea id="update_about"></textarea><br />
 
-    create_plant.addEventListener("click", (e) => {
-      window.location.href = "./create.html";
-    });
-    update_plant.addEventListener("click", (e) => {
-      create_form.classList.add("not_view");
-      update_form.classList.remove("not_view");
-      update_form.classList.add("view");
-    });
-    delete_plant.addEventListener("click", (e) => {});
+        <label for=" Type_of_plant">
+          Type: <input type="text" id="update_Type_of_plant" /></label>
+        <label for=" Suitable_Location">
+          Suitable_Location:<input type="text" id="update_Suitable_Location" /></label><br /><br />
+        <label for=" Container_Type">Container_Type:<input type="text" id="update_Container_Type" /></label>
 
-    const plant_product = JSON.parse(localStorage.getItem("create_plant"))
-  ? JSON.parse(localStorage.getItem("create_plant"))
-  : [];
+        <label for="Height">
+          Height: <input type="text" id="update_Height" /></label>
+        <label for="Brand">
+          Brand: <input type="text" id="update_Brand" /></label><br /><br />
+        <label for=" Planting_Season">
+          Planting Season: <input type="text" id="update_Planting_Season" /></label>
+        <label for="Hybrid">
+          Hybrid: <input type="text" id="update_Hybrid" /></label>
+        <br /><br />
+        <button id="update_product">Update</button>
+      </div>
+    </form>
+    <form id="delete_form" class="not_view">
+      <h3>Delete a product</h3>
+      <label for="delete_input">
+        Enter the name of the Plant / Seed :
+        <input type="text" id="delete_input" />
+      </label>
+      <label for="delete_brand">
+        Enter the brand of the Plant / Seed :
+        <input type="text" id="delete_brand" />
+      </label>
+      <button id="delete_product">Delete</button>
 
-    const seed_details = JSON.parse(localStorage.getItem("seed_details"))
-  ? JSON.parse(localStorage.getItem("seed_details"))
-  : [];
+      <h3>Restore deleted plant</h3>
+      <label for="restore_input">
+        Enter the name of the Plant / Seed :
+        <input type="text" id="restore_input" />
+      </label>
+      <label for="restore_brand">
+        Enter the brand of the Plant / Seed :
+        <input type="text" id="restore_brand" />
+      </label>
+      <button id="restore_button">Restore</button>
+    </form>
+  </div>
+</body>
+<script src="/assests/js/model.js"></script>
 
-    document.getElementById("create").addEventListener("click", (e) => {
-      e.preventDefault();
+<script>
+  const create_plant = document.getElementById("create_plant");
+  const update_plant = document.getElementById("update_plant");
+  const delete_plant = document.getElementById("delete_plant");
 
-      const image = document.getElementById("image");
-      const price = document.getElementById("price");
-      const name = document.getElementById("name");
-      const ratings = document.getElementById("ratings");
-      const image_1 = document.getElementById("image_1");
-      const image_2 = document.getElementById("image_2");
-      const image_3 = document.getElementById("image_3");
-      const about = document.getElementById("about");
+  const create_form = document.getElementById("form");
+  const update_form = document.getElementById("update_form");
+  const detete_form = document.getElementById("delete_form");
 
-      const Type_of_plant = document.getElementById("Type_of_plant");
-      const Suitable_Location = document.getElementById("Suitable_Location");
-      const Container_Type = document.getElementById("Container_Type");
-      const Container_Material = document.getElementById("Container_Material");
-      const Height = document.getElementById("Height");
-      const Brand = document.getElementById("Brand");
-      const Planting_Season = document.getElementById("Planting_Season");
-      // const table_Plantname = document.getElementById("table_Plantname");
-      const Hybrid = document.getElementById("Hybrid");
-      const plant_category = document.getElementById("plant_category");
-      const seed_category = document.getElementById("seed_category");
-      let category;
-      if (plant_category.checked) {
-        category = "Plant";
-      } else {
-        category = "Seed";
-      }
+  create_plant.addEventListener("click", (e) => {
+    window.location.href = "./create.html";
+  });
+  update_plant.addEventListener("click", (e) => {
+    create_form.classList.add("not_view");
+    update_form.classList.remove("not_view");
+    update_form.classList.add("view");
+  });
+  delete_plant.addEventListener("click", (e) => { });
 
-      const product_create = {
-    image: image.value,
-    price: price.value,
-    name: name.value,
-    ratings: ratings.value,
-    image_1: image_1.value,
-    image_2: image_2.value,
-    image_3: image_3.value,
-    about: about.value,
-    Type_of_plant: Type_of_plant.value,
-    Suitable_Location: Suitable_Location.value,
-    Container_Type: Container_Type.value,
-    Height: Height.value,
-    Brand: Brand.value,
-    Planting_Season: Planting_Season.value,
-    Hybrid: Hybrid.value,
-    Category: category,
-    status:true
-  };
+  const plant_product = JSON.parse(localStorage.getItem("create_plant"))
+    ? JSON.parse(localStorage.getItem("create_plant"))
+    : [];
 
-      if (plant_category.checked) {
-        plant_product.push(product_create);
-        localStorage.setItem("create_plant", JSON.stringify(plant_product));
-        // localStorage.setItem("plant_backup", JSON.stringify(plant_product))
-      } else {
-        seed_details.push(product_create);
-        localStorage.setItem("seed_details", JSON.stringify(seed_details));
-        localStorage.setItem("plant_backup", JSON.stringify(plant_product));
-      }
+  const seed_details = JSON.parse(localStorage.getItem("seed_details"))
+    ? JSON.parse(localStorage.getItem("seed_details"))
+    : [];
 
-      alert("done");
-    });
-    // function delete_product() {
-    //   if (plant_category.checked) {
-    //     let cr_plant = JSON.parse(localStorage.getItem("create_plant"));
-    //     for (let i = 0; i < cr_plant.length; i++) {
-    //       if (document.getElementById("name").value == cr_plant[i]["name"]) {
-    //         cr_plant.splice(i, 1);
-    //         localStorage.setItem("create_plant", JSON.stringify(cr_plant));
-    //       }
-    //     }
-    //   } else {
-    //     let seed_details = JSON.parse(localStorage.getItem("seed_details"));
+  document.getElementById("create").addEventListener("click", (e) => {
+    e.preventDefault();
 
-    //     for (let j = 0; j < seed_details.length; j++) {
-    //       if (
-    //         document.getElementById("name").value == seed_details[j]["name"]
-    //       ) {
-    //         seed_details.splice(j, 1);
-    //         localStorage.setItem("seed_details", JSON.stringify(seed_details));
-    //       }
-    //     }
-    //   }
-    // }
-    const update = document.getElementById("update");
-    update.addEventListener("click", (e) => {});
+    const image = document.getElementById("image");
+    const price = document.getElementById("price");
+    const name = document.getElementById("name");
+    const ratings = document.getElementById("ratings");
+    const image_1 = document.getElementById("image_1");
+    const image_2 = document.getElementById("image_2");
+    const image_3 = document.getElementById("image_3");
+    const about = document.getElementById("about");
 
-    function update_product() {
-      product_update = {};
-      const product = JSON.parse(localStorage.getItem("create_plant")) ?? [];
-      const image = document.getElementById("image").value;
-      const price = document.getElementById("price").value;
-      const name = document.getElementById("name").value;
-      const ratings = document.getElementById("ratings").value;
-      product_create.image = image;
-      product_create.price = price;
-      product_create.name = name;
-      product_create.ratings = ratings;
-      product.push(product_create);
+    const Type_of_plant = document.getElementById("Type_of_plant");
+    const Suitable_Location = document.getElementById("Suitable_Location");
+    const Container_Type = document.getElementById("Container_Type");
+    const Container_Material = document.getElementById("Container_Material");
+    const Height = document.getElementById("Height");
+    const Brand = document.getElementById("Brand");
+    const Planting_Season = document.getElementById("Planting_Season");
+    // const table_Plantname = document.getElementById("table_Plantname");
+    const Hybrid = document.getElementById("Hybrid");
+    const plant_category = document.getElementById("plant_category");
+    const seed_category = document.getElementById("seed_category");
+    let category;
+    if (plant_category.checked) {
+      category = "Plant";
+    } else {
+      category = "Seed";
     }
-    const search = document.getElementById("search");
-    const update_details_div = document.querySelector(".update_details");
-    search.addEventListener("click", (e) => {
-      e.preventDefault();
-      const update_input_value = document.getElementById("update_input").value;
-      let res = 0;
-      const plants_array = JSON.parse(localStorage.getItem("create_plant"));
-      let current_plant;
-      plants_array.forEach((e) => {
-        if (update_input_value == e.name) {
-          current_plant = e;
-          res = 1;
-          return current_plant;
-        }
-      });
 
-      if (res == 1) {
-        update_details_div.classList.remove("not_view");
-        update_details_div.classList.add("view");
-        console.log(current_plant, "sdghcvey");
-        document.getElementById("update_image").value = current_plant.image;
-        document.getElementById("update_price").value = current_plant.price;
-        document.getElementById("update_name").value = current_plant.name;
-        document.getElementById("update_ratings").value =
-          current_plant.ratings;
-        document.getElementById("update_image_1").value =
-          current_plant.image_1;
-        document.getElementById("update_image_2").value =
-          current_plant.image_2;
-        document.getElementById("update_image_3").value =
-          current_plant.image_3;
-        document.getElementById("update_about").value = current_plant.about;
-        document.getElementById("update_Type_of_plant").value =
-          current_plant.Type_of_plant;
-        document.getElementById("update_Suitable_Location").value =
-          current_plant.Suitable_Location;
-        document.getElementById("update_Container_Type").value =
-          current_plant.Container_Type;
-        document.getElementById("update_Height").value =
-          current_plant.Height;
-        document.getElementById("update_Brand").value = current_plant.Brand;
-        document.getElementById("update_Planting_Season").value =
-          current_plant.Planting_Season;
-        document.getElementById("update_Hybrid").value =
-          current_plant.Hybrid;
-      } else alert("No plants/seeds like that");
-    });
-    if (document.getElementById("update_product")) {
-      const update_product = document.getElementById("update_product");
-      update_product.addEventListener("click", (e) => {
-        e.preventDefault();
-        const update_input_value = document.getElementById("update_input").value;
-
-        const update_image = document.getElementById("update_image").value;
-        const update_price = document.getElementById("update_price").value;
-        const update_name = document.getElementById("update_name").value;
-        const update_ratings = document.getElementById("update_ratings").value;
-        const update_image_1 = document.getElementById("update_image_1").value;
-        const update_image_2 = document.getElementById("update_image_2").value;
-        const update_image_3 = document.getElementById("update_image_3").value;
-        const update_about = document.getElementById("update_about").value;
-
-        const update_Type_of_plant = document.getElementById(
-          "update_Type_of_plant"
-        ).value;
-        const update_Suitable_Location = document.getElementById(
-          "update_Suitable_Location"
-        ).value;
-        const update_Container_Type = document.getElementById(
-          "update_Container_Type"
-        ).value;
-
-        const update_Height = document.getElementById("update_Height").value;
-        const update_Brand = document.getElementById("update_Brand").value;
-        const update_Planting_Season = document.getElementById(
-          "update_Planting_Season"
-        ).value;
-        // const table_Plantname = document.getElementById("table_Plantname");
-        const update_Hybrid = document.getElementById("update_Hybrid").value;
-
-        // const update_seed_category = document.getElementById("update_seed_category").value;
-
-        const updated_product = {
-      image: update_image,
-      price: update_price,
-      name: update_name,
-      ratings: update_ratings,
-      image_1: update_image_1,
-      image_2: update_image_2,
-      image_3: update_image_3,
-      about: update_about,
-      Type_of_plant: update_Type_of_plant,
-      Suitable_Location: update_Suitable_Location,
-      Container_Type: update_Container_Type,
-      Height: update_Height,
-      Brand: update_Brand,
-      Planting_Season: update_Planting_Season,
-      Hybrid: update_Hybrid,
-      status:true
+    const product_create = {
+      image: image.value,
+      price: price.value,
+      name: name.value,
+      ratings: ratings.value,
+      image_1: image_1.value,
+      image_2: image_2.value,
+      image_3: image_3.value,
+      about: about.value,
+      Type_of_plant: Type_of_plant.value,
+      Suitable_Location: Suitable_Location.value,
+      Container_Type: Container_Type.value,
+      Height: Height.value,
+      Brand: Brand.value,
+      Planting_Season: Planting_Season.value,
+      Hybrid: Hybrid.value,
+      Category: category,
+      status: true
     };
 
+    if (plant_category.checked) {
+      plant_product.push(product_create);
+      localStorage.setItem("create_plant", JSON.stringify(plant_product));
+      // localStorage.setItem("plant_backup", JSON.stringify(plant_product))
+    } else {
+      seed_details.push(product_create);
+      localStorage.setItem("seed_details", JSON.stringify(seed_details));
+      localStorage.setItem("plant_backup", JSON.stringify(plant_product));
+    }
+
+    alert("done");
+  });
+  // function delete_product() {
+  //   if (plant_category.checked) {
+  //     let cr_plant = JSON.parse(localStorage.getItem("create_plant"));
+  //     for (let i = 0; i < cr_plant.length; i++) {
+  //       if (document.getElementById("name").value == cr_plant[i]["name"]) {
+  //         cr_plant.splice(i, 1);
+  //         localStorage.setItem("create_plant", JSON.stringify(cr_plant));
+  //       }
+  //     }
+  //   } else {
+  //     let seed_details = JSON.parse(localStorage.getItem("seed_details"));
+
+  //     for (let j = 0; j < seed_details.length; j++) {
+  //       if (
+  //         document.getElementById("name").value == seed_details[j]["name"]
+  //       ) {
+  //         seed_details.splice(j, 1);
+  //         localStorage.setItem("seed_details", JSON.stringify(seed_details));
+  //       }
+  //     }
+  //   }
+  // }
+
+  let res = 0;
+  let rese = 0;
+  const update = document.getElementById("update");
+  update.addEventListener("click", (e) => { });
+
+  function update_product() {
+    product_update = {};
+    const product = JSON.parse(localStorage.getItem("create_plant")) ?? [];
+    const image = document.getElementById("image").value;
+    const price = document.getElementById("price").value;
+    const name = document.getElementById("name").value;
+    const ratings = document.getElementById("ratings").value;
+    product_create.image = image;
+    product_create.price = price;
+    product_create.name = name;
+    product_create.ratings = ratings;
+    product.push(product_create);
+  }
+  const search = document.getElementById("search");
+  const update_details_div = document.querySelector(".update_details");
+  search.addEventListener("click", (e) => {
+    e.preventDefault();
+    const update_input_value = document.getElementById("update_input").value;
+
+    const plants_array = JSON.parse(localStorage.getItem("create_plant"));
+    let seeds_array = JSON.parse(localStorage.getItem("seed_details"));
+    let current_plant;
+    plants_array.forEach((e) => {
+      if (update_input_value == e.name) {
+        current_plant = e;
+        res = 1;
+        return current_plant;
+      }
+    })
+
+    seeds_array.forEach((e) => {
+      if (update_input_value == e.name) {
+        current_plant = e;
+        rese = 1
+        return current_plant;
+      }
+    })
+    function update_product_both() {
+      update_details_div.classList.remove("not_view");
+      update_details_div.classList.add("view");
+      console.log(current_plant, "sdghcvey");
+      document.getElementById("update_image").value = current_plant.image;
+      document.getElementById("update_price").value = current_plant.price;
+      document.getElementById("update_name").value = current_plant.name;
+      document.getElementById("update_ratings").value =
+        current_plant.ratings;
+      document.getElementById("update_image_1").value =
+        current_plant.image_1;
+      document.getElementById("update_image_2").value =
+        current_plant.image_2;
+      document.getElementById("update_image_3").value =
+        current_plant.image_3;
+      document.getElementById("update_about").value = current_plant.about;
+      document.getElementById("update_Type_of_plant").value =
+        current_plant.Type_of_plant;
+      document.getElementById("update_Suitable_Location").value =
+        current_plant.Suitable_Location;
+      document.getElementById("update_Container_Type").value =
+        current_plant.Container_Type;
+      document.getElementById("update_Height").value =
+        current_plant.Height;
+      document.getElementById("update_Brand").value = current_plant.Brand;
+      document.getElementById("update_Planting_Season").value =
+        current_plant.Planting_Season;
+      document.getElementById("update_Hybrid").value =
+        current_plant.Hybrid;
+    }
+
+    if (res == 1) {
+      update_product_both()
+
+    }
+    else if (rese == 1) {
+      update_product_both()
+    }
+
+    else {
+      alert("No plants/seeds like that")
+    };
+  });
+  if (document.getElementById("update_product")) {
+    const update_product = document.getElementById("update_product");
+    update_product.addEventListener("click", (e) => {
+      e.preventDefault();
+      const update_input_value = document.getElementById("update_input").value;
+
+      const update_image = document.getElementById("update_image").value;
+      const update_price = document.getElementById("update_price").value;
+      const update_name = document.getElementById("update_name").value;
+      const update_ratings = document.getElementById("update_ratings").value;
+      const update_image_1 = document.getElementById("update_image_1").value;
+      const update_image_2 = document.getElementById("update_image_2").value;
+      const update_image_3 = document.getElementById("update_image_3").value;
+      const update_about = document.getElementById("update_about").value;
+
+      const update_Type_of_plant = document.getElementById(
+        "update_Type_of_plant"
+      ).value;
+      const update_Suitable_Location = document.getElementById(
+        "update_Suitable_Location"
+      ).value;
+      const update_Container_Type = document.getElementById(
+        "update_Container_Type"
+      ).value;
+
+      const update_Height = document.getElementById("update_Height").value;
+      const update_Brand = document.getElementById("update_Brand").value;
+      const update_Planting_Season = document.getElementById(
+        "update_Planting_Season"
+      ).value;
+      // const table_Plantname = document.getElementById("table_Plantname");
+      const update_Hybrid = document.getElementById("update_Hybrid").value;
+
+      // const update_seed_category = document.getElementById("update_seed_category").value;
+      console.log(rese);
+      if (res == 1) {
+        const updated_product = {
+          image: update_image,
+          price: update_price,
+          name: update_name,
+          ratings: update_ratings,
+          image_1: update_image_1,
+          image_2: update_image_2,
+          image_3: update_image_3,
+          about: update_about,
+          Type_of_plant: update_Type_of_plant,
+          Suitable_Location: update_Suitable_Location,
+          Container_Type: update_Container_Type,
+          Height: update_Height,
+          Brand: update_Brand,
+          Planting_Season: update_Planting_Season,
+          Hybrid: update_Hybrid,
+          status: true
+        };
         console.log(updated_product);
         const plants_array = JSON.parse(localStorage.getItem("create_plant"));
         plants_array.forEach((e, index) => {
@@ -403,85 +424,127 @@
             localStorage.setItem("create_plant", JSON.stringify(plants_array));
           }
         });
-      });
-    }
+        location.reload()
 
-    // function delete_product()--------------------
-    const delete_product = document.getElementById("delete_plant");
-    delete_product.addEventListener("click", (e) => {
-      e.preventDefault()
-      create_form.classList.add("not_view");
-      update_form.classList.add("not_view");
-      delete_form.classList.remove("not_view");
+      }
+      else if (rese == 1) {
+        const updated_product = {
+          image: update_image,
+          price: update_price,
+          name: update_name,
+          ratings: update_ratings,
+          image_1: update_image_1,
+          image_2: update_image_2,
+          image_3: update_image_3,
+          about: update_about,
+          Type_of_plant: update_Type_of_plant,
+          Suitable_Location: update_Suitable_Location,
+          Container_Type: update_Container_Type,
+          Height: update_Height,
+          Brand: update_Brand,
+          Planting_Season: update_Planting_Season,
+          Hybrid: update_Hybrid,
+          status: true,
+          Category: "Seed"
+        };
+        console.log(updated_product);
+        const seed_details = JSON.parse(localStorage.getItem("seed_details"));
+        seed_details.forEach((e, index) => {
+          if (e.name == update_input_value) {
+            seed_details[index] = updated_product;
+            localStorage.setItem("seed_details", JSON.stringify(seed_details));
+          }
+        });
+        location.reload()
+      }
+      else {
 
-      });
-      // location.reload()
+      }
 
-    const delete_button =document.getElementById("delete_product")
-    delete_button.addEventListener("click",e=>{
-      e.preventDefault()
+    });
+  }
 
-      const delete_input = document.querySelector("#delete_input").value;
-      const delete_brand = document.querySelector("#delete_brand").value;
 
-      const plant_details = JSON.parse(localStorage.getItem("create_plant"));
-      const seed_details = JSON.parse(localStorage.getItem("seed_details"));
-      plant_details.forEach((e, index) => {
-        if(e.name==delete_input&&e.Brand==delete_brand){
-          e.status=false
-    localStorage.setItem("create_plant", JSON.stringify(plant_details));
-    
-        }
-      });
-      seed_details.forEach((e, index) => {
-        if(e.name==delete_input&&e.Brand==delete_brand){
-          e.status=false
-           localStorage.setItem("seed_details", JSON.stringify(seed_details));
-           console.log("seed");
 
-}    });
+  // function delete_product()--------------------
+  const delete_product = document.getElementById("delete_plant");
+  delete_product.addEventListener("click", (e) => {
+    e.preventDefault()
+    create_form.classList.add("not_view");
+    update_form.classList.add("not_view");
+    delete_form.classList.remove("not_view");
 
-    })
-    // }
-    // let plant_de = JSON.parse(localStorage.getItem("create_plant"));
-    // let seed_de = JSON.parse(localStorage.getItem("seed_details"));
-    // plant_de.forEach((e, index) => {
-    //   e["status"] = true;
-    // });
-    // seed_de.forEach((e, index) => {
-    //   e["status"] = true;
-    // });
-    // console.log(plant_de);
-    // console.log(seed_de);
+  });
+  // location.reload()
 
-    // localStorage.setItem("seed_details", JSON.stringify(seed_de));
-    // localStorage.setItem("create_plant", JSON.stringify(plant_de));
+  const delete_button = document.getElementById("delete_product")
+  delete_button.addEventListener("click", e => {
+    e.preventDefault()
 
-    // Function restore-------------------------------------
+    const delete_input = document.querySelector("#delete_input").value;
+    const delete_brand = document.querySelector("#delete_brand").value;
 
-    const restore_buttton =document.getElementById("restore_button")
-    restore_buttton.addEventListener("click",e=>{
-      e.preventDefault()
-      const restore_input = document.getElementById("restore_input").value
+    const plant_details = JSON.parse(localStorage.getItem("create_plant"));
+    const seed_details = JSON.parse(localStorage.getItem("seed_details"));
+    plant_details.forEach((e, index) => {
+      if (e.name == delete_input && e.Brand == delete_brand) {
+        e.status = false
+        localStorage.setItem("create_plant", JSON.stringify(plant_details));
+
+      }
+    });
+    seed_details.forEach((e, index) => {
+      if (e.name == delete_input && e.Brand == delete_brand) {
+        e.status = false
+        localStorage.setItem("seed_details", JSON.stringify(seed_details));
+        console.log("seed");
+
+      }
+    });
+
+  })
+  // }
+  // let plant_de = JSON.parse(localStorage.getItem("create_plant"));
+  // let seed_de = JSON.parse(localStorage.getItem("seed_details"));
+  // plant_de.forEach((e, index) => {
+  //   e["status"] = true;
+  // });
+  // seed_de.forEach((e, index) => {
+  //   e["status"] = true;
+  // });
+  // console.log(plant_de);
+  // console.log(seed_de);
+
+  // localStorage.setItem("seed_details", JSON.stringify(seed_de));
+  // localStorage.setItem("create_plant", JSON.stringify(plant_de));
+
+  // Function restore-------------------------------------
+
+  const restore_buttton = document.getElementById("restore_button")
+  restore_buttton.addEventListener("click", e => {
+    e.preventDefault()
+    const restore_input = document.getElementById("restore_input").value
     const restore_brand = document.getElementById("restore_brand").value
 
-      const plant_details = JSON.parse(localStorage.getItem("create_plant"));
-      const seed_details = JSON.parse(localStorage.getItem("seed_details"));
-      plant_details.forEach((e, index) => {
-        if(e.name==restore_input&&e.Brand==restore_brand){
-          e.status=true
-    localStorage.setItem("create_plant", JSON.stringify(plant_details));
-    
-        }
-      });
-      seed_details.forEach((e, index) => {
-        if(e.name==restore_input&&e.Brand==restore_brand){
-          e.status=true
-           localStorage.setItem("seed_details", JSON.stringify(seed_details));
-           console.log("seed");
+    const plant_details = JSON.parse(localStorage.getItem("create_plant"));
+    const seed_details = JSON.parse(localStorage.getItem("seed_details"));
+    plant_details.forEach((e, index) => {
+      if (e.name == restore_input && e.Brand == restore_brand) {
+        e.status = true
+        localStorage.setItem("create_plant", JSON.stringify(plant_details));
 
-}    });
+      }
+    });
+    seed_details.forEach((e, index) => {
+      if (e.name == restore_input && e.Brand == restore_brand) {
+        e.status = true
+        localStorage.setItem("seed_details", JSON.stringify(seed_details));
+        console.log("seed");
 
-    })
-  </script>
+      }
+    });
+
+  })
+</script>
+
 </html>

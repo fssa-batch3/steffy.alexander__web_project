@@ -13,6 +13,32 @@
 </head>
 <body>
     
+    <header>
+        <div class="logo">
+          <img id="logo_img" src="/assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
+        </div>
+    
+        <div class="nav">
+        
+          <a id="home_title" href="#">Home</a>
+          <a href="/pages/plant.html">Plants</a>
+          <a href="/pages/seeds.html">Seeds</a>
+          <a href="/pages/blog.html">Blog</a>
+       
+          <a id="profile_logo" href="/pages/profile.html" id="profile_logo">
+    <img id="profile_logo" src="/assests/images/girl.png" alt="">
+    </a>
+        
+          <a id="cart_a" href="">
+            <img id="cart" src="/assests/images/cart logo.png" alt="cart">
+            </a>
+            <a id="log" href="./pages/login.html">
+                <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+                <span id="login_title">Login</span>
+                </a>
+        </div>
+      </header>
+  <!-- header ends -->
             <div class="content">
         <div class="left">
     <div class="leftbox">
@@ -33,9 +59,10 @@
         <div class="fstname">
 <i class="fa-solid fa-user"></i>Profile
 </div>
-        <!-- <div class="secname">
-<i class="fa-solid fa-user"></i>Edit Profile
-</div> -->
+        <a id="create_product" href="/pages/create.html"><div class="secname">
+<i class="fa-solid fa-user"></i>create product
+</div>
+</a>
        <a href="/index.html">
 <div class="thirdname">
 <i class="fa-solid fa-user"></i>Back to Home
@@ -91,14 +118,18 @@ Gender <input type="text" id="gender" disabled>
 
 <div class="lastcontent">
     <div class="side_one">
-        <h2>Add Bio</h2>
-        <textarea placeholder="Add Bio"></textarea>
-        <button id="edit">Edit</button>
-        <button type="submit" id="save">update</button>
-        <button id="delete">Delete</button>
+        
+      <span id="edit" ><img src="/assests/images/edit_icon.avif">Edit</span>
+      <button type="submit"><img src="/assests/images/update_icon.png">Update</button>
+      <span  id="delete"><img src="/assests/images/delete.png">Delete</span>
+      <span id="logout">
+        <img id="logout_icon" src="/assests/images/logout_icon.png">
+        Log Out
+        </span>
+
     </div>
    <div>
-<img src="../assests/images/img gif.gif" alt="plants">
+<img id="gif" src="../assests/images/img gif.gif" alt="plants">
 </div>
 </div>
 </form>
@@ -106,6 +137,7 @@ Gender <input type="text" id="gender" disabled>
 </div>
 </div>
 </form>
+<script src="/assests/js/model.js"></script>
 
 <script>
        const img_div =document.querySelector(".leftbox")
@@ -227,10 +259,23 @@ let res;
     let seed_details=document.getElementById("seed_details")
 
 
-    // if(email==steffyalexander20.gmail.com){
-    
+    let logout = document.getElementById("logout")
+    logout.addEventListener("click",e=>{
+        localStorage.removeItem("profile")
+        window.location.href ="./login.html"
+        alert("Successfully logged out..!")
 
-    // }
+    })
+
+let admin_email="steffy@gmail.com"
+let create_product=document.getElementById("create_product")
+let email=localStorage.getItem("profile")
+if(email==admin_email){
+    create_product.style.display="block"
+}
+
+
+
 </script>
 </body>
 </html>

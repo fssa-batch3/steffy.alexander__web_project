@@ -1,4 +1,4 @@
-const login_logo = document.getElementById("log"); //
+ login_logo = document.getElementById("log"); //
 profile_logo = document.getElementById("profile_logo");
 login_titles = document.getElementById("login_title");
 if (localStorage.getItem("profile")) {
@@ -17,7 +17,7 @@ const cart_data_view = document.getElementById("cart");
 cart_data_view.addEventListener("click", (e) => {
   e.preventDefault();
   if (localStorage.getItem("profile")) {
-    window.location.href = "./pages/cart.html";
+    window.location.href = "./cart.html";
     console.log("already signed");
   } else {
     window.location.href = "signup.html";

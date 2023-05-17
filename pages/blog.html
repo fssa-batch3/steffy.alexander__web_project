@@ -16,7 +16,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../assests/css/blog.css" />
   </head>
 
@@ -33,20 +36,17 @@
         <a href="./plant.html">Plants</a>
         <a href="./seeds.html">Seeds</a>
         <a href="./blog.html">Blog</a>
-        <a href="./login.html" id="log"
-          ><img
-            id="log"
-            src="../assests/images/Untitled_design-removebg-preview.png"
-            alt=""
-            id="login_title"
-          />Login/signup</a
-        >
-        <a href="/pages/profile.html"
+        
+        <a id="profile_logo" href="/pages/profile.html"
           ><img id="profile_logo" src="/assests/images/girl.png" alt=""
         /></a>
-        <a href="./cart.html"
+        <a id="cart" href="./cart.html"
           ><img id="cart" src="../assests/images/cart logo.png" alt="cart"
         /></a>
+        <a id="log" href="./pages/login.html">
+          <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+          <span id="login_title">Login</span>
+      </a>
       </div>
     </header>
 
@@ -77,7 +77,7 @@
               <h4 id="content_name">Content</h4>
               <textarea placeholder="Add a content.." id="content"></textarea>
             </div>
-            <button id="add">want to add on more points</button>
+            <button id="add">Want to add on more points</button>
 
             <div class="additional_points">
               <div class="title_input_2">
@@ -125,10 +125,7 @@
         <p id="content_view_1">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p> 
         <h4 id="title_view_2">title</h4>
         <p id="content_view_2">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p>  -->
-     
-       
       </div>
-    
 
       <!-- 
             <h3>ROSERY PEA CARING METHODS</h3>
@@ -219,57 +216,58 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
         </div> -->
     </main>
     <script src="/assests/js/model.js"></script>
-    <script>      const add_img= document.getElementById("upload_img")
-      const add_title= document.getElementById("title")
-      const add_content= document.getElementById("content")
-      const add_blog= document.getElementById("add_blog")
-      const blog_content= document.getElementsByClassName("blog_content")
-      const additional_data= document.getElementsByClassName("additional_points")
-      const heading= document.getElementById("points")
-      const points= document.getElementById("extra_points")
-      const sub_heading_= document.getElementById("heading_2")
-      const extra_points= document.getElementById("extra_content_2")
+    <script>
+      const add_img = document.getElementById("upload_img");
+      const add_title = document.getElementById("title");
+      const add_content = document.getElementById("content");
+      const add_blog = document.getElementById("add_blog");
+      const blog_content = document.getElementsByClassName("blog_content");
+      const additional_data =
+        document.getElementsByClassName("additional_points");
+      const heading = document.getElementById("points");
+      const points = document.getElementById("extra_points");
+      const sub_heading_ = document.getElementById("heading_2");
+      const extra_points = document.getElementById("extra_content_2");
 
       let blog;
       const username = JSON.parse(localStorage.getItem("arr"));
-      const profile_data = (localStorage.getItem("profile"));
+      const profile_data = localStorage.getItem("profile");
       let user_name;
-          username.find(e=>{
-              if(e.email==profile_data){
-                  return user_name=(`${e.fname} ${e.lastname}`); //arr[0]
-              }
-          })
+      username.find((e) => {
+        if (e.email == profile_data) {
+          return (user_name = `${e.fname} ${e.lastname}`); //arr[0]
+        }
+      });
 
-          add.addEventListener("click",e=>{
-          e.preventDefault()
-          additional_data[0].style.display='block';
-          add.style.display='none';
+      add.addEventListener("click", (e) => {
+        e.preventDefault();
+        additional_data[0].style.display = "block";
+        add.style.display = "none";
+      });
+      //   let blog_id = 0
+      submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        const user_id = Math.floor(Math.random() * 700);
 
-      })
-    //   let blog_id = 0
-          submit.addEventListener("click",e=>{
-          e.preventDefault()
-          const user_id = Math.floor(Math.random() * 700);
+        const blog_detail = JSON.parse(localStorage.getItem("blog")) || [];
+        const blog = {
+          product_img: add_img.value,
+          Title: add_title.value,
+          Content: add_content.value,
+          heading_1: heading.value,
+          points_1: points.value,
+          heading_2: sub_heading_.value,
+          points_2: extra_points.value,
+          username: user_name,
+          // "date":date,
+          id: user_id,
+        };
 
-         const blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
-        const blog={
-    "product_img":add_img.value,
-    "Title":add_title.value,
-    "Content":add_content.value,
-    "heading_1":heading.value,
-    "points_1":points.value,
-    "heading_2":sub_heading_.value,
-    "points_2":extra_points.value,
-    "username":user_name,
-    // "date":date,
-    "id" : user_id
-  }
+        blog_detail.push(blog);
 
-        blog_detail.push(blog)
-
-localStorage.setItem("blog",JSON.stringify(blog_detail))
-location.reload()
-    })
+        localStorage.setItem("blog", JSON.stringify(blog_detail));
+        location.reload();
+      });
 
       // --ends
 
@@ -280,32 +278,29 @@ location.reload()
 
       // })
 
-      add_blog.addEventListener("click",e=>{
-          e.preventDefault()
-          if(localStorage.getItem("profile")){
-            const center = document.querySelector('.center');
-          center.style.filter = 'blur(4.3px)';
-          blog_content[0].style.display='block';
-  // window.location.href="/pages/blog.html"
-}
-else{
-  window.location.href="signup.html"
-  console.log("");
-  
-} 
-         
-      })
-      const title_of=document.getElementById("title_view")
-      const image_of=document.getElementById("image_view")
-      const content_of=document.getElementById("add_content")
-     
-      const currentDate = new Date().toJSON().slice(0, 10);
-      console.log(currentDate); 
+      add_blog.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (localStorage.getItem("profile")) {
+          const center = document.querySelector(".center");
+          center.style.filter = "blur(4.3px)";
+          blog_content[0].style.display = "block";
+          // window.location.href="/pages/blog.html"
+        } else {
+          window.location.href = "signup.html";
+          console.log("");
+        }
+      });
+      const title_of = document.getElementById("title_view");
+      const image_of = document.getElementById("image_view");
+      const content_of = document.getElementById("add_content");
 
-      const blog_detail=JSON.parse(localStorage.getItem("blog"))??0
-      let blog_details=""
-      for( let i=0;i<blog_detail.length;i++){
-      blog_details+=`
+      const currentDate = new Date().toJSON().slice(0, 10);
+      console.log(currentDate);
+
+      const blog_detail = JSON.parse(localStorage.getItem("blog")) ?? 0;
+      let blog_details = "";
+      for (let i = 0; i < blog_detail.length; i++) {
+        blog_details += `
       <a href = "blog_details.html?id=${blog_detail[i].id}"><div class="blog_details">
         <img id="image_view"src="${blog_detail[i].product_img}">
            <h3 id="title_view">${blog_detail[i].Title}</h3>
@@ -315,15 +310,13 @@ else{
            </div>
            </div></a>
       
-      `
-     
+      `;
       }
       const blog_div = document.querySelector(".blog_view");
       console.log(blog_div);
-      blog_div.innerHTML+=blog_details;
+      blog_div.innerHTML += blog_details;
 
-      const login_title =document.getElementById("login_title")
+      const login_title = document.getElementById("login_title");
     </script>
-   
   </body>
 </html>

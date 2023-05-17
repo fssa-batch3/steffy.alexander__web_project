@@ -54,20 +54,35 @@ header a {
   margin-left: 12px;
 }
 
-
-#user_name{
+#user_name {
   font-weight: 600;
   margin: 0px 10px;
 }
-#login_title{
-  margin-left: 14px;
-  font-family: "Carter One", cursive;
-
+#login_title {
+  /* margin-left: 14px; */
+  /* font-family: "Carter One", cursive; */
+  padding: 8px 15px;
+  background-color: #3d6921;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-right: 10px;
 }
+#login_title:hover {
+  background-color: white;
+  color: #3d6921;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+}
+
 #log {
-  width: 25px;
-  height: 25px;
-  /* margin-left: 23px; */
+  border: none;
+    outline: none;
+  
 }
 
 .logo img {
@@ -76,10 +91,12 @@ header a {
   /* margin-left: 25px; */
 }
 
-#profile_logo{
-  width:40px;
-  height:40px;
-  margin-right: 28px;
+#profile_logo {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  /* margin-right: 28px; */
 }
 
 .nav a {
@@ -89,7 +106,19 @@ header a {
   font-size: 18px;
   color: #30650f;
 }
+.nav a:hover{
+  border: solid #4c812a;
+  border-width: 0px 0px 3px 0px;
+transition: 0.05s ease;
+color: #0d5114;
 
+}
+#cart_a:hover{
+  outline: none;
+  border-width: 0px;
+  
+
+}
 #cart {
   width: 80px;
   height: 60px;
@@ -207,7 +236,7 @@ header a {
   text-align: center;
   padding: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #3d6921;;
+  color: #3d6921;
 }
 .container_1 h3 {
   font-weight: 100;
@@ -248,9 +277,9 @@ header a {
 
 .content_2_images button {
   border-radius: 40px;
-  
-  color:white;
-  background-color:  #3d6921;
+
+  color: white;
+  background-color: #3d6921;
   text-align: center;
   border: 2px solid rgb(37, 111, 72);
   margin-top: 30px;
@@ -259,42 +288,42 @@ header a {
   margin-left: 50px;
 }
 .content_2_images button:hover {
-  background-color:white;
-  color:  #3d6921;
+  background-color: white;
+  color: #3d6921;
   border-color: 1px solid rgb(37, 111, 72);
   cursor: pointer;
 }
-.container_2{
+.container_2 {
   display: flex;
   margin: 90px auto;
 }
-.fancy_title{
-  color:green;
+.fancy_title {
+  color: green;
   font-size: 38px;
   text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 600;
   letter-spacing: 0.75px;
 }
-.plantquote{
+.plantquote {
   display: flex;
   flex-direction: column;
   margin: 100px auto;
 }
-.para_plants{
-  color:rgb(14, 0, 0);
+.para_plants {
+  color: rgb(14, 0, 0);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  font-size:24px ;
+  font-size: 24px;
   margin-top: 28px;
 }
-#home_shopnow{
-  width:160px;
+#home_shopnow {
+  width: 160px;
   height: 37px;
   margin: 100px auto;
   border-radius: 40px;
   border-color: 1px solid rgb(37, 111, 72);
-  color:white;
+  color: white;
   background-color: #3d6921;
   text-align: center;
   border: 2px solid rgb(37, 111, 72);
@@ -302,24 +331,21 @@ header a {
   padding: 8px;
   margin-left: 368px;
 }
-#home_shopnow:hover{
-  background-color:white; 
+#home_shopnow:hover {
+  background-color: white;
   color: #3d6921;
   /* border-color: 2px solid rgb(37, 111, 72); */
   cursor: pointer;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-#ad_quote{
+#ad_quote {
   font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin-top: 30px;
   font-weight: 450;
-
-
-  
 }
 .right {
   width: 70%;
@@ -332,39 +358,35 @@ header a {
   height: 390px;
   margin-top: 50px;
 }
-.container_3{
+.container_3 {
   display: flex;
   /* border: 2px solid black; */
-  
 }
-#reviewgirlimg{
-width: 305px;
-height: 500px;
-position: relative;
-left: 246px;
+#reviewgirlimg {
+  width: 305px;
+  height: 500px;
+  position: relative;
+  left: 246px;
 }
-.review_home{
+.review_home {
   /* border:2px solid black; */
-  width:1050px;
-  height:350px;
+  width: 1050px;
+  height: 350px;
   position: absolute;
   left: 230px;
   background-image: linear-gradient(to bottom right, #4b8760, #b7e0cc);
   /* background-color: white; */
   border-radius: 30px;
   box-sizing: border-box;
-  margin-top:150px;
-
+  margin-top: 150px;
 }
-#about_review{
-  margin: 104px 80px 0px 320px ;
+#about_review {
+  margin: 104px 80px 0px 320px;
   margin-left: 330px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 100;
   color: rgb(0, 0, 0);
   font-size: 18px;
-
-
 }
 /* #text_review{
   position: relative;
@@ -376,23 +398,23 @@ left: 246px;
  
 
 } */
-input:focus{
+input:focus {
   outline: none;
 }
-#quotation{
- position: relative;
+#quotation {
+  position: relative;
   left: 925px;
-  top:190px;
- width: 100px;
- height: 100px;
+  top: 190px;
+  width: 100px;
+  height: 100px;
 }
-#text_review{
-  width:130px;
+#text_review {
+  width: 130px;
   height: 35px;
   border-radius: 40px;
-  color:white;
+  color: white;
   background-color: #3d6921;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   border: 1px solid rgb(37, 111, 72);
   /* font-weight: 600; */
@@ -402,73 +424,70 @@ input:focus{
   position: relative;
   left: 310px;
   font-size: 13px;
-  
-
 }
-#text_review:hover{
-  background-color:white; 
-  color: #3d6921;;
-   border-style: none;
-   border: none;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
- 
- }
- #submit{
+#text_review:hover {
+  background-color: white;
+  color: #3d6921;
+  border-style: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#submit {
   background-color: #fafcf9;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   border: 1px solid rgb(230, 235, 232);
- }
- #submit:hover{
-  background-color:rgb(255, 255, 255); 
+}
+#submit:hover {
+  background-color: rgb(255, 255, 255);
   color: #000000;
-   border-style: none;
-   border: none;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
- 
- }
- button{
+  border-style: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+button {
   background-color: #3d6921;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   border: 1px solid rgb(37, 111, 72);
- }
- button:hover{
-  background-color:white; 
-  color: #3d6921;;
-   border-style: none;
-   border: none;
-   cursor: pointer;
-   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
- 
- }
+}
+button:hover {
+  background-color: white;
+  color: #3d6921;
+  border-style: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
 .fa-sharp {
-  color:gold;
+  color: gold;
   height: 40px;
-   font-size: 20px;
-   padding: 4px;
-  position:relative;
-  left: 330px; 
+  font-size: 20px;
+  padding: 4px;
+  position: relative;
+  left: 330px;
   top: 70px;
 }
 
-#Customer_say{
+#Customer_say {
   margin-left: 700px;
-  font-size:32px;
+  font-size: 32px;
   font-family: carter one;
   letter-spacing: 0.75px;
-  
+
   /* margin-top: 200px; */
 }
-#cus_design{
+#cus_design {
   color: #30650f;
-  font-size:32px;
+  font-size: 32px;
   font-family: carter one;
   letter-spacing: 0.75px;
   margin: 4px;
-
 }
 .box1 {
   height: 380px;
@@ -505,7 +524,6 @@ input:focus{
   width: 100%;
   margin-top: 20px;
 }
-
 
 #add {
   background-color: rgb(232, 229, 229);
@@ -620,7 +638,6 @@ footer {
   margin-top: 200px;
 }
 
-
 #review h5 {
   color: rgb(49, 56, 105);
   font-size: 20px;
@@ -645,9 +662,7 @@ footer {
   body {
     width: 1000px;
   }
-  .nav {
-    /* width: 500px; */
-  }
+
   .content1 {
     width: 100%;
   }

@@ -22,27 +22,34 @@
         </div>
 
         <div class="nav">
-            
+
             <a href="../index.html">Home</a>
             <a href="./plant.html">Plants</a>
             <a href="./seeds.html">Seeds</a>
             <a href="./blog.html">Blog</a>
-            <a href="./login.html" id="log">
-<img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
-                    LOGIN>Login/signup</a>
-                    <a href="/pages/profile.html">
-<img id="profile_logo" src="/assests/images/girl.png" alt="">
-</a>
-            <a href="./cart.html">
-<img id="cart" src="../assests/images/cart logo.png" alt="cart">
-</a>
+            
+           <a id="profile_logo" href="/pages/profile.html"><img id="profile_logo" src="/assests/images/girl.png" alt="">
+        </a>
+            
+            <a id="cart" href="./cart.html">
+                <img id="cart" src="../assests/images/cart logo.png" alt="cart">
+            </a>
+            
+             
+            <a id="log" href="./pages/login.html">
+                <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+                <span id="login_title">Login</span>
+            </a>
     </header>
+    <h2 id="heading">PLANTS </h2>
     <div class="search_box">
- <input type="search" id="search" placeholder="Search">
- 
- <!-- <img id="search_icon" src="/assests/images/search.png" > -->
-</div>
-                  
+        <input type="search" id="search" placeholder="Search">
+
+        <!-- <img id="search_icon" src="/assests/images/search.png" > -->
+
+    </div>
+
+
     <div class="right">
 
         <!-- <div class="box1">
@@ -361,68 +368,68 @@
             const products = JSON.parse(localStorage.getItem('create_plant'))
 
             for (const product of products) {
-                if(product.status==true){
+                if (product.status == true) {
 
                     const div_1 = document.createElement("a")
-                div_1.setAttribute("href",`../pages/details.html?name=${ product.name}`)
-                div_1.setAttribute("class", "box1")
-                document.querySelector(".right").prepend(div_1)
+                    div_1.setAttribute("href", `../pages/details.html?name=${product.name}`)
+                    div_1.setAttribute("class", "box1")
+                    document.querySelector(".right").prepend(div_1)
 
-                const div_2 = document.createElement("div")
-                div_2.setAttribute("class", "imgtrend")
-                document.querySelector(".box1").append(div_2)
+                    const div_2 = document.createElement("div")
+                    div_2.setAttribute("class", "imgtrend")
+                    document.querySelector(".box1").append(div_2)
 
-                const img = document.createElement("img")
-                img.setAttribute("src", product.image)
-                img.setAttribute("alt", "rose")
-                document.querySelector(".imgtrend").append(img)
+                    const img = document.createElement("img")
+                    img.setAttribute("src", product.image)
+                    img.setAttribute("alt", "rose")
+                    document.querySelector(".imgtrend").append(img)
 
-                const i_1 = document.createElement("i")
-                i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
-                i_1.setAttribute("id", "rs")
-                i_1.innerText = product.price
-                document.querySelector(".imgtrend").append(i_1)
+                    const i_1 = document.createElement("i")
+                    i_1.setAttribute("class", "fa-solid fa-indian-rupee-sign")
+                    i_1.setAttribute("id", "rs")
+                    i_1.innerText = product.price
+                    document.querySelector(".imgtrend").append(i_1)
 
-                const h3 = document.createElement("h3")
-                h3.setAttribute("class", "pinkrose")
-                h3.innerText = product.name
-                document.querySelector(".imgtrend").append(h3)
+                    const h3 = document.createElement("h3")
+                    h3.setAttribute("class", "pinkrose")
+                    h3.innerText = product.name
+                    document.querySelector(".imgtrend").append(h3)
 
-                for (i = 0; i <= 4; i++) {
-                    const i_2 = document.createElement("i")
-                    i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
-                    i_2.setAttribute("id", "rs")
-                    document.querySelector(".imgtrend").append(i_2)
-                }
+                    for (i = 0; i <= 4; i++) {
+                        const i_2 = document.createElement("i")
+                        i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
+                        i_2.setAttribute("id", "rs")
+                        document.querySelector(".imgtrend").append(i_2)
+                    }
 
-                const a_1 = document.createElement("a")
-                a_1.setAttribute("href", `../pages/details.html?name=${ product.name}`)
-                a_1.setAttribute("id", "add")
-                a_1.innerText = "Add to cart"
-                document.querySelector(".box1").append(a_1)
+                    const a_1 = document.createElement("a")
+                    a_1.setAttribute("href", `../pages/details.html?name=${product.name}`)
+                    a_1.setAttribute("id", "add")
+                    a_1.innerText = "Add to cart"
+                    document.querySelector(".box1").append(a_1)
 
                 }
 
             }
 
-           const result_of_search= document.getElementById("search")
-    result_of_search.addEventListener("input", (e) => {
-      const word = e.target.value.toLowerCase();
-      const div = document.querySelectorAll(".box1");
-console.log(word)
+            const result_of_search = document.getElementById("search")
+            result_of_search.addEventListener("input", (e) => {
+                const word = e.target.value.toLowerCase();
+                const div = document.querySelectorAll(".box1");
+                console.log(word)
 
-div.forEach(ex => {
-        const child = ex.children[0].children[2].textContent.toLocaleLowerCase().trim();
-        
-        if (child.startsWith(word)) {
-          ex.style.display = "block"
+                div.forEach(ex => {
+                    const child = ex.children[0].children[2].textContent.toLocaleLowerCase().trim();
 
-        }
-        else {
-          ex.style.display = "none"
-        }
-      })
-    })
+                    if (child.startsWith(word)) {
+                        ex.style.display = "block"
+
+                    }
+                    else {
+                        ex.style.display = "none"
+                    }
+                })
+            })
 
 //             for(let k=10; k<=19; k++){
 

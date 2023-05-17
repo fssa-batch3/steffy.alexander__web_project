@@ -23,22 +23,22 @@
 
     <div class="nav">
     
-      <a href="#">Home</a>
+      <a id="home_title" href="#">Home</a>
       <a href="./pages/plant.html">Plants</a>
       <a href="./pages/seeds.html">Seeds</a>
       <a href="./pages/blog.html">Blog</a>
-      <a href="./pages/login.html">
-<img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt="">
-<span id="login_title">Login/signup</span>
-</a>
-      <a href="./pages/profile.html" id="profile_logo_a">
+   
+      <a id="profile_logo" href="./pages/profile.html" id="profile_logo">
 <img id="profile_logo" src="./assests/images/girl.png" alt="">
 </a>
     
-      <!-- <a href="./pages/order.html">Order</a> -->
-      <a href="">
+      <a id="cart_a" href="">
         <img id="cart" src="./assests/images/cart logo.png" alt="cart">
         </a>
+        <a id="log" href="./pages/login.html">
+          <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+          <span id="login_title">Login</span>
+          </a>
     </div>
   </header>
   
@@ -261,8 +261,35 @@ What Our <span id="cus_design">Customer</span> Say's?
     </div>
   </footer>
   <script src="./main.js"></script>
-<script src="./assests/js/model.js"></script>
+
   <script>
+
+login_logo = document.getElementById("log"); //
+profile_logo = document.getElementById("profile_logo");
+login_titles = document.getElementById("login_title");
+if (localStorage.getItem("profile")) {
+  login_logo.style.display = "none";
+  if(login_titles){
+    login_titles.style.display = "none";
+
+  }
+  console.log("success");
+} else {
+  profile_logo.style.display = "none";
+}
+
+    const cart_data_view = document.getElementById("cart");
+
+cart_data_view.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (localStorage.getItem("profile")) {
+    window.location.href = "/pages/cart.html";
+    console.log("already signed");
+  } else {
+    window.location.href = "signup.html";
+    console.log("");
+  }
+});
     // const user_name = localStorage.getItem("profile");
     // console.log(user_name);
     // if(localStorage.getItem("profile")){

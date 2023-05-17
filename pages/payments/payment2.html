@@ -26,7 +26,7 @@
         <a href="../plant.html">Plants</a>
         <a href="../seeds.html">Seeds</a>
         <a href="../blog.html">Blog</a>
-        <a href="../login.html"
+        <a id="log" href="../login.html"
           ><img
             id="log"
             src="../../assests/images/Untitled_design-removebg-preview.png"
@@ -34,8 +34,8 @@
             LOGIN
           />Login/signup</a
         >
-
-        <a href="../cart.html"
+        <a id="profile_logo" href="/pages/profile.html"><img  id="profile_logo" src="/assests/images/girl.png"></a>
+        <a id="cart" href="../cart.html"
           ><img id="cart" src="../../assests/images/cart logo.png" alt="cart"
         /></a>
       </div>
@@ -56,11 +56,22 @@
       ><br />
       <br /><br />
 
-      <label for="City"
+      <label for="number"
         >Phone Number
-        <input id="phone_num" type="number" required /> </label
+        <input id="phone_num"   autocomplete="off"
+        
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type="number"
+        maxlength="10"
+        minlength="10"
+        inputmode="numerical"
+        placeholder="9876543210"
+        type="number"
+        data-pattern-validatetype="number" required />
+        <br /><br /></label
       ><br />
-      <br /><br />
+      
+   
 
       <label for="Address">
         Delivery Address
@@ -114,14 +125,18 @@
           <label for="number"
             >Card number
             <input
-              id="card_number"
-              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-              type="number"
-              maxlength="16"
-              placeholder="1234 5901 5678 9011"
-              pattern="[0-9]*"
-              required
-            /> </label
+            autocomplete="off"
+            id="card_number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number"
+            maxlength="16"
+            minlength="16"
+            inputmode="numerical"
+            placeholder="1234 1234 1234 1234"
+            type="number"
+            data-pattern-validate
+            />
+</label
           ><br />
           <br />
           <div class="div">
@@ -129,10 +144,12 @@
             <div class="expiry_date">
               <input
               autocomplete="off"
-              id="month"
+                  id="month"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               type="number"
               maxlength="2"
+            minlength="2"
+
               inputmode="numerical"
               placeholder="MM"
               type="number"
@@ -145,6 +162,8 @@
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 type="number"
                 maxlength="2"
+            minlength="2"
+
                 inputmode="numerical"
                 placeholder="YY"
                 type="number"
@@ -237,6 +256,16 @@
 
       </div>
     </div>
+    <script src="/assests/js/model.js"></script>
+    <script>
+
+
+      const login_titles = document.getElementById("login_title");
+          
+      const login_logo = document.getElementById("log");
+           
+           const profile_logo =document.getElementById("profile_logo")
+         </script>
     <script>
       // let fname = document.getElementById("fname")
 
