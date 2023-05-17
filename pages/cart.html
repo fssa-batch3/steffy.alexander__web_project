@@ -119,7 +119,7 @@
             <h3 class="total">Total</h3>
             <h3 class="total_value">0</h3>
           </div>
-          <a href="/pages/payments/payment2.html" id="proceed_button"><button>Proceed to Checkout</button></a>
+          <a  id="proceed_button"><button>Proceed to Checkout</button></a>
 
 
           <!-- <div class="total_calculation">
@@ -195,6 +195,7 @@
 
 
       const users = JSON.parse(localStorage.getItem("arr"))
+
       const active_user = localStorage.getItem("profile")
       let ac_user;
       users.forEach(e => {
@@ -202,6 +203,18 @@
           ac_user = e
         }
       })
+      let proceed_button=document.getElementById("proceed_button")
+      proceed_button.addEventListener("click",e=>{
+        console.log(ac_user.cart.length);
+        if(ac_user.cart.length>0){
+
+          window.location.href ="./payments/payment2.html"
+        }
+        else{
+          alert("Add products in the cart, before proceeding the payment page")
+        }
+      })
+
       // active user is stored in ac_user//
       const cart_data = ac_user.cart
       console.log(cart_data)

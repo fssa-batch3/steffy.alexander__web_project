@@ -88,11 +88,11 @@
     
     <div class="inputfields">
         <label for="fname">
-First name<input type="text" id="fname" disabled>
+First name<input type="text" required id="fname" disabled>
 </label>
 <br>
         <label for="lname">
-last name <input type="text" id="lname" disabled>
+last name <input type="text" required id="lname" disabled>
 </label>
 <br>
         <label for="email">
@@ -100,16 +100,16 @@ Email <input type="text" id="email" disabled>
 </label>
 <br>
         <label for="number">
-Mobile.No <input type="tel" pattern="[0-9]{10}" id="number" disabled required>
+Mobile.No <input type="tel" pattern="[0-9]{10}"  id="number" disabled required>
 </label>
 <br>
         <label for="address">
-Address<input type="text" id="address" disabled>
+Address<input type="text" id="address"required disabled>
 </label>
 <br>
 
          <label for="gender">
-Gender <input type="text" id="gender" disabled>
+Gender <input type="text" id="gender"required disabled>
 </label> 
 <br>
     </div>
@@ -179,7 +179,7 @@ let res;
 
     document.getElementById("fname").value = res.fname;
     document.getElementById("lname").value = res.lastname;
-    document.getElementById("email").value = res.email; 
+    document.getElementById("email").value = res.email;
     document.getElementById("number").value = res.number?? ""; 
     document.getElementById("address").value = res.address??""; 
     document.getElementById("gender").value = res.gender??"";
@@ -199,10 +199,10 @@ let res;
         document.getElementById("number").removeAttribute("disabled","")
         document.getElementById("address").removeAttribute("disabled","")
         document.getElementById("gender").removeAttribute("disabled","")
-       
     })
 
     const formbtn=document.getElementById("profile_form")
+
     formbtn.addEventListener("submit",e=>{
         e.preventDefault();
         const res1={};

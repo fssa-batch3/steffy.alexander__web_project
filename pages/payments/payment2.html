@@ -437,6 +437,7 @@
         delete e["cart"]
         localStorage.setItem("arr",JSON.stringify(users))
         alert("Ordered succesfully")
+        window.location.href="../order.html"
 
         }
 
@@ -450,13 +451,13 @@
 
       })
 
-       let us = JSON.parse(localStorage.getItem("arr"))
-       us.forEach((e) => {
-        if (active_email == e.email) {
-          delete e["order_history"]
-        }
-      });
-      localStorage.setItem("arr",JSON.stringify(us))
+      //  let us = JSON.parse(localStorage.getItem("arr"))
+      //  us.forEach((e) => {
+      //   if (active_email == e.email) {
+      //     delete e["order_history"]
+      //   }
+      // });
+      // localStorage.setItem("arr",JSON.stringify(us))
     </script>
   </body>
 </html>
