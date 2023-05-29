@@ -157,14 +157,13 @@ header a {
   width: 120px;
 }
 .titles p:nth-of-type(4),.details p:nth-of-type(4) {
-  width: 90px;
+  width: 120px;
 }
 .titles p:nth-of-type(5),.details p:nth-of-type(5) {
-width: 280px;
+  width: 170px;
 }
-.titles p:nth-of-type(6),.details p:nth-of-type(6) {
-width: 100px;
-}
+
+
 .titles p{
   border: 0.5px solid white;
   height:28px;

@@ -244,18 +244,19 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
         additional_data[0].style.display = "block";
         add.style.display = "none";
       });
-      //   let blog_id = 
+       
+    
+
       submit.addEventListener("click", (e) => {
         e.preventDefault();
-        if(add_img!=""&& add_title!=""&& add_content!=""){
-
         
+      
         
         const user_id = Math.floor(Math.random() * 700);
 
         const blog_detail = JSON.parse(localStorage.getItem("blog")) || [];
-
-        const blog = {
+        if (add_img.value!= "" && add_title.value!= "" && add_content.value != "") {
+          const blog = {
           product_img: add_img.value,
           Title: add_title.value,
           Content: add_content.value,
@@ -271,9 +272,14 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
         blog_detail.push(blog);
 
         localStorage.setItem("blog", JSON.stringify(blog_detail));
-        location.reload();}
-      });
-    
+        location.reload();
+        }
+        else{
+          alert("Fill all the details")
+        }
+ }
+      );
+      
       // --ends
 
       // submit.addEventListener("click",e=>{
@@ -314,7 +320,6 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
            <p id="date_view">${currentDate}</p>
            </div>
            </div></a>
-      
       `;
       }
       const blog_div = document.querySelector(".blog_view");
@@ -322,6 +327,7 @@ By the time your plant has depleted the nutrients in its soil it’s likely grow
       blog_div.innerHTML += blog_details;
 
       const login_title = document.getElementById("login_title");
+      
     </script>
   </body>
 </html>
