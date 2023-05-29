@@ -31,12 +31,28 @@ header a {
 .nav {
     display: flex;
     align-items: center;
+    padding-right: 30px;
 }
+#heading{
+    margin-top:60px;
+    margin-left:40px;
+    /* font-family: poppins; */
+    font-size: 30px;
+    color:#3d6921;
+    font-weight: 600;
+    letter-spacing: 1px;
 
+}
 .nav a:nth-child(4) img {
     margin-right: 13px;
 }
-
+.nav a:hover{
+    border: solid #4c812a;
+    border-width: 0px 0px 3px 0px;
+  transition: 0.05s ease;
+  color: #0d5114;
+  
+  }
 #log {
     width: 25px;
     height: 25px;
@@ -60,16 +76,108 @@ header a {
     width: 80px;
     height: 60px;
 }
+#cart:hover {
+  border: none;
+  outline: none;
+}
+#profile_logo{
+    width:40px;
+    height:40px;
+  
+  }
+  #profile_logo:hover{
+    border: none;
+  outline: none;
 
+  }
+  #login_title {
+    /* margin-left: 14px; */
+    /* font-family: "Carter One", cursive; */
+    padding: 8px 15px;
+    background-color: #3d6921;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  #login_title:hover {
+    background-color: white;
+    color: #3d6921;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      
+  }
+  
+  #log {
+    border: none;
+      outline: none;
+    
+  }
 /* header ends */
 .right ,.right2{
     margin: 50px auto;
     height: 400px;
     display: flex;
-    overflow: hidden;
-    overflow-x:scroll;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    /* overflow-x:scroll; */
     scroll-behavior: smooth;
+    width: 1200px;
+    /* width:1400px; */
+    /* margin:50px auto; */
+    /* margin-left: 270px; */
 
+
+}
+#search_icon{
+    width:40px;
+    height:40px;
+    position: relative;
+    
+    
+  
+}
+
+h3{
+    margin-top: 10px;
+}
+#search{
+    position:relative;
+    width:320px;
+    height:40px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.search_box{
+display:flex;
+position:relative;
+margin: 50px auto;
+width:400px;
+height:80px;
+
+/* background-size: 20px; */
+/* background-repeat: no-repeat; */
+
+}
+#search{
+    background-image: url("/assests/images/search.png");
+    background-size:28px;
+    background-repeat: no-repeat;
+    background-position: right;
+border:none;
+border-radius: 3px;
+
+}
+#search:focus{
+outline: none;
+}
+.right a{
+    text-decoration: none;
 }
 
 .right::-webkit-scrollbar ,.right2::-webkit-scrollbar{
@@ -78,30 +186,32 @@ header a {
 .box1,.box2 {
     height: 350px;
     width: 220px;
-    border: 2px solid white;
-    margin: 0px 30px ;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 30px 30px ;
     transition: 1s;
     color: brown;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px grey;
+    /* box-sizing: border-box */
+    padding:  10px;
 }
 
 .box1:hover, .box2:hover{
-    transform: scale(0.95);
-    transition: .8s;
-    box-shadow: 5px 5px 20px grey;
+    transform: scale(1.03);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .5s;
+    /* box-shadow: 5px 5px 20px grey; */
 }
 
-.spl img {
+/* .spl img {
     width: 20px;
     height: 30px;
-}
+} */
 
 .box1 img,.box2 img {
     height: 190px;
     width: 190px;
-    margin-bottom: 10px;
+    margin: auto 10px;
     border-radius: 20px;
 }
 
@@ -113,12 +223,15 @@ header a {
 
 .fa-sharp {
     color: gold;
-    height: 40px;
+    font-size: 17px;
+    padding:3px;
+    height:50px;
+    margin-top: 12px;
 }
-.fa-regular {
+/* .fa-regular {
     color: gold;
     height: 40px;
-}
+} */
 
 #add {
     background-color: rgb(232, 229, 229);
@@ -130,11 +243,12 @@ header a {
     font-size: 15px;
     text-decoration: none;
 }
-
-
-.foot1 h1 {
-    margin-top: 23px;
+.side_bar{
+    width:200px;
+    height:200px;
+    border:2px solid black;
 }
+
 
 /* footer starts */
 
@@ -157,6 +271,9 @@ footer {
     position: absolute;
     top: 1100px;
     left: 300px;
+}
+.foot1 h1 {
+    margin-top: 23px;
 }
 
 .foot2 {
@@ -226,9 +343,7 @@ footer {
     body{
       width: 1000px;
     }
-    .nav{
-      /* width: 500px; */
-      }
+   
       .box1{
         width: 300px;
         height: 380px;
@@ -257,3 +372,4 @@ footer {
        }
        
     }
+  

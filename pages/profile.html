@@ -8,31 +8,69 @@
     <link rel="stylesheet" href="../assests/css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
+    
+    <header>
+        <div class="logo">
+          <img id="logo_img" src="/assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO">
+        </div>
+    
+        <div class="nav">
         
+          <a id="home_title" href="#">Home</a>
+          <a href="/pages/plant.html">Plants</a>
+          <a href="/pages/seeds.html">Seeds</a>
+          <a href="/pages/blog.html">Blog</a>
+       
+          <a id="profile_logo" href="/pages/profile.html" id="profile_logo">
+    <img id="profile_logo" src="/assests/images/girl.png" alt="">
+    </a>
+        
+          <a id="cart_a" href="">
+            <img id="cart" src="/assests/images/cart logo.png" alt="cart">
+            </a>
+            <a id="log" href="./pages/login.html">
+                <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+                <span id="login_title">Login</span>
+                </a>
+        </div>
+      </header>
+  <!-- header ends -->
             <div class="content">
         <div class="left">
     <div class="leftbox">
         
          <img class="profile" src="../assests/images/bc.jpeg" alt="profile img">
          <input type="file" id="file">
-         <label for="file"><img id="editcam" src="../assests/images/photo-camera.png" alt="editimg"></label>
-         <br><br>
-         <p class="username" id="displayProfile">Steffy Alexander</p>
+         <label for="file">
+<img id="editcam" src="../assests/images/photo-camera.png" alt="editimg">
+</label>
+         <br>
+<br>
+         <p class="username" id="displayProfile"></p>
          <!-- <label for="name"> name <input type="text" id="name"></label><br><br>
          <label for="email">Email <input type="text"  id="email"></label> -->
         </div>
         <div class="bottomleft">
 
-        <div class="fstname"><i class="fa-solid fa-user"></i>Profile</div>
-        <div class="secname"><i class="fa-solid fa-user"></i>Edit Profile</div>
-       <div class="thirdname"><i class="fa-solid fa-user"></i>Home</div>
+        <div class="fstname">
+<i class="fa-solid fa-user"></i>Profile
+</div>
+        <a id="create_product" href="/pages/create.html"><div class="secname">
+<i class="fa-solid fa-user"></i>create product
+</div>
+</a>
+       <a href="/index.html">
+<div class="thirdname">
+<i class="fa-solid fa-user"></i>Back to Home
+</div>
+</a>
         </div>
     </div>
+    <form id="profile_form">
     <div class="right">
     <!-- <div class="righttop">
         <textarea placeholder="What's in your mind today?"></textarea><br>
@@ -41,42 +79,68 @@
         <i class="fa-solid fa-microphone"></i><span><button id="post">POST</button></span>
         
     </div> -->
-
-
+   
 <div class="bottomcontent">
     
     <div class="bottomquote">
-  <p id="para">"a3wsedrctyvuhbijninyybvrs rthvyu"</p>
+  <p id="para">"Happiness blooms where seeds of love and joy are planted"</p>
     </div>
+    
     <div class="inputfields">
-        <label for="fname">First name<input type="text" id="fname" disabled></label><br>
-        <label for="lname">last name <input type="text" id="lname" disabled></label><br>
-        <label for="email">Email <input type="text"  id="email" disabled></label><br>
-        <label for="number">Mobile.No <input type="text"  id="number" disabled></label><br>
-        <label for="address">Address<input type="text" id="address" disabled></label><br>
-        <label for="gender">Gender <input type="text" id="gender" disabled></label><br>
+        <label for="fname">
+First name<input type="text" required id="fname" disabled>
+</label>
+<br>
+        <label for="lname">
+last name <input type="text" required id="lname" disabled>
+</label>
+<br>
+        <label for="email">
+Email <input type="text" id="email" disabled>
+</label>
+<br>
+        <label for="number">
+Mobile.No <input type="tel" pattern="[0-9]{10}"  id="number" disabled required>
+</label>
+<br>
+        <label for="address">
+Address<input type="text" id="address"required disabled>
+</label>
+<br>
+
+         <label for="gender">
+Gender <input type="text" id="gender"required disabled>
+</label> 
+<br>
     </div>
+
 </div>
 
 <div class="lastcontent">
     <div class="side_one">
-        <h2>Add Bio</h2>
-        <textarea placeholder="Add Bio"></textarea>
-        <button id="edit" >Edit</button>
-        <button id="save" onclick="update()">update</button>
-        <button id="delete" onclick="del()">Delete</button>
+        
+      <span id="edit" ><img src="/assests/images/edit_icon.avif">Edit</span>
+      <button type="submit"><img src="/assests/images/update_icon.png">Update</button>
+      <span  id="delete"><img src="/assests/images/delete.png">Delete</span>
+      <span id="logout">
+        <img id="logout_icon" src="/assests/images/logout_icon.png">
+        Log Out
+        </span>
+
     </div>
-   <div><img src="../assests/images/img gif.gif" alt="plants"></div>
+   <div>
+<img id="gif" src="../assests/images/img gif.gif" alt="plants">
 </div>
+</div>
+</form>
 </div>
 </div>
 </div>
 </form>
-
+<script src="/assests/js/model.js"></script>
 
 <script>
-   
-    const img_div =document.querySelector(".leftbox")
+       const img_div =document.querySelector(".leftbox")
     const profile =document.querySelector(".profile")
     const file=document.querySelector("#file")
     const uploadbtn=document.querySelector("#button")
@@ -88,26 +152,22 @@
         if(choosed_file) {
             const reader= new FileReader()
    // filereader is predefiden function of js
-            reader.addEventListener('load',function(){
+            reader.addEventListener('load',() =>{
              profile.setAttribute("src",reader.result)
          })
          reader.readAsDataURL(choosed_file)
         }
     })
 
-
-
-    let username = JSON.parse(localStorage.getItem("arr")); //array of objects
-
-
-    let profile_data = JSON.parse(localStorage.getItem("profile"));
-     //object --> to know who the user is 
+    const username = JSON.parse(localStorage.getItem("arr")); 
+    //array of objects
+   
+    const profile_data = (localStorage.getItem("profile"));
      
 let res;
 
-
     username.find(e=>{
-        if(e["email"]==profile_data["email"]){
+        if(e.email==profile_data){
             return res=e; //arr[0]
 
         }
@@ -117,90 +177,105 @@ let res;
     // res["mobile_num"]="56767676"
     // console.log(res)
 
-    document.getElementById("fname").value = res["fname"];
-    document.getElementById("lname").value = res["lastname"];
-    document.getElementById("email").value = res["email"]; 
-    document.getElementById("number").value = res["number"]; 
-    document.getElementById("address").value = res["address"]; 
-    document.getElementById("gender").value = res["gender"];
-    displayName.innerText = res["fname"] + " "+res["lastname"] 
-    
-    //
+    document.getElementById("fname").value = res.fname;
+    document.getElementById("lname").value = res.lastname;
+    document.getElementById("email").value = res.email;
+    document.getElementById("number").value = res.number?? ""; 
+    document.getElementById("address").value = res.address??""; 
+    document.getElementById("gender").value = res.gender??"";
+    //  document.getElementById("number").value = ""; 
+    // document.getElementById("address").value = ""; 
+    // document.getElementById("gender").value = "";
+
+    displayName.innerText=`${res.fname } ${ res.lastname}`;
+    // displayName.innerText = res["fname"] + " "+res["lastname"] 
 
     document.getElementById("edit").addEventListener("click",e=>{
         e.preventDefault();
         document.getElementById("fname").removeAttribute("disabled","")
         document.getElementById("lname").removeAttribute("disabled","")
         // document.getElementById("email").removeAttribute("disabled","")
+        // document.getElementById("password").value = res["password"]; 
         document.getElementById("number").removeAttribute("disabled","")
         document.getElementById("address").removeAttribute("disabled","")
         document.getElementById("gender").removeAttribute("disabled","")
-       
     })
 
+    const formbtn=document.getElementById("profile_form")
 
-
-    document.getElementById("save").addEventListener("click",e=>{
+    formbtn.addEventListener("submit",e=>{
         e.preventDefault();
+        const res1={};
+       const users=JSON.parse(localStorage.getItem("arr"))
+       res1.email=document.getElementById("email").value;
+       users.forEach((e,i) => {
+        if(res1.email==e.email){
         
-        
-        res["fname"]=document.getElementById("fname").value;
-        res["lastname"]=document.getElementById("lname").value;
-        res["number"]=document.getElementById("number").value;
-        res["address"]=document.getElementById("address").value;
-        res["gender"]=document.getElementById("gender").value;
-        
+        e.fname=document.getElementById("fname").value;
+        e.lastname=document.getElementById("lname").value;
+        e.number=document.getElementById("number").value;
+        e.address=document.getElementById("address").value;
+        e.gender=document.getElementById("gender").value;
+            
+        }
+       });
 
-        localStorage.setItem("arr",JSON.stringify(username))
+        localStorage.setItem("arr",JSON.stringify(users))
+        if(res.number){
+            console.log(res)
+            document.getElementById("number").value=res.number
 
+        }
+        
+        document.getElementById("fname").setAttribute("disabled","")
+        document.getElementById("lname").setAttribute("disabled","")
+        document.getElementById("email").setAttribute("disabled","")
+        document.getElementById("number").setAttribute("disabled","")
+        document.getElementById("address").setAttribute("disabled","")
+        document.getElementById("gender").setAttribute("disabled","")
+        window.location.href="./profile.html"
     })
 
     document.getElementById("delete").addEventListener("click",e=>{
         e.preventDefault();
-        console.log(res) //current object
-        // res["fname"]=""
-        // console.log(res)
-        let num=username.indexOf(res) //1
 
-        // delete username[num] //username[1]
-        username.splice(num,1)//splice(index,1,replacement)
-        console.log(username)
-        localStorage.setItem("arr",JSON.stringify(username))
+        const active_user= localStorage.getItem("profile")
+      const users = JSON.parse(localStorage.getItem("arr"))
+      users.forEach((e,index)=>{
+        if(active_user==e.email){
+          users.splice(index,1)
 
+        }
+      })
+      localStorage.setItem("arr",JSON.stringify(users))
+      localStorage.removeItem("profile")
+      location.reload()
+       window.location.href ="./login.html"
+     
+    })
+  
+    let admin;
+    let create_plant=document.getElementById("create_plant")
+    let seed_details=document.getElementById("seed_details")
+
+
+    let logout = document.getElementById("logout")
+    logout.addEventListener("click",e=>{
+        localStorage.removeItem("profile")
+        window.location.href ="./login.html"
+        alert("Successfully logged out..!")
 
     })
 
-
-    console.log(username);
-
-    // for (let i = 0; i < username.length; i++) { 
-    //     document.getElementById("fname").value = username[i]["fname"];
-    //     document.getElementById("lname").value = username[i]["lastname"];
-    //     document.getElementById("email").value = username[i]["email"];
-    //     document.getElementById("p").innerText = username[i]["fname"]+ " " + username[i]["lastname"];
-
-    // }
-
-        // let username = JSON.parse(localStorage.getItem("arr"));
-       
-
-    //     for(let i = 0; i < username.length; i++){
-    //       if(document.getElementById("email").value == username[i]["email"]){
-    //         username[i].fname= document.getElementById("fname").value
-    //         username[i].lastname= document.getElementById("lname").value
-           
-    //     }
-    //     localStorage.setItem("arr", JSON.stringify(username))
-    // }
+let admin_email="steffy@gmail.com"
+let create_product=document.getElementById("create_product")
+let email=localStorage.getItem("profile")
+if(email==admin_email){
+    create_product.style.display="block"
+}
 
 
-    
 
 </script>
 </body>
 </html>
-
-
-
-
-

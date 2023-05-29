@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assests/css/order.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../assests/images/Picsart_22-12-05_14-49-34-612.png"
+          alt="LOGO"
+        />
+      </div>
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="./plant.html">Plants</a>
+        <a href="./seeds.html">Seeds</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./login.html" id="log"
+          ><img
+            id="log"
+            src="../assests/images/Untitled_design-removebg-preview.png"
+            alt=""
+            id="login_title"
+          />Login/signup</a
+        >
+        <a href="/pages/profile.html"
+          ><img id="profile_logo" src="/assests/images/girl.png" alt=""
+        /></a>
+        <a href="./cart.html"
+          ><img id="cart" src="../assests/images/cart logo.png" alt="cart"
+        /></a>
+      </div>
+    </header>
+    <h1 class="heading">Order History</h1>
+    <h3 class="all_orders">All Orders</h3>
+    <div class="order">
+      <div class="titles">
+        <p class="id">ID</p>
+        <!-- <p class="name">Name</p> -->
+        <p class="product">Product</p>
+        <p class="quantity">Quantity</p>
+        <p class="price">Total Price</p>
+        <p class="delivery_address">Delivery address</p>
+        <p class="ordered_date">Ordered date</p>
+        <p class="expected_date">Expected Delivery Date</p>
+        <p class="delivered_date">Delivered Date</p>
+        <p class="status">Status</p>
+      </div>
+
+      <!-- <div class="details">
+        <p class="id">1</p>
+        <p class="name">steffy</p>
+        <p class="product">plant <br> jbhgvfch <br>huygfcdxghv</p>
+        <p class="quantity">2</p>
+        <p class="price">123</p>
+        <p class="delivery_address">54ca</p>
+        <p class="ordered_date">Ordered date</p>
+        <p class="expected_date">9.05.2023</p>
+        <p class="delivered_date">10.09.2023</p>
+        <p class="status">Delivered</p>
+      </div> -->
+    </div>
+    <script src="/assests/js/model.js"></script>
+    <script>
+            const id = document.querySelector(".id");
+      const name = document.querySelector(".name");
+      const product = document.querySelector(".product");
+      const quantity = document.querySelector(".quantity");
+      const price = document.querySelector(".price");
+      const delivery_address = document.querySelector(".delivery_address");
+      const ordered_date = document.querySelector(".ordered_date");
+      const expected_date = document.querySelector(".expected_date");
+      const status = document.querySelector(".status");
+    
+
+
+      // let history = JSON.parse(localStorage.getItem("cart"));
+      // let email = JSON.stringify(localStorage.getItem("profile"));
+      // let address_details = JSON.parse(localStorage.getItem("details"));
+
+      // let product_order_details =
+      
+      //   JSON.parse(localStorage.getItem("history_details")) || [];
+
+      // let history_details = {
+
+      //   "id":id.length+1,
+      //   "name": document.getElementById("profile"),
+      //   "product": document.getElementById("plant_name"),
+      //   "quantity": document.getElementById("plantquantity"),
+      //   "price": document.getElementById("plant_total_price"),
+      //   "delivery_address": document.getElementById("address"),
+      //   "expected_date": document.getElementById("expected_date")
+      // };
+
+      // product_order_details.push(history_details);
+      // localStorage.setItem(
+      //   "history_details",
+      //   JSON.stringify(product_order_details)
+      // );
+
+      
+let users = JSON.parse(localStorage.getItem("arr"))
+let profile = localStorage.getItem("profile")
+let order_div = document.querySelector(".order")
+let current_user;
+users.forEach(e => {
+  if(e["email"]==profile){
+
+    current_user =e
+  }
+  
+});
+let hydra= current_user["order_history"]
+for(let i =0;i<hydra.length;i++){
+  let total_amount=0
+  let product_value = ""
+  let product_quantity=""
+
+  for(let j=0;j<hydra[i]["cart_details"].length;j++){
+    total_amount+=Number(hydra[i]["cart_details"][j]["plant_total_price"]) 
+    product_value+=` ${hydra[i]["cart_details"][j]["plant_name"]}<br>`
+    product_quantity+=`${hydra[i]["cart_details"][j]["plantquantity"]} x ${hydra[i]["cart_details"][j]["plant_price"]}<br>`
+  }
+  let order_date =hydra[i]["date"]
+  let temp=order_date.slice(2,order_date.length)
+  let temp1=hydra[i]["date"].slice(0,2)
+  let temp2=Number(temp1)+2
+  let expected_date=temp2+temp
+  let curr_date =new Date().toLocaleDateString()
+  let curr_date_1=curr_date.slice(0,2)
+  let delivered_date
+  let active_status
+  // console.log(Number(temp2),Number(curr_date_1), Number(temp2),Number(curr_date_1));
+if(Number(temp2)>Number(curr_date_1)&& Number(temp2)!==Number(curr_date_1)){
+ active_status="On Progress"
+ delivered_date="---"
+}
+else{
+   active_status="Delivered"
+   delivered_date=expected_date
+
+}
+
+order_div.innerHTML+=`
+<div class="details">
+        <p class="id">${i+1}</p>
+        <p class="product">${product_value}</p>
+        <p class="quantity">${product_quantity}</p>
+        <p class="price"> ₹ ${total_amount}</p>
+        <p class="delivery_address">Name -${hydra[i]["fname"]} <br>${hydra[i]["address"]} ${hydra[i]["city"]}<br>Pincode -${hydra[i]["pincode"]} <br> Phone number - ${hydra[i]["phone_num"]} </p>
+        <p class="ordered_date">${order_date}</p>
+        <p class="expected_date">${expected_date}</p>
+        <p class="delivered_date">${delivered_date}</p>
+        <p class="status">${active_status}</p>
+       
+
+      </div>
+`
+
+}
+
+   </script>
+  </body>
+</html>

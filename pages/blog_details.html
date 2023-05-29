@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+    rel="stylesheet"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assests/css/blog_details.css">
+</head>
+<body>
+ <h4 id="heading">Read Our Customer's Blog!</h4>
+    <div class="blog_view">
+        <!-- <h3 id="title_view">title</h3>
+          <
+     <img id="image_view"src="/assests/images/beanseed_1.jpg">
+     <p id="content_view">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ    
+        Dieffenbranchia_3</p> -->
+        <!-- <h4 id="title_view_1">title</h4>
+        <p id="content_view_1">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p> 
+        <h4 id="title_view_2">title</h4>
+        <p id="content_view_2">Dieffenbranchia_2------https://iili.io/HNOqRgn.jpgrdtfyguijechdgt6YGHJ Dieffenbranchia_3</p>  -->
+
+      </div>
+
+    <script>
+const blog_view_div =document.querySelector(".blog_view")
+
+     //  ---url params--
+     const url = window.location.search; 
+          // console.log(url)
+          const urls = new URLSearchParams(url)
+       
+          const Title= urls.get("id")
+          console.log(Title);
+
+          const currentDate = new Date().toJSON().slice(0, 10);
+      console.log(currentDate); 
+
+          const blog_item= JSON.parse(localStorage.getItem("blog"))
+
+          let res
+          blog_item.find((obj) =>{
+
+          if(obj.id == Title){
+            list_blog(obj);
+            return res=obj
+
+          }
+    
+         })
+function list_blog(product){
+
+    blog_view_div.innerHTML+=` 
+    <h3 id="title_view">${product.Title}</h3><hr id="line">
+    <p id="date_view">${currentDate}</p>
+           <img id="image_view" src=${product.product_img}></div></a>
+            <p id="content_view">${product.Content}</p><hr>
+            <h4 id="title_view_1">${product.heading_1}</h4>
+             <p id="content_view_1">${product.points_1}</p><hr>
+             <h4 id="title_view_2">${product.heading_2}</h4>
+              <p id="content_view_2">${product.points_2}</p>     
+           <p id="name_view">-Written by ${product.username}</p>
+           
+    `
+}
+//          submit.addEventListener("click",e=>{
+//           e.preventDefault()
+
+//          let blog_detail=JSON.parse(localStorage.getItem("blog"))||[]
+//         let blog={
+//           "product_img":add_img.value,
+//           "Title":add_title.value,
+//           "Content":add_content.value,
+//           "heading_1":heading.value,
+//           "points_1":points.value,
+//           "heading_2":sub_heading_.value,
+//           "points_2":extra_points.value,
+//           "username":user_name
+//         }
+
+//         blog_detail.push(blog)
+
+// localStorage.setItem("blog",JSON.stringify(blog_detail))
+// location.reload()
+//     })
+// let blog_page_details=JSON.parse(localStorage.getItem("blog"))
+
+      // --ends
+
+      // submit.addEventListener("click",e=>{
+      //     e.preventDefault()
+      //     document.getElementById("additional_data")
+      //     blog_content[0].style.display='block';
+
+      // })
+    //   add_blog.addEventListener("click",e=>{
+    //       e.preventDefault()
+    //       const center = document.querySelector('.center');
+    //       center.style.filter = 'blur(4.3px)';
+    //       blog_content[0].style.display='block';
+    //   })
+    //   let title_of=document.getElementById("title_view")
+    //   let image_of=document.getElementById("image_view")
+    //   let content_of=document.getElementById("add_content")
+
+    //   let blog_detail=JSON.parse(localStorage.getItem("blog")) ??0
+    //   let blog_details=""
+    //   for( let i=0;i<blog_detail.length;i++){
+    //   blog_details+=`
+    //   <div class="blog_view">
+
+    //         <h3 id="title_view">${blog_detail[i]["Title"]}</h3>
+    //         <img id="image_view"src="${blog_detail[i]["product_img"]}">
+    //         <p id="content_view">${blog_detail[i]["Content"]}</p>
+    //         <h4 id="title_view_1">${blog_detail[i]["heading_1"]}</h4>
+    //         <p id="content_view_1">${blog_detail[i]["points_1"]}</p>
+    //         <h4 id="title_view_2">${blog_detail[i]["heading_2"]}</h4>
+    //         <p id="content_view_2">${blog_detail[i]["points_2"]}</p>
+          
+    //         </div>
+    //    `
+    //   }
+    //   let div = document.querySelector(".blog_view");
+    //   div.innerHTML+=blog_details;
+
+    //   let login_title =document.getElementById("login_title")
+    </script>
+
+    </script>
+</body>
+
+</html>

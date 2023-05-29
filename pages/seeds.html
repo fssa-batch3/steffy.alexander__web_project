@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assests/css/plant_seeds.css">
 </head>
 
 <body>
-
 
     <header>
         <div class="logo">
@@ -26,12 +25,25 @@
             <a href="plant.html">Plants</a>
             <a href="seeds.html">Seeds</a>
             <a href="blog.html">Blog</a>
-            <a href="login.html"><img id="log" src="../assests/images/Untitled_design-removebg-preview.png" alt=""
-                    LOGIN>Login/signup</a>
-            <a href="./cart.html"><img id="cart" src="../assests/images/cart logo.png" alt="cart"></a>
+            
+            <a id="profile_logo" href="/pages/profile.html">
+                <img id="profile_logo" src="/assests/images/girl.png" alt="">
+            </a>
+            <a id="cart" href="./cart.html">
+                <img id="cart" src="../assests/images/cart logo.png" alt="cart">
+            </a>
+            <a id="log" href="./pages/login.html">
+                <!-- <img id="log" src="./assests/images/Untitled_design-removebg-preview.png" alt=""> -->
+                <span id="login_title">Login</span>
+            </a>
     </header>
+    <div class="search_box">
+        <input type="search" id="search" placeholder="Search">
 
+        <!-- <img id="search_icon" src="/assests/images/search.png" > -->
+    </div>
     <div class="right">
+
         <!-- <div class="box1">
             <div class="imgtrend" alt="trend">
                 <img src="../assests/images/sunflower seeds.jpg" alt="sunflower seeds">
@@ -45,7 +57,6 @@
                 <i  class="fa-sharp fa-solid fa-star"></i>
             </div>
             <a id="add" href="../pages/seedcart.html">Add To Cart</a>
-
 
         </div>
         <div class="box1">
@@ -75,7 +86,6 @@
                 <i  class="fa-regular fa-star-half-stroke"></i>
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
-
 
         </div>
         <div class="box1">
@@ -119,7 +129,6 @@
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
 
-
         </div>
 
         <div class="box1">
@@ -135,9 +144,7 @@
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
 
-
         </div>
-
 
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -152,9 +159,7 @@
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
 
-
         </div>
-
 
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -169,9 +174,7 @@
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
 
-
         </div>
-
 
         <div class="box1">
             <div class="imgtrend" alt="trend">
@@ -186,7 +189,6 @@
             </div>
             <a id="add" href="cart.html">Add To Cart</a>
 
-
         </div> -->
 
     </div>
@@ -194,7 +196,8 @@
     <footer>
         <div class="foot1">
             <h1>Suggestions</h1>
-            <textarea placeholder="leave a comment..."></textarea><br>
+            <textarea placeholder="leave a comment..."></textarea>
+            <br>
             <button>Submit</button>
         </div>
         <div class="foot2">
@@ -218,245 +221,247 @@
             </div>
         </div>
     </footer>
+    <script src="/assests/js/model.js"></script>
 
-    <script>
+    <script>// const product_list=[{
 
-const product_list=[{
+        // "name":"Pinkrose Plant",
+        // "image":{
+        //     source: "../assests/images/pink_rose_plant.jpg",
+        //     alt:"rose"}
+        // },
+        // {
+        // "name":"Starlink Hibiscus Plant",
+        // "image":{
+        //     source: "../assests/images/hibiscuss.jpg",
+        //     alt:"hibiscus"}
+        // },
 
-"name":"Pinkrose Plant",
-"image":{
-    source: "../assests/images/pink_rose_plant.jpg",
-    alt:"rose"}
-},
-{
-"name":"Starlink Hibiscus Plant",
-"image":{
-    source: "../assests/images/hibiscuss.jpg",
-    alt:"hibiscus"}
-},
+        // {
+        // "name":"dieffenbranchia",
+        // "image":{
+        //     source:" ../assests/images/dieff.jpg",
+        //     alt:"dieffenbranchia"}
+        // },
 
-{
-"name":"dieffenbranchia",
-"image":{
-    source:" ../assests/images/dieff.jpg",
-    alt:"dieffenbranchia"}
-},
+        // {
+        // "name":"Jade Mini Plant",
+        // "image":{
+        //     source: "../assests/images/jade plant.jpg",
+        //     alt:"jade"}
+        // },
+        // {
+        // "name":"Mexican Marigold",
+        // "image":{
+        //     source:"../assests/images/marigold.jpg",
+        //     alt:"marigold"}
+        // },
 
-{
-"name":"Jade Mini Plant",
-"image":{
-    source: "../assests/images/jade plant.jpg",
-    alt:"jade"}
-},
-{
-"name":"Mexican Marigold",
-"image":{
-    source:"../assests/images/marigold.jpg",
-    alt:"marigold"}
-},
+        // {
+        // "name":"Black Tomato seeds",
+        // "image":{
+        //     source:"../assests/images/blackcherry.jpg ",
+        //     alt:"black tomatoimg"}
+        // },
 
-{
-"name":"Black Tomato seeds",
-"image":{
-    source:"../assests/images/blackcherry.jpg ",
-    alt:"black tomatoimg"}
-},
+        // {
+        // "name":"Rosery Pea",
+        // "image":{
+        //     source:"../assests/images/precatorious.jpg",
+        //     alt:"rosery pea img"}
+        // },
 
-{
-"name":"Rosery Pea",
-"image":{
-    source:"../assests/images/precatorious.jpg",
-    alt:"rosery pea img"}
-},
+        // {
+        // "name":"Thyme",
+        // "image":{
+        //     source:"../assests/images/bougainvillea.jpeg",
+        //     alt:"thymeimg"}
+        // },
+        // {
+        // "name":"Swiss Cheese Plant",
+        // "image":{
+        //     source:"../assests/images/swiss cheese plant.jpg",
+        //     alt:"swiss cheese plant img"}
+        // },
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
+        // {
+        // "name":"Strawberry",
+        // "image":{
+        //     source:"../assests/images/strawberry.jpg",
+        //     alt:"strawberry img"}
+        // },
 
-{
-"name":"Thyme",
-"image":{
-    source:"../assests/images/bougainvillea.jpeg",
-    alt:"thymeimg"}
-},
-{
-"name":"Swiss Cheese Plant",
-"image":{
-    source:"../assests/images/swiss cheese plant.jpg",
-    alt:"swiss cheese plant img"}
-},
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
-{
-"name":"Strawberry",
-"image":{
-    source:"../assests/images/strawberry.jpg",
-    alt:"strawberry img"}
-},
+        // {
+        // "name":"Canna Yellow plant",
+        // "image":{
+        //     source:"../assests/images/canna yellow.jpg",
+        //     alt:"canna flower img"}
+        // },
 
-{
-"name":"Canna Yellow plant",
-"image":{
-    source:"../assests/images/canna yellow.jpg",
-    alt:"canna flower img"}
-},
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
 
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
 
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
 
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
 
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // },
+        // {
+        // "name":"Mini orange plant",
+        // "image":{
+        //     source:"../assests/images/mini orange.webp",
+        //     alt:" mini orange img"}
+        // }
 
+        // ]
 
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
+        const seed_details = JSON.parse(localStorage.getItem('seed_details'))
 
+        for (let j = 0; j < seed_details.length; j++) {
+            console.log(seed_details[0].name);
+            if (seed_details[j].status == true) {
+                const div_1 = document.createElement("a")
+                div_1.setAttribute("href", `../pages/details.html?name=${seed_details[j].name}`)
+                div_1.setAttribute("class", "box1")
+                document.querySelector(".right").prepend(div_1)
 
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-},
-{
-"name":"Mini orange plant",
-"image":{
-    source:"../assests/images/mini orange.webp",
-    alt:" mini orange img"}
-}
+                const div_2 = document.createElement("div")
+                div_2.setAttribute("class", "imgtrend")
+                document.querySelector(".box1").append(div_2)
 
+                const img = document.createElement("img")
+                img.setAttribute("src", seed_details[j].image)
+                img.setAttribute("alt", "rose")
+                document.querySelector(".imgtrend").append(img)
 
+                const i_1 = document.createElement("i")
+                i_1.setAttribute("class", "fa-solid fa-indian-rupee-sign")
+                i_1.setAttribute("id", "rs")
+                i_1.innerText = seed_details[j].price
+                document.querySelector(".imgtrend").append(i_1)
 
+                const h3 = document.createElement("h3")
+                h3.setAttribute("class", "pinkrose")
+                h3.innerText = seed_details[j].name
+                document.querySelector(".imgtrend").append(h3)
 
-
-
-]
-
-    
-        for(let j=0; j<=9; j++){
-    
-            let  div_1=document.createElement("div")
-        div_1.setAttribute("class","box1")
-        document.querySelector(".right").prepend(div_1)
-        
-        
-        let  div_2=document.createElement("div")
-        div_2.setAttribute("class","imgtrend")
-        document.querySelector(".box1").append(div_2)
-        
-         let img=document.createElement("img")
-        img.setAttribute("src", product_list[j]["image"]["source"])
-        img.setAttribute("alt","rose")
-        document.querySelector(".imgtrend").append(img)
-        
-        let  i_1=document.createElement("i")
-        i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
-        i_1.setAttribute("id","rs")
-        document.querySelector(".imgtrend").append(i_1)
-        
-        let  h3=document.createElement("h3")
-        h3.setAttribute("class","pinkrose")
-        h3.innerText=product_list[j]["name"]
-        document.querySelector(".imgtrend").append(h3)
-        
-        for(i=0; i<=4; i++){
-        let  i_2=document.createElement("i")
-        i_2.setAttribute("class","fa-sharp fa-solid fa-star")
-        i_2.setAttribute("id","rs")
-        document.querySelector(".imgtrend").append(i_2)
-        }
-        
-        let a_1=document.createElement("anchor")
-        a_1.setAttribute("href","pages/plantcart.html")
-        a_1.setAttribute("id","add")
-        a_1.innerText="Add to cart"
-        document.querySelector(".box1").append(a_1)
-        
-        
-            
+                for (i = 0; i <= 4; i++) {
+                    const i_2 = document.createElement("i")
+                    i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
+                    i_2.setAttribute("id", "rs")
+                    document.querySelector(".imgtrend").append(i_2)
                 }
-    
 
-                   
-        for(let k=10; k<=19; k++){
-    
-            let  div_1=document.createElement("div")
-div_1.setAttribute("class","box2")
-document.querySelector(".right2").prepend(div_1)
+                const a_1 = document.createElement("anchor")
+                a_1.setAttribute("href", "pages/plantcart.html")
+                a_1.setAttribute("id", "add")
+                a_1.innerText = "Add to cart"
+                document.querySelector(".box1").append(a_1)
 
+            }
 
-let  div_2=document.createElement("div")
-div_2.setAttribute("class","imgtrend1")
-document.querySelector(".box2").append(div_2)
+            for (let k = 10; k < seed_details.length; k++) {
 
- let img=document.createElement("img")
-img.setAttribute("src", product_list[k]["image"]["source"])
-img.setAttribute("alt","rose")
-document.querySelector(".imgtrend1").append(img)
+                const div_1 = document.createElement("div")
+                div_1.setAttribute("class", "box2")
+                document.querySelector(".right2").prepend(div_1)
 
-let  i_1=document.createElement("i")
-i_1.setAttribute("class","fa-solid fa-indian-rupee-sign")
-i_1.setAttribute("id","rs")
-document.querySelector(".imgtrend1").append(i_1)
+                const div_2 = document.createElement("div")
+                div_2.setAttribute("class", "imgtrend1")
+                document.querySelector(".box2").append(div_2)
 
-let  h3=document.createElement("h3")
-h3.setAttribute("class","pinkrose")
-h3.innerText=product_list[k]["name"]
-document.querySelector(".imgtrend1").append(h3)
+                const img = document.createElement("img")
+                img.setAttribute("src", seed_details[k].image)
+                img.setAttribute("alt", "rose")
+                document.querySelector(".imgtrend1").append(img)
 
-for(l=0; l<=4; l++){
-let  i_2=document.createElement("i")
-i_2.setAttribute("class","fa-sharp fa-solid fa-star")
-i_2.setAttribute("id","rs")
-document.querySelector(".imgtrend1").append(i_2)
-}
+                const i_1 = document.createElement("i")
+                i_1.setAttribute("id", "rs")
+                document.querySelector(".imgtrend1").append(i_1)
 
-let a_1=document.createElement("anchor")
-a_1.setAttribute("href","pages/plantcart.html")
-a_1.setAttribute("id","add")
-a_1.innerText="Add to cart"
-document.querySelector(".box2").append(a_1)
- 
+                const h3 = document.createElement("h3")
+                h3.setAttribute("class", "pinkrose")
+                h3.innerText = seed_details[k].name
+                document.querySelector(".imgtrend1").append(h3)
+
+                for (l = 0; l <= 4; l++) {
+                    const i_2 = document.createElement("i")
+                    i_2.setAttribute("class", "fa-sharp fa-solid fa-star")
+                    i_2.setAttribute("id", "rs")
+                    document.querySelector(".imgtrend1").append(i_2)
+                }
+
+                const a_1 = document.createElement("anchor")
+                a_1.setAttribute("href", "pages/plantcart.html")
+                a_1.setAttribute("id", "add")
+                a_1.innerText = "Add to cart"
+                document.querySelector(".box2").append(a_1)
+
+            }
         }
 
+        const result_of_search = document.getElementById("search")
+        result_of_search.addEventListener("input", (e) => {
+            const word = e.target.value.toLowerCase();
+            const div = document.querySelectorAll(".box1");
+            console.log(word)
+            let count_res
+            div.forEach(ex => {
+                const child = ex.children[0].children[2].textContent.toLocaleLowerCase();
 
-    
+                if (child.startsWith(word)) {
+                    ex.style.display = "block"
+
+                }
+                else {
+                    ex.style.display = "none"
+                }
+            })
+        })
     </script>
-    
-
-
 
 </body>
 

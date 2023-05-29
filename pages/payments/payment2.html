@@ -1,98 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assests/css/payment/payment2.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../assests/css/payment/payment2.css" />
-</head>
-
-<body>
-  <header>
-    <div class="logo">
-      <img src="../../assests/images/Picsart_22-12-05_14-49-34-612.png" alt="LOGO" />
-    </div>
-
-    <div class="nav">
-     
-      <a href="../../index.html">Home</a>
-      <a href="../plant.html">Plants</a>
-      <a href="../seeds.html">Seeds</a>
-      <a href="../blog.html">Blog</a>
-      <a href="../login.html"><img id="log" src="../../assests/images/Untitled_design-removebg-preview.png" alt=""
-          LOGIN />Login/signup</a>
-
-      <a href="../cart.html"><img id="cart" src="../../assests/images/cart logo.png" alt="cart" /></a>
-    </div>
-  </header>
-
-
-  <h1>Payment Page</h1>
-  <div class="steps">
-    <a href="payment.html" class="step1">Step - 1</a>
-    <a href="payment2.html" class="step2">Step - 2</a>
-    <a href="#" class="step3">Step - 3</a>
-  </div>
-
-  <div class="payment">
-    <h2>Cards,UPI and more</h2>
-    <a href="#" class="card pay">
-      <img src="../../assests/images/card icon.png" alt="card">
-      <div class="card para">
-        <h2>Card</h2>
-        <h4>Visa, Mastecard, RuPay and Maestro</h4>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../../assests/images/Picsart_22-12-05_14-49-34-612.png"
+          alt="LOGO"
+        />
       </div>
-    </a>
 
-    <div class="netbanking pay">
-      <img src="../../assests/images/bank.png" alt="bank">
-      <div class="netbank para">
-        <h2>Netbanking</h2>
-        <h4>All Indain Banks</h4>
+      <div class="nav">
+        <a href="../../index.html">Home</a>
+        <a href="../plant.html">Plants</a>
+        <a href="../seeds.html">Seeds</a>
+        <a href="../blog.html">Blog</a>
+        <a id="log" href="../login.html"
+          ><img
+            id="log"
+            src="../../assests/images/Untitled_design-removebg-preview.png"
+            alt=""
+            LOGIN
+          />Login/signup</a
+        >
+        <a id="profile_logo" href="/pages/profile.html"><img  id="profile_logo" src="/assests/images/girl.png"></a>
+        <a id="cart" href="../cart.html"
+          ><img id="cart" src="../../assests/images/cart logo.png" alt="cart"
+        /></a>
       </div>
-    </div>
-    <div class="wallet pay">
-      <img src="../../assests/images/wallet.png" alt="wallet">
-      <div class="upi para">
-        <h2>Wallet</h2>
-        <h4>Mobikwik & More</h4>
-      </div>
-    </div>
-    <div class="emi pay">
-      <img src="../../assests/images/emi.jpg" alt="emi">
-      <div class="upi para">
-        <h2>EMI</h2>
-        <h4>Debit/Credit cards, EarlySalary & More</h4>
-      </div>
-    </div>
-    <div class="paylater pay">
-      <img src="../../assests/images/cod.jpg" alt="cod">
-      <div class="upi para">
-        <h2>Cash on Delivery</h2>
-        <h4>Pay at your Doorstep.</h4>
-      </div>
-    </div>
-    <div class="upipay pay">
-      <img src="../../assests/images/UPI icon.png" alt="upi">
-      <div class="upi para">
-        <h2>UPI</h2>
-        <h4>Pay with installed app, or use others</h4>
-      </div>
-    </div>
-    <div class="icons">
+    </header>
 
-      <img src="../../assests/images/gpay icon.png" alt="gpay" />
-      <img src="../../assests/images/paytm icon.png" alt="paytm" />
-      <img src="../../assests/images/phonepe.png" alt="phonepe" />
-    </div>
-    <div class="last">
-      <a href="payment.html">Previous</a>
-      <a href="payment3.html">Next</a>
-    </div>
-  </div>
-</body>
+    <h1>Payment Page</h1>
+    <h3 id="address_head">Address Details</h3>
+    <form id="payment_form">
+      <label for="fname"
+        >Name
+        <input id="fname" type="text" required /> </label
+      ><br />
+      <br /><br />
 
+      <label for="Email"
+        >Email Address
+        <input id="email" type="text" required /> </label
+      ><br />
+      <br /><br />
+
+      <label for="number"
+        >Phone Number
+        <input id="phone_num"   autocomplete="off"
+        
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type="number"
+        maxlength="10"
+        minlength="10"
+        inputmode="numerical"
+        placeholder="9876543210"
+        type="number"
+        data-pattern-validatetype="number" required />
+        <br /><br /></label
+      ><br />
+      
+   
+
+      <label for="Address">
+        Delivery Address
+        <input id="address" type="text" required /> </label
+      ><br />
+      <br /><br />
+
+      <label for="City"
+        >City
+        <input id="city" type="text" required /> </label
+      ><br />
+      <br /><br />
+
+      <label for="pincode"
+        >Pincode
+        <input id="pincode"   autocomplete="off"
+        
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type="number"
+        maxlength="6"
+        inputmode="numerical"
+        placeholder="xxxxxx"
+        type="number"
+        data-pattern-validatetype="number" required /> </label
+      ><br />
+      <br /><br />
+      
+
+      <!-- <div class="last">
+            <a href="payment2.html" id="submit">Next</a>
+          </div> -->
+    </form>
+
+    <!-- <div class="steps">
+      <a href="payment.html" class="step1">Step - 1</a>
+      <a href="payment2.html" class="step2">Step - 2</a>
+      <a href="#" class="step3">Step - 3</a>
+    </div> -->
+    <div class="container">
+      <div class="payment">
+        <h3>Select a payment method</h3>
+        <a class="card pay click">
+          <img src="../../assests/images/card icon.png" alt="card" />
+          <div class="card para">
+            <h2>Card</h2>
+            <h4>Visa, Mastecard, RuPay and Maestro</h4>
+          </div>
+        </a>
+
+        <div class="card_details">
+          <label for="number"
+            >Card number
+            <input
+            autocomplete="off"
+            id="card_number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number"
+            maxlength="16"
+            minlength="16"
+            inputmode="numerical"
+            placeholder="1234 1234 1234 1234"
+            type="number"
+            data-pattern-validate
+            />
+</label
+          ><br />
+          <br />
+          <div class="div">
+            <p>Expiry Date</p>
+            <div class="expiry_date">
+              <input
+              autocomplete="off"
+                  id="month"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type="number"
+              maxlength="2"
+            minlength="2"
+
+              inputmode="numerical"
+              placeholder="MM"
+              type="number"
+              data-pattern-validate
+              />
+
+              <input
+                autocomplete="off"
+                id="year"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type="number"
+                maxlength="2"
+            minlength="2"
+
+                inputmode="numerical"
+                placeholder="YY"
+                type="number"
+                data-pattern-validate
+              />
+            </div>
+
+            <p>CVV</p>
+
+            <div class="cvc">
+              <input
+              autocomplete="off"
+                id="cvv"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type="number"
+                maxlength="3"
+                inputmode="numerical"
+                placeholder="123"
+                type="number"
+                data-pattern-validate
+              />
+            </div>
+          </div>
+          <button id="place_order_button">Pay ₹ <span class="rs"> 0 </span></button>
+        </div>
+
+        <div class="other_apps">
+          <div class="paylater pay">
+            <img src="../../assests/images/cod.jpg" alt="cod" />
+            <div class="upi para">
+              <h2>Cash on Delivery</h2>
+              <h4>Pay at your Doorstep.</h4>
+            </div>
+          </div>
+          <div class="cash_delivery">
+            <p>
+              By choosing cash on delivery, You can pay at your Door Step after
+              receiving the product
+            </p>
+            <button id="cash_btn">Confirm Order</button>
+          </div>
+          <div class="upipay pay">
+            <img src="../../assests/images/UPI_icon.png" alt="upi" />
+            <div class="upi para">
+              <h2>UPI</h2>
+              <h4>Pay with installed app, or use others</h4>
+            </div>
+          </div>
+          <div class="upi_trans">
+            <div class="icons">
+              <img
+                id="gpay"
+                src="../../assests/images/gpay_icon.png"
+                alt="gpay"
+              />
+              <img
+                id="paytm"
+                src="../../assests/images/paytm_logo.png"
+                alt="paytm"
+              />
+              <img src="../../assests/images/phonepe.png" alt="phonepe" />
+            </div>
+            <label for="upi_id"
+              >Enter your UPI Id
+              <input type="email" id="upi_id" placeholder="robert@oksbibank"
+            /></label>
+
+            <p>Place Order</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pro_details">
+        <h2>Price details</h2>
+        <hr />
+        <div class="price">
+          <p>Price ( <span id="num_items"> 1 </span> item)</p>
+          <p>₹<span class="rs">200</span></p>
+        </div>
+        <div class="delivery_charges">
+          <p>Delivery Charges</p>
+          <p>FREE</p>
+        </div>
+        <hr />
+        <div class="amount_payable">
+          <p>Total Amount Payable</p>
+          <p>₹<span class="rs">200</span></p>
+        </div>
+      <a  id="order_history" href="/pages/order.html">Want to see Order history?</a>
+
+      </div>
+    </div>
+    <script src="/assests/js/model.js"></script>
+    <script>
+
+
+      const login_titles = document.getElementById("login_title");
+          
+      const login_logo = document.getElementById("log");
+           
+           const profile_logo =document.getElementById("profile_logo")
+         </script>
+    <script>
+      // let fname = document.getElementById("fname")
+
+      // let lname = document.getElementById("lname");
+
+      // let email = document.getElementById("email");
+
+      // let address = document.getElementById("address");
+
+      // let city = document.getElementById("city");
+
+      // let pincode = document.getElementById("pincode");
+
+      const submit = document.getElementById("submit");
+
+      const data = JSON.parse(localStorage.getItem("arr"));
+      const profile = localStorage.getItem("profile");
+      console.log(profile);
+      console.log(data);
+
+      let res;
+      data.find((obj) => {
+        if (obj.email == profile) {
+          res = obj;
+        }
+      });
+
+      console.log(res);
+
+      document.getElementById("fname").value = res.fname;
+      // document.getElementById("lname").value = res["lastname"];
+      document.getElementById("email").value = res.email;
+      document.getElementById("email").setAttribute("disabled", "");
+      document.getElementById("address").value = res.address;
+      const pincode = document.getElementById("pincode");
+      const city = document.getElementById("city");
+      // submit.addEventListener("click", (e) => {
+      //   e.preventDefault();
+
+        // let fname = document.getElementById("fname").value;
+        // let lname = document.getElementById("lname").value;
+        // let email = document.getElementById("email").value;
+        // let address = document.getElementById("address").value;
+        // let city = document.getElementById("city").value;
+        // let pincode = document.getElementById("pincode").value;
+
+      //   if (
+      //     fname != "" &&
+      //     lname != "" &&
+      //     email != "" &&
+      //     address != "" &&
+      //     city != "" &&
+      //     pincode != ""
+      //   ) {
+      //     let payment_detail =
+      //       JSON.parse(localStorage.getItem("details")) || [];
+      //     let details = {
+      //       payment_id: payment_detail.length + 1,
+      //       fname: document.getElementById("fname").value,
+      //       lname: document.getElementById("lname").value,
+      //       email: document.getElementById("email").value,
+      //       address: document.getElementById("address").value,
+      //       city: city.value,
+      //       pincode: pincode.value,
+      //     };
+
+      //     payment_detail.push(details);
+      //     localStorage.setItem("details", JSON.stringify(payment_detail));
+      //     window.location.href = "payment2.html";
+      //   } else {
+      //     alert("fill all data");
+      //   }
+      // });
+
+      const card = document.querySelector(".click");
+      const upipay = document.querySelector(".upipay");
+      const paylater = document.querySelector(".paylater");
+      const cash_delivery = document.querySelector(".cash_delivery");
+
+      console.log(card);
+      const card_details = document.querySelector(".card_details");
+      console.log(card_details);
+
+      card.addEventListener("click", (e) => {
+        card_details.classList.toggle("view");
+        icons.classList.remove("view");
+        order_btn.classList.remove("view");
+      });
+
+      const icons = document.querySelector(".upi_trans");
+      upipay.addEventListener("click", (e) => {
+        icons.classList.toggle("view");
+        card_details.classList.remove("view");
+        order_btn.classList.remove("view");
+      });
+
+      const order_btn = document.querySelector(".cash_delivery");
+
+      paylater.addEventListener("click", (e) => {
+        order_btn.classList.toggle("view");
+        card_details.classList.remove("view");
+        icons.classList.remove("view");
+      });
+
+      //  showing the total items in the cart0-----
+      let total_amount = 0;
+      let total_quantity = 0;
+      const active_email = localStorage.getItem("profile");
+      const users = JSON.parse(localStorage.getItem("arr"));
+      let current_user;
+      users.forEach((e) => {
+        if (active_email == e.email) {
+          orderdetails(e);
+        }
+      });
+      function orderdetails(e) {
+        for (let u = 0; u < e.cart.length; u++) {
+          total_quantity += 1;
+          total_amount += Number(e.cart[u].plant_total_price);
+        }
+      }
+      const num_items = document.getElementById("num_items");
+      const rs_to_show = document.querySelectorAll(".rs");
+      num_items.innerHTML = total_quantity;
+      rs_to_show.forEach((e) => {
+        e.innerHTML = total_amount;
+      });
+
+      //  Place order using the card details=================
+
+      function gettingvalue(){
+      
+      }
+      const place_order_button = document.getElementById("place_order_button")
+      place_order_button.addEventListener("click",e=>{
+        let  fname = document.getElementById("fname").value;
+        let  email = document.getElementById("email").value;
+        let  address = document.getElementById("address").value;
+        let phone_num = document.getElementById("phone_num").value
+        let  city = document.getElementById("city").value;
+        let  pincode = document.getElementById("pincode").value;
+        let  card_number = document.getElementById("card_number").value
+        let  card_month = document.getElementById("month").value
+        let  card_year = document.getElementById("year").value
+        let  card_cvv =document.getElementById("cvv").value
+        let date = new Date().toLocaleDateString()
+
+        if(fname!=""&&address!=""&&city!=""&&pincode!=""&&card_number!=""&&card_month!=""&&card_year!=""&&card_cvv!="" ){
+
+   users.forEach((e) => {
+        if (active_email == e["email"]) {
+        let order_history =e["order_history"]?? []
+        let order_details ={
+          fname,
+          email,
+          address,
+          city,
+          phone_num,
+          pincode,
+          card_number,
+          card_month,
+          card_year,
+          card_cvv,
+          date,
+          cart_details:e["cart"]
+        }
+        order_history.push(order_details)
+        e["order_history"]=order_history
+        delete e["cart"]
+        localStorage.setItem("arr",JSON.stringify(users))
+       
+        window.location.href="payment3.html"
+
+        }
+
+
+      });
+        }
+        else{
+          alert(" Kindly fill all the address details and all the card details")
+        }
+
+
+      })
+
+      //  let us = JSON.parse(localStorage.getItem("arr"))
+      //  us.forEach((e) => {
+      //   if (active_email == e.email) {
+      //     delete e["order_history"]
+      //   }
+      // });
+      // localStorage.setItem("arr",JSON.stringify(us))
+    </script>
+  </body>
 </html>

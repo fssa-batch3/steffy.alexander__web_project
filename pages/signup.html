@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="../assests/css/signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
 </head>
 
 <body>
-
 
     <div class="main">
         <div class="signup">
@@ -28,31 +27,45 @@
         </div>
         <form>
 
-            <label><i id="loglog" class="fa-solid fa-child-dress"></i>
+            <label>
+<i id="loglog" class="fa-solid fa-child-dress"></i>
                 <input type="text" placeholder="First Name..." pattern="[A-Za-z]{1,24}" id="fname"
-                    title="Firstletter must in CAPS" required></label><br>
-            <label><i id="loglog" class="fa-solid fa-child-dress"></i>
-                <input type="text" placeholder="Last Name..." id="lname"></label><br>
-            <label><i id="loglog" class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Email..." id="email" required></label><br>
-            <label><i id="loglog" class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password..." id="password"
+            required></label>
+<br>
+            <label>
+<i id="loglog" class="fa-solid fa-child-dress"></i>
+                <input type="text" placeholder="Last Name..." id="lname">
+</label>
+<br>
+            <label>
+<i id="loglog" class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email..." id="email" title="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+</label>
+<br>
+            <label>
+<i id="loglog" class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password..." id="password" title="Enter a uppercase, a lowercase, a number/special character" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" 
                
-                    required></label><br> 
-            <label><i id="loglog" class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Confirm Password..." id="confirmpass" required></label><br><br><br>
-
+                    required></label>
+<br> 
+            <label>
+<i id="loglog" class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Confirm Password..." id="confirmpass" required>
+</label>
+<br>
+<br>
+<br>
+            <a href="/pages/login.html">Already have an account?</a>
+<br>
+<br>
             <button type="submit">GET STARTED</button>
         </form>
-        
 
     </div>
-
-
   
     <script>
-        let form = document.querySelector("form");
-        form.addEventListener("submit", function(event){
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (event) =>{
             event.preventDefault();
             submit();
 
@@ -70,18 +83,20 @@
 
             if (fname != "" && lname != "" && email != "" && password != "" && confirmpass != "") {
 
-                let arr = localStorage.getItem("arr")
-                        ? JSON.parse(localStorage.getItem("arr")) :
-                        [];
+                const arr = localStorage.getItem("arr")
+                ? JSON.parse(localStorage.getItem("arr")) :
+                [];
+                        const user_backup = localStorage.getItem("user_backup")
+                ? JSON.parse(localStorage.getItem("user_backup")) :
+                [];
 
-
-                let user_data = {
-                    "fname": fname,
-                    "lastname": lname,
-                    "email": email,
-                    "password": password,
-                    "confirmpass": confirmpass,
-                }
+                const user_data = {
+            fname,
+            "lastname": lname,
+            email,
+            password,
+            confirmpass,
+        }
                 let check = true;
                 if(records!= null){
                     for( let i=0; i< records.length; i++){
@@ -92,11 +107,13 @@
                     }
                 }
 
-
           if(check){
             if (password === confirmpass) {
                   
                 arr.push(user_data)
+                user_backup.push(user_data)
+                localStorage.setItem("user_backup", JSON.stringify(user_backup))
+
                     localStorage.setItem("arr", JSON.stringify(arr))
                     alert("Successfully logged in")
                     window.location.href = "login.html"
@@ -116,10 +133,6 @@
         else{
             alert ("fill this data")
         }}
-        
-      
-
-
     </script>
 </body>
 

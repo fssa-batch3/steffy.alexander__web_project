@@ -1,6 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    /* width: 1520px; */
+    background-color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+  }
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #f2f4f1;
+    box-shadow: 0px 5px 20px black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-size: 30px;
+    width: 100%;
+    
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #171a0f;
+    display: flex;
+    align-items: center;
+    font-family: "Carter One", cursive;
+    font-size: 80px;
+  }
+  /* 
+  #shopping {
+    color: blue;
+    margin-top: 100px;
+  } */
+  
+  .home {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+  }
+  
+  .nav a:nth-child(5) img {
+    margin-left: 12px;
+  }
+  
+  #user_name {
+    font-weight: 600;
+    margin: 0px 10px;
+  }
 
-body{
+  
+  
+  .logo img {
+    width: 110px;
+    height: 65px;
+    /* margin-left: 25px; */
+  }
+  
+  #profile_logo {
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    /* margin-right: 28px; */
+  }
+  
+  .nav a {
+    margin: 10px;
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 18px;
+    color: #30650f;
+  }
+  .nav a:hover{
+    border: solid #4c812a;
+    border-width: 0px 0px 3px 0px;
+  transition: 0.05s ease;
+  color: #0d5114;
+  
+  }
+  #cart_a:hover{
+    outline: none;
+    border-width: 0px;
+    
+  
+  }
+  #cart {
+    width: 80px;
+    height: 60px;
+  }
+  
+/* body{
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,17 +113,15 @@ body{
     background-position: center;
     width:100%;
     height:100%
-}
+} */
 
 .leftbox{
     width:310px;
     height:300px;
-    /* border:2px solid black; */
     background-image: linear-gradient(to bottom right, #90c2a3, #187248);
 }
 .left{
     margin-left: 40px;
-    /* margin-top: 80px; */
 }
 .profile{
     border-radius:50%;
@@ -45,18 +148,17 @@ body{
 }
 
 .bottomleft{
-    /* width:333px; */
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     background-color: #f2f4f1;
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+a{
+    text-decoration: none;
+    color:black;
+}
 
-/* i{
-    padding:123px;
-} */
 .fstname{
         height:52px;
 }
@@ -73,7 +175,7 @@ body{
     height: 90vh;
 }
 .righttop {
-    /* border: 1px solid black; */
+ 
     width:850px;
     height:200px;
     margin-left: 100px;
@@ -89,7 +191,7 @@ i{
 .right{
     display: flex;
     flex-direction: column;
-    /* margin-top: 25px; */
+
 }
 .bottomcontent{
     width:850px;
@@ -113,13 +215,13 @@ i{
     width:850px;
     height:100px;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    
     background-image: linear-gradient(to bottom right, #90c2a3, #187248);
     margin-bottom: 0px;
 }
 
 .inputfields{
-    /* margin-left: 30px; */
+
      display: flex;
     flex-wrap: wrap;
     justify-content:center; 
@@ -155,7 +257,7 @@ label input:focus,.side_one textarea:focus {
     margin-left: 100px;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #eef1f2;
     padding: 20px;
     box-sizing: border-box;
@@ -178,6 +280,28 @@ label input:focus,.side_one textarea:focus {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 }
-.lastcontent img{
-    width: 350px;
+
+select{
+    height: 20px;
+}
+#create_product{
+    display: none;
+}
+.side_one span,.side_one button{
+display: flex;
+align-items: center;
+width: 150px;
+margin: 10px;
+border: none;
+background-color: none;
+
+}
+.side_one  img{
+    width:25px;
+    margin: 10px 20px;
+}
+#gif{
+    margin:0px 280px 400px 0px;
+    width: 300px;
+    
 }
